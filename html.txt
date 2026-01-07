@@ -1,8 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petneeds.ai – Smarter Care for Happier Pets</title>
+  <meta name="description" content="Petneeds.ai is an AI-powered pet care assistant offering insights, product recommendations, and premium features for pet owners." />
+  <meta name="robots" content="index, follow" />
+
+  <style>
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#f9fafb; color:#333; line-height:1.6; }
+    header { background:linear-gradient(135deg, #4f46e5, #6366f1); color:#fff; padding:60px 20px; text-align:center; }
+    header h1 { margin-bottom:10px; font-size:2.5rem; }
+    header p { font-size:1.1rem; max-width:700px; margin:0 auto; }
+    main { max-width:1000px; margin:40px auto; padding:0 20px; }
+    h2 { color:#4f46e5; margin-bottom:15px; }
+    .tier-box { background:#fff; border-radius:8px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:20px; }
+    .cta { background:#eef2ff; padding:30px; border-radius:8px; text-align:center; }
+    .email-capture input[type="email"] { padding:10px; width:250px; border:1px solid #ccc; border-radius:4px; }
+    .email-capture button { padding:10px 20px; margin-left:10px; background:#4f46e5; color:#fff; border:none; border-radius:4px; cursor:pointer; }
+    footer { background:#111827; color:#d1d5db; padding:30px 20px; font-size:0.85rem; text-align:center; }
+    footer a { color:#9ca3af; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav style="background:#111827;padding:12px 20px;">
+    <div style="max-width:1000px;margin:auto;display:flex;gap:20px;align-items:center;">
+      <a href="index.html" style="color:#fff;text-decoration:none;font-weight:bold;">Petneeds.ai</a>
+      <a href="dogs.html" style="color:#d1d5db;text-decoration:none;">Dogs</a>
+      <a href="cats.html" style="color:#d1d5db;text-decoration:none;">Cats</a>
+      <a href="other-pets.html" style="color:#d1d5db;text-decoration:none;">Other Pets</a>
+      <a href="products.html" style="color:#d1d5db;text-decoration:none;">Products</a>
+      <a href="about.html" style="color:#d1d5db;text-decoration:none;">About</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header>
+    <div class="badge">🚧 Under Construction</div>
+    <h1>Petneeds.ai</h1>
+    <p>Smarter insights for everyday pet care. AI-powered tools to help you understand your pets’ needs — from daily care to long-term well-being.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Petneeds.ai</h2>
+      <p>Petneeds.ai is designed to support pet owners with educational insights, personalized recommendations, and product suggestions powered by artificial intelligence.</p>
+    </section>
+
+    <section>
+      <h2>Our Tiers</h2>
+      <div class="tier-box">
+        <h3>Free Tier</h3>
+        <p>Access basic pet care tips, product suggestions, and AI insights preview.</p>
+      </div>
+      <div class="tier-box">
+        <h3>Premium Tier - $9.95/month</h3>
+        <p>Enjoy full AI recommendations, personalized pet care reminders, exclusive guides, and discounts on partnered products.</p>
+        <p><strong>Coming Soon!</strong></p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Stay Updated</h2>
+      <p>Sign up to get notified when we launch!</p>
+      <div class="email-capture">
+        <form>
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Notify Me</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Petneeds.ai. All rights reserved.</p>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong><br />
+      Petneeds.ai is informational only. Content is not a substitute for professional veterinary advice. Consult a licensed vet for health concerns.
+    </div>
+  </footer>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petneeds.ai – Dog Care</title>
+  <style>
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#f9fafb; color:#333; line-height:1.6; }
+    header { background:linear-gradient(135deg, #4f46e5, #6366f1); color:#fff; padding:60px 20px; text-align:center; }
+    header h1 { margin-bottom:10px; font-size:2.5rem; }
+    header p { font-size:1.1rem; max-width:700px; margin:0 auto; }
+    main { max-width:1000px; margin:40px auto; padding:0 20px; }
+    h2 { color:#4f46e5; margin-bottom:15px; }
+    .tier-box { background:#fff; border-radius:8px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:20px; }
+    .cta { background:#eef2ff; padding:30px; border-radius:8px; text-align:center; }
+    footer { background:#111827; color:#d1d5db; padding:30px 20px; font-size:0.85rem; text-align:center; }
+    footer a { color:#9ca3af; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav style="background:#111827;padding:12px 20px;">
+    <div style="max-width:1000px;margin:auto;display:flex;gap:20px;align-items:center;">
+      <a href="index.html" style="color:#fff;text-decoration:none;font-weight:bold;">Petneeds.ai</a>
+      <a href="dogs.html" style="color:#d1d5db;text-decoration:none;">Dogs</a>
+      <a href="cats.html" style="color:#d1d5db;text-decoration:none;">Cats</a>
+      <a href="other-pets.html" style="color:#d1d5db;text-decoration:none;">Other Pets</a>
+      <a href="products.html" style="color:#d1d5db;text-decoration:none;">Products</a>
+      <a href="about.html" style="color:#d1d5db;text-decoration:none;">About</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Dog Care Insights</h1>
+    <p>Your trusted AI-powered resource for healthier, happier dogs. From nutrition to behavior, we guide you every step of the way.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Nutrition</h2>
+      <p>Balanced diets, portion control, and age-specific food recommendations for dogs.</p>
+    </section>
+
+    <section>
+      <h2>Behavior & Training</h2>
+      <p>Socialization tips, basic training, and recognizing stress or anxiety in dogs.</p>
+    </section>
+
+    <section>
+      <h2>Health & Wellness</h2>
+      <p>Exercise, routine checkups, and preventive care to keep your dog happy and healthy.</p>
+    </section>
+
+    <section>
+      <h2>Products</h2>
+      <p>Top-rated toys, food, and supplements. Coming soon: AI-personalized recommendations.</p>
+    </section>
+
+    <section>
+      <h2>Personalized AI Dog Care</h2>
+      <p>Coming soon: Create a profile for your dog and get AI-generated recommendations tailored to breed, age, and lifestyle.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Petneeds.ai. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
 
     
-    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petneeds.ai – Cat Care</title>
+  <style>
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#f9fafb; color:#333; line-height:1.6; }
+    header { background:linear-gradient(135deg, #4f46e5, #6366f1); color:#fff; padding:60px 20px; text-align:center; }
+    header h1 { margin-bottom:10px; font-size:2.5rem; }
+    header p { font-size:1.1rem; max-width:700px; margin:0 auto; }
+    main { max-width:1000px; margin:40px auto; padding:0 20px; }
+    h2 { color:#4f46e5; margin-bottom:15px; }
+    footer { background:#111827; color:#d1d5db; padding:30px 20px; font-size:0.85rem; text-align:center; }
+    footer a { color:#9ca3af; text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav style="background:#111827;padding:12px 20px;">
+    <div style="max-width:1000px;margin:auto;display:flex;gap:20px;align-items:center;">
+      <a href="index.html" style="color:#fff;text-decoration:none;font-weight:bold;">Petneeds.ai</a>
+      <a href="dogs.html" style="color:#d1d5db;text-decoration:none;">Dogs</a>
+      <a href="cats.html" style="color:#d1d5db;text-decoration:none;">Cats</a>
+      <a href="other-pets.html" style="color:#d1d5db;text-decoration:none;">Other Pets</a>
+      <a href="products.html" style="color:#d1d5db;text-decoration:none;">Products</a>
+      <a href="about.html" style="color:#d1d5db;text-decoration:none;">About</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Cat Care Insights</h1>
+    <p>Essential advice for indoor and outdoor cats, covering nutrition, enrichment, and overall health.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Nutrition</h2>
+      <p>Age-specific diets, portion control, and supplements for optimal cat health.</p>
+    </section>
+
+    <section>
+      <h2>Behavior & Enrichment</h2>
+      <p>Tips for indoor stimulation, litter training, and recognizing stress or illness.</p>
+    </section>
+
+    <section>
+      <h2>Health & Wellness</h2>
+      <p>Regular vet visits, preventive care, and keeping cats active and happy.</p>
+    </section>
+
+    <section>
+      <h2>Personalized AI Cat Care</h2>
+      <p>Coming soon: AI recommendations for your cat’s diet, behavior, and overall wellness.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Petneeds.ai. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Petneeds.ai – Other Pets</title>
+  <style>
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; background:#f9fafb; color:#333; line-height:1.6; }
+    header { background:linear-gradient(135deg, #4f46e5, #6366f1); color:#fff; padding:60px 20px; text-align:center; }
+    header h1 { margin-bottom:10px; font-size:2.5rem; }
+    header p { font-size:1.1rem; max-width:700px; margin:0 auto; }
+    main { max-width:1000px; margin:40px auto; padding:0 20px; }
+    h2 { color:#4f46e5; margin-bottom:15px; }
+    .tier-box { background:#fff; border-radius:8px; padding:20px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:20px; }
+    footer { background:#111827; color:#d1d5db; padding:30px 20px; font-size:0.85rem; text-align:center; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav style="background:#111827;padding:12px 20px;">
+    <div style="max-width:1000px;margin:auto;display:flex;gap:20px;align-items:center;">
+      <a href="index.html" style="color:#fff;text-decoration:none;font-weight:bold;">Petneeds.ai</a>
+      <a href="dogs.html" style="color:#d1d5db;text-decoration:none;">Dogs</a>
+      <a href="cats.html" style="color:#d1d5db;text-decoration:none;">Cats</a>
+      <a href="other-pets.html" style="color:#d1d5db;text-decoration:none;">Other Pets</a>
+      <a href="products.html" style="color:#d1d5db;text-decoration:none;">Products</a>
+      <a href="about.html" style="color:#d1d5db;text-decoration:none;">About</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Other Pets Hub</h1>
+    <p>Petneeds.ai is expanding to support a wide range of household pets with the same care-first philosophy.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Pets We Support</h2>
+      <ul>
+        <li>Rabbits</li>
+        <li>Fish & Aquatic Pets</li>
+        <li>Birds</li>
+        <li>Reptiles</li>
+        <li>Small Mammals (hamsters, guinea pigs, ferrets)</li>
+      </ul>
+      <p><strong>Dedicated guides coming soon.</strong></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Petneeds.ai. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
 
   
+
 
 
 
