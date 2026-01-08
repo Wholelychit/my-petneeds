@@ -167,3 +167,22 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.product-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #4f46e5;
+  font-weight: 600;
+}
