@@ -93,6 +93,42 @@
         recommendations based on breed, age, and lifestyle.
       </p>
     </section>
+<section class="cta" id="ai-chat">
+  <h2>Ask Our Dog Care AI</h2>
+  <p>Get instant guidance for feeding, behavior, health, and safety.</p>
+
+  <div class="chat-box">
+    <div id="chat-log"></div>
+
+    <input
+      type="text"
+      id="user-input"
+      placeholder="Ask a question about your dog..."
+    />
+    <button onclick="sendMessage()">Ask</button>
+  </div>
+</section>
+
+<script>
+async function sendMessage() {
+  const input = document.getElementById("user-input");
+  const chatLog = document.getElementById("chat-log");
+  const message = input.value.trim();
+  if (!message) return;
+
+  chatLog.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
+  input.value = "";
+
+  const response = await fetch("/api/pet-chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ question: message })
+  });
+
+  const data = await response.json();
+  chatLog.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.answer}</p>`;
+}
+</script>
 
   </main>
 
