@@ -1,4 +1,10 @@
-/* Petneeds.ai Global Styles */
+/* =========================
+   Petneeds.ai Global Styles
+   ========================= */
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -8,42 +14,86 @@ body {
   line-height: 1.6;
 }
 
-/* Navigation */
-nav {
+/* =========================
+   Navigation
+   ========================= */
+
+.nav {
   background: #111827;
   padding: 12px 20px;
 }
 
-nav a {
+.nav-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.nav-links a {
   color: #d1d5db;
   text-decoration: none;
-  margin-right: 18px;
+  margin-left: 18px;
   font-weight: 500;
 }
 
-nav a:first-child {
+.nav-links a:hover {
   color: #ffffff;
-  font-weight: 700;
 }
 
-/* Header */
-header {
+/* =========================
+   Hero / Header
+   ========================= */
+
+.hero {
   background: linear-gradient(135deg, #4f46e5, #6366f1);
   color: #ffffff;
   padding: 60px 20px;
   text-align: center;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.2rem;
+.hero h1 {
+  margin: 15px 0 10px;
+  font-size: 2.4rem;
 }
 
-/* Main layout */
-main {
+.hero p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.05rem;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  background: #facc15;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* =========================
+   Main Layout
+   ========================= */
+
+.main {
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
+}
+
+section {
+  margin-bottom: 50px;
 }
 
 h2 {
@@ -51,17 +101,48 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Content cards */
-.info-box {
-  background: #ffffff;
+/* =========================
+   Call to Action
+   ========================= */
+
+.cta {
+  background: #eef2ff;
+  padding: 30px;
   border-radius: 8px;
-  padding: 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  margin-bottom: 30px;
+  text-align: center;
 }
 
-/* Footer */
-footer {
+.email-capture {
+  margin-top: 20px;
+}
+
+.email-capture input {
+  padding: 10px;
+  width: 240px;
+  max-width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.email-capture button {
+  padding: 10px 18px;
+  margin-left: 8px;
+  background: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.email-capture button:hover {
+  background: #4338ca;
+}
+
+/* =========================
+   Footer
+   ========================= */
+
+.footer {
   background: #111827;
   color: #d1d5db;
   padding: 30px 20px;
@@ -69,10 +150,20 @@ footer {
   text-align: center;
 }
 
-footer a {
+.footer a {
   color: #9ca3af;
   text-decoration: none;
 }
 
- 
+.footer a:hover {
+  text-decoration: underline;
+}
 
+.disclaimer {
+  margin-top: 15px;
+  font-size: 0.8rem;
+  color: #9ca3af;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
