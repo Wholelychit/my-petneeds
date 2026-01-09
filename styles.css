@@ -226,7 +226,8 @@ h2 {
   border-radius: 4px;
   cursor: pointer;
 }
-
-.chat-box button:hover {
+.chat-box button:hover { 
   background: #4338ca;
 }
+
+
