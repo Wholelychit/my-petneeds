@@ -1,28 +1,20 @@
-async function askAI() {
-  const input = document.getElementById("user-input");
-  const chatLog = document.getElementById("chat-log");
+import OpenAI from "openai";
 
-  if (!input.value.trim()) return;
+const client = new OpenAI({
+  apiKey: OPENAI_API_KEY  // automatically comes from Cloudflare
+});
 
-  chatLog.innerHTML += `<p><strong>You:</strong> ${input.value}</p>`;
-  const userQuestion = input.value;
+export async function onRequest(context) {
+  const { request } = context;
+  const { searchParams } = new URL(request.url);
+  const question = searchParams.get("q") || "";
 
-  // Call your backend API
-  try {
-    const response = await fetch("/api/ask", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question: userQuestion })
-    });
+  const response = await client.responses.create({
+    model: "gpt-5-nano",
+    input: question,
+  });
 
-    const data = await response.json();
-    chatLog.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.answer}</p>`;
-  } catch (err) {
-    chatLog.innerHTML += `<p><strong>Petneeds.ai:</strong> Sorry, something went wrong.</p>`;
-    console.error(err);
-  }
-
-  input.value = "";
-  chatLog.scrollTop = chatLog.scrollHeight;
+  return new Response(JSON.stringify({ answer: response.output_text }), {
+    headers: { "Content-Type": "application/json" },
+  });
 }
-
