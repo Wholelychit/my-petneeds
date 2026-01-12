@@ -1,9 +1,10 @@
-async function askAI(textFromVoice = null) {
+  async function askAI(textFromVoice = null) {
   const input = document.getElementById("user-input");
   const chatLog = document.getElementById("chat-log");
 
   const question = textFromVoice || input.value.trim();
   if (!question) return;
+  let voiceEnabled = true;
 
   chatLog.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
   input.value = "";
@@ -12,7 +13,7 @@ async function askAI(textFromVoice = null) {
   const data = await response.json();
 
   chatLog.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.answer}</p>`;
-
+ 
   speak(data.answer);
 }
 
@@ -22,6 +23,15 @@ function startVoice() {
     alert("Voice input not supported in this browser.");
     return;
   }
+function speak(text) {
+  if (!voiceEnabled) return;
+
+  const msg = new SpeechSynthesisUtterance(text);
+  msg.rate = 1;
+  msg.pitch = 1;
+  msg.lang = "en-US";
+  speechSynthesis.speak(msg);
+}
 
   const recognition = new webkitSpeechRecognition();
   recognition.lang = "en-US";
@@ -36,12 +46,17 @@ function startVoice() {
 }
 
 /* 🔊 Voice output */
-function speak(text) {
-  const msg = new SpeechSynthesisUtterance(text);
-  msg.rate = 1;
-  msg.pitch = 1;
-  msg.lang = "en-US";
-  speechSynthesis.speak(msg);
+
+}
+function toggleVoice() {
+  voiceEnabled = !voiceEnabled;
+
+  const btn = document.getElementById("voice-toggle");
+  btn.textContent = voiceEnabled ? "🔊 Voice On" : "🔇 Voice Off";
+
+  if (!voiceEnabled) {
+    speechSynthesis.cancel();
+  }
 }
 
 
