@@ -1,24 +1,47 @@
-async function askAI() {
+async function askAI(textFromVoice = null) {
   const input = document.getElementById("user-input");
   const chatLog = document.getElementById("chat-log");
 
-  if (!input.value.trim()) return;
-
-  const question = input.value;
+  const question = textFromVoice || input.value.trim();
+  if (!question) return;
 
   chatLog.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
   input.value = "";
 
-  try {
-    const response = await fetch(
-      `/api/ask?q=${encodeURIComponent(question)}`
-    );
+  const response = await fetch(`/api/ask?q=${encodeURIComponent(question)}`);
+  const data = await response.json();
 
-    const data = await response.json();
+  chatLog.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.answer}</p>`;
 
-    chatLog.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.answer}</p>`;
-  } catch (err) {
-    chatLog.innerHTML += `<p><strong>Petneeds.ai:</strong> Sorry, something went wrong.</p>`;
-  }
+  speak(data.answer);
 }
+
+/* 🎤 Voice input */
+function startVoice() {
+  if (!("webkitSpeechRecognition" in window)) {
+    alert("Voice input not supported in this browser.");
+    return;
+  }
+
+  const recognition = new webkitSpeechRecognition();
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+
+  recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    askAI(transcript);
+  };
+
+  recognition.start();
+}
+
+/* 🔊 Voice output */
+function speak(text) {
+  const msg = new SpeechSynthesisUtterance(text);
+  msg.rate = 1;
+  msg.pitch = 1;
+  msg.lang = "en-US";
+  speechSynthesis.speak(msg);
+}
+
 
