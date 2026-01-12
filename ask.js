@@ -9,3 +9,4 @@ function askAI() {
 
   input.value = "";
 }
+Add ask.js for chat UI
