@@ -223,6 +223,33 @@ async function sendMessage() {
   }
 }
 </script>
+<script>
+async function askAI() {
+  const input = document.getElementById("user-input");
+  const chat = document.getElementById("chat-log");
+  const question = input.value.trim();
+
+  if (!question) return;
+
+  chat.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
+  input.value = "";
+
+  try {
+    const response = await fetch("/functions/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: question })
+    });
+
+    const data = await response.json();
+    chat.innerHTML += `<p><strong>Petneeds AI:</strong> ${data.reply}</p>`;
+  } catch (err) {
+    chat.innerHTML += `<p><em>Error contacting AI</em></p>`;
+  }
+
+  chat.scrollTop = chat.scrollHeight;
+}
+</script>
 
 </body>
 </html>
