@@ -229,5 +229,10 @@ h2 {
 .chat-box button:hover { 
   background: #4338ca;
 }
+.cta {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 
 
