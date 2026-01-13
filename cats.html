@@ -1,117 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cat Care Guide | Petneeds.ai</title>
-  <meta name="description" content="Trusted cat care guidance including nutrition, behavior, health, and safety.">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Care Guidance | Petneeds.ai</title>
+  <meta name="description" content="Responsible cat care guidance including nutrition, behavior, health, and enrichment." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">Petneeds.ai</a>
+    <a class="logo" href="index.html">Petneeds.ai</a>
     <div class="nav-links">
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
+      <a href="other-pets.html">Other Pets</a>
+      <a href="products.html">Resources</a>
+      <a href="about.html">About</a>
     </div>
   </div>
 </nav>
 
 <header class="hero">
-  <span class="badge">Expert-Guided Cat Care</span>
   <h1>Cat Care Essentials</h1>
-  <p>Nutrition, behavior, health, and enrichment for every stage of your cat’s life.</p>
+  <p>Responsible guidance for cat health, behavior, nutrition, and enrichment.</p>
 </header>
 
 <main class="main">
+  <section>
+    <h2>Feeding & Nutrition</h2>
+    <p>High-protein diets and essential nutrients to support cat health at all life stages.</p>
+  </section>
 
-<section>
-  <h2>Feeding & Nutrition</h2>
-  <p>
-    Cats require a high-protein diet with taurine to maintain heart and eye health.
-    Feeding needs vary by age, activity level, and medical history.
-  </p>
-</section>
+  <section>
+    <h2>Behavior & Enrichment</h2>
+    <p>Scratching, climbing, and interactive play to reduce stress and encourage natural behaviors.</p>
+  </section>
 
-<section>
-  <h2>Behavior & Enrichment</h2>
-  <p>
-    Scratching posts, climbing spaces, and interactive play help reduce stress,
-    prevent destructive behavior, and support mental health.
-  </p>
-</section>
+  <section>
+    <h2>Health & Wellness</h2>
+    <p>Regular checkups, vaccinations, and preventive care to keep cats happy and healthy.</p>
+  </section>
 
-<!-- AI CHAT (NON-COMMERCIAL, EDUCATIONAL ONLY) -->
-<section class="cta" id="ai-chat">
-  <h2>Ask Our Cat Care AI</h2>
-  <p>General cat care guidance only. Not a substitute for veterinary advice.</p>
+  <section class="cta" id="ai-chat">
+    <h2>Ask Our Cat Care AI</h2>
+    <p>Coming soon: general guidance for cat care. Not a substitute for veterinary advice.</p>
 
-  <div class="chat-box">
-    <div id="chat-log"></div>
-
-    <div class="chat-controls">
-      <input
-        id="user-input"
-        type="text"
-        placeholder="Ask a cat care question..."
-      />
-
+    <div class="chat-box">
+      <div id="chat-log"></div>
+      <input type="text" id="user-input" placeholder="Ask a question..." />
       <button onclick="askAI()">Ask</button>
-      <button onclick="startVoice()" title="Speak">🎤</button>
-      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
     </div>
-
-    <div id="listening" class="listening hidden">
-      🎙 Listening…
-    </div>
-  </div>
-</section>
-
+  </section>
 </main>
 
 <footer class="footer">
-  <p>© 2026 Petneeds.ai</p>
-
-  <section class="disclaimer">
-    <h2>Important Veterinary Disclaimer</h2>
-    <p>
-      The information provided on Petneeds.ai is for educational and informational
-      purposes only and is not intended as a substitute for professional veterinary
-      advice, diagnosis, or treatment.
-    </p>
-    <p>
-      Always seek the advice of a licensed veterinarian with any questions you may
-      have regarding your pet’s health, medical conditions, or treatment options.
-      Never disregard professional veterinary advice because of something you have
-      read on this website.
-    </p>
-  </section>
+  <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
 
-<!-- MEDICAL / EDUCATIONAL DISCLAIMER SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Pet Care Information Disclaimer",
-  "description": "Educational pet care content provided by Petneeds.ai is not a substitute for professional veterinary advice.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Petneeds.ai"
-  },
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Pet Owners"
-  },
-  "about": {
-    "@type": "MedicalEntity",
-    "name": "Veterinary Care Disclaimer",
-    "description": "Information is not intended to diagnose, treat, cure, or prevent disease in animals."
+<script>
+async function askAI() {
+  const input = document.getElementById("user-input");
+  const chat = document.getElementById("chat-log");
+  const question = input.value.trim();
+  if (!question) return;
+
+  chat.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
+  input.value = "";
+
+  try {
+    const response = await fetch(`/api/ask?q=${encodeURIComponent(question)}`);
+    const data = await response.json();
+    chat.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.answer}</p>`;
+    chat.scrollTop = chat.scrollHeight;
+  } catch {
+    chat.innerHTML += `<p><em>AI service unavailable.</em></p>`;
   }
 }
 </script>
 
-<script src="ask.js"></script>
 </body>
 </html>
