@@ -62,17 +62,19 @@
   <h2>Ask Petneeds AI</h2>
   <p>Ask a general dog-care question. (No medical diagnosis)</p>
 
-  <div class="chat-box">
-    <div id="chat-log"></div>
+><div class="chat-controls">
+  <input
+    id="user-input"
+    type="text"
+    placeholder="Ask a cat care question..."
+  />
 
-    <input
-      type="text"
-      id="user-input"
-      placeholder="Ask about feeding, training, grooming..."
-    />
-    <button onclick="askAI()">Ask</button>
-  </div>
-</section>
+  <button onclick="askAI()">Ask</button>
+  <button onclick="startVoice()" title="Speak">🎤</button>
+  <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+</div>
+
+  </section>
 
 </section>
 
