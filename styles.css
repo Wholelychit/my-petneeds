@@ -271,6 +271,26 @@ h2 {
 #voice-toggle:hover {
   background: #15803d;
 }
+/* =========================
+   Voice Listening Indicator
+   ========================= */
+
+.listening {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #4f46e5;
+  animation: pulse 1.2s infinite;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
 
 
 
