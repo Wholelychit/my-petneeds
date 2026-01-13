@@ -5,192 +5,102 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Dog Care Guidance | Petneeds.ai</title>
-  <meta name="description" content="Trusted dog care guidance powered by AI. Learn about nutrition, training, health, and daily care for dogs of all breeds." />
+  <meta name="description" content="Trusted, educational dog care guidance covering nutrition, behavior, health, and daily care. Not a substitute for veterinary advice." />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <div class="nav-container">
-      <a class="logo" href="index.html">Petneeds.ai</a>
-      <div class="nav-links">
-        <a href="dogs.html">Dogs</a>
-        <a href="cats.html">Cats</a>
-        <a href="other-pets.html">Other Pets</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero -->
-  <header class="hero">
-    <h1>Dog Care Insights</h1>
-    <p>
-      Clear, responsible guidance to help your dog live a healthier, happier life.
-      AI-powered tools coming soon.
-    </p>
-  </header>
-
-  <!-- Main -->
-  <section>
-  <h2>Recommended Dog Products</h2>
-
-  <div class="product-grid">
-    <div class="product-card">
-      <h3>High-Protein Dog Food</h3>
-      <p>Supports muscle health and digestion for adult dogs.</p>
-      <a href="#" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-    </div>
-
-    <div class="product-card">
-      <h3>Durable Chew Toy</h3>
-      <p>Designed to reduce boredom and promote dental health.</p>
-      <a href="#" target="_blank" rel="nofollow sponsored">View on Amazon</a>
-    </div>
-
-    <div class="product-card">
-      <h3>Joint Support Supplements</h3>
-      <p>Helps maintain mobility in senior and large-breed dogs.</p>
-      <a href="#" target="_blank" rel="nofollow sponsored">View on Amazon</a>
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-container">
+    <a class="logo" href="index.html">Petneeds.ai</a>
+    <div class="nav-links">
+      <a href="dogs.html">Dogs</a>
+      <a href="cats.html">Cats</a>
+      <a href="other-pets.html">Other Pets</a>
+      <a href="about.html">About</a>
     </div>
   </div>
-    <section class="cta">
-  <div class="chat-box">
-  <div id="chat-log"></div>
+</nav>
 
-  <div class="chat-controls">
-    <input
-      id="user-input"
-      type="text"
-      placeholder="Ask a cat care question..."
-    />
+<!-- Hero -->
+<header class="hero">
+  <h1>Dog Care Insights</h1>
+  <p>
+    Clear, responsible guidance to help your dog live a healthier, happier life.
+    Educational use only.
+  </p>
+</header>
 
-    <button onclick="askAI()">Ask</button>
-    <button onclick="startVoice()">🎤 Speak</button>
-    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-  </div>
+<!-- Main Content -->
+<main class="main">
 
-  <div id="listening" class="listening hidden">
-    🎙 Listening…
-  </div>
-</div>
-
-  <p>Ask a general dog-care question. (No medical diagnosis)</p>
-
-><div class="chat-controls">
-  <input
-    id="user-input"
-    type="text"
-    placeholder="Ask a cat care question..."
-  />
-
-  <button onclick="askAI()">Ask</button>
-  <button onclick="startVoice()" title="Speak">🎤</button>
-  <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-</div>
-
-  </section>
-
+<section>
+  <h2>Nutrition & Feeding</h2>
+  <p>
+    Learn what to feed your dog at every life stage — from puppies to seniors.
+    Guidance focuses on safety, balance, and widely accepted best practices.
+  </p>
 </section>
 
-  <main class="main">
+<section>
+  <h2>Training & Behavior</h2>
+  <p>
+    Understand common dog behaviors, positive training techniques,
+    and how to build a strong bond with your dog.
+  </p>
+</section>
 
-    <section>
-      <h2>Nutrition & Feeding</h2>
-      <p>
-        Learn what to feed your dog at every life stage — from puppies to seniors.
-        We focus on safety, balance, and evidence-based guidance.
-      </p>
-    </section>
+<section>
+  <h2>Health & Wellness</h2>
+  <p>
+    Explore preventive care, warning signs to watch for,
+    and when to consult a licensed veterinarian.
+  </p>
+</section>
 
-    <section>
-      <h2>Training & Behavior</h2>
-      <p>
-        Understand common dog behaviors, positive training techniques,
-        and how to build a strong bond with your dog.
-      </p>
-    </section>
-
-    <section>
-      <h2>Health & Wellness</h2>
-      <p>
-        Explore preventive care, warning signs to watch for,
-        and when to consult a veterinarian.
-      </p>
-    </section>
-
-    <section class="cta">
-      <h2>Personalized AI Dog Care</h2>
-      <p>
-        Soon you’ll be able to create a dog profile and receive customized
-        recommendations based on breed, age, and lifestyle.
-      </p>
-    </section>
+<!-- AI CHAT (EDUCATIONAL ONLY) -->
 <section class="cta" id="ai-chat">
   <h2>Ask Our Dog Care AI</h2>
-  <p>Get instant guidance for feeding, behavior, health, and safety.</p>
+  <p>General guidance only. Not medical advice.</p>
 
   <div class="chat-box">
     <div id="chat-log"></div>
 
-    <input
-      type="text"
-      id="user-input"
-      placeholder="Ask a question about your dog..."
-    />
-    <button onclick="sendMessage()">Ask</button>
+    <div class="chat-controls">
+      <input
+        id="user-input"
+        type="text"
+        placeholder="Ask a general dog care question..."
+      />
+      <button onclick="askAI()">Ask</button>
+    </div>
   </div>
 </section>
 
-<script>
-async function sendMessage() {
-  const input = document.getElementById("user-input");
-  const chatLog = document.getElementById("chat-log");
-  const message = input.value.trim();
-  if (!message) return;
+</main>
 
-  chatLog.innerHTML += `<p><strong>You:</strong> ${message}</p>`;
-  input.value = "";
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 Petneeds.ai</p>
 
-  const response = await fetch("/api/pet-chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ question: message })
-  });
+  <section class="disclaimer">
+    <h2>Important Veterinary Disclaimer</h2>
+    <p>
+      The information provided on Petneeds.ai is for educational and informational
+      purposes only and is not intended as a substitute for professional veterinary
+      advice, diagnosis, or treatment.
+    </p>
+    <p>
+      Always seek the advice of a licensed veterinarian with any questions you may
+      have regarding your pet’s health or medical conditions.
+    </p>
+  </section>
+</footer>
 
-  const data = await response.json();
-  chatLog.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.answer}</p>`;
-}
-</script>
-
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p>© 2026 Petneeds.ai</p>
-    <div class="disclaimer">
-      Information is for educational purposes only and does not replace veterinary advice.
-    </div>
-    <section class="disclaimer">
-  <h2>Important Veterinary Disclaimer</h2>
-  <p>
-    The information provided on Petneeds.ai is for educational and informational
-    purposes only and is not intended as a substitute for professional veterinary
-    advice, diagnosis, or treatment.
-  </p>
-  <p>
-    Always seek the advice of a licensed veterinarian with any questions you may
-    have regarding your pet’s health, medical conditions, or treatment options.
-    Never disregard professional veterinary advice because of something you have
-    read on this website.
-  </p>
-</section>
-
-  </footer>
+<!-- FAQ SCHEMA -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -201,7 +111,7 @@ async function sendMessage() {
       "name": "How often should I feed my dog?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Most adult dogs should be fed twice daily, while puppies may require three to four meals depending on age and breed."
+        "text": "Most adult dogs are fed twice daily, while puppies may require more frequent meals depending on age and breed."
       }
     },
     {
@@ -209,91 +119,4 @@ async function sendMessage() {
       "name": "What human foods are dangerous for dogs?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Chocolate, grapes, raisins, onions, garlic, xylitol, alcohol, and caffeine are toxic to dogs and should be avoided."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How much exercise does a dog need?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Most dogs need 30–90 minutes of daily exercise depending on breed, age, and health."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Pet Care Information Disclaimer",
-  "description": "Educational pet care content provided by Petneeds.ai is not a substitute for professional veterinary advice.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Petneeds.ai"
-  },
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Pet Owners"
-  },
-  "about": {
-    "@type": "MedicalEntity",
-    "name": "Veterinary Care Disclaimer",
-    "description": "Information is not intended to diagnose, treat, cure, or prevent disease in animals."
-  }
-}
-</script>
-<script>
-async function askAI() {
-  const input = document.getElementById("user-input");
-  const chat = document.getElementById("chat-log");
-  const question = input.value.trim();
-
-  if (!question) return;
-
-  chat.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
-  input.value = "";
-
-  try {
-    const response = await fetch("/functions/ask", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message: question })
-    });
-
-    const data = await response.json();
-    chat.innerHTML += `<p><strong>Petneeds AI:</strong> ${data.reply}</p>`;
-  } catch (err) {
-    chat.innerHTML += `<p><em>Error contacting AI</em></p>`;
-  }
-
-  chat.scrollTop = chat.scrollHeight;
-}
-<script src="ask.js"></script>
-</body>
-</html>
-
-</body>
-</html>
-
-</body>
-</html>
-<section class="cta">
-  <h2>Ask Our Dog Care AI</h2>
-  <p>Get instant guidance for feeding, behavior, health, and safety.</p>
-  <button disabled>AI Chat Coming Soon</button>
-</section>
-
-
- 
-
-
-
- 
- 
-
-
-   
-
-
+        "text": "Chocolate, grapes, r
