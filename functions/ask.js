@@ -39,11 +39,14 @@ User question: ${message}`
     );
   }
 }
+
 // Add AI ask function
 async function askAI(textFromVoice = null) {
   const input = document.getElementById("user-input");
   const chatLog = document.getElementById("chat-log");
-
+  ...
+  speak(data.answer);
+}
   const question = textFromVoice || input.value.trim();
   if (!question) return;
 
