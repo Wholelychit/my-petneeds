@@ -60,10 +60,6 @@ function startVoice() {
   recognition.start();
 }
 
-
-  recognition.start();
-}
-
 /* =========================
    🔊 Voice Output
    ========================= */
