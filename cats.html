@@ -37,7 +37,26 @@
 </section>
 
 <section class="cta">
-  <h2>Ask Petneeds.ai (Cats)</h2>
+ <div class="chat-box">
+  <div id="chat-log"></div>
+
+  <div class="chat-controls">
+    <input
+      id="user-input"
+      type="text"
+      placeholder="Ask a cat care question..."
+    />
+
+    <button onclick="askAI()">Ask</button>
+    <button onclick="startVoice()">🎤 Speak</button>
+    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+  </div>
+
+  <div id="listening" class="listening hidden">
+    🎙 Listening…
+  </div>
+</div>
+
   <p>Get general cat care guidance. Not a substitute for veterinary advice.</p>
 
   <div class="chat-box">
