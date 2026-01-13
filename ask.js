@@ -36,14 +36,30 @@ function startVoice() {
     return;
   }
 
+  const listening = document.getElementById("listening");
+  listening.classList.remove("hidden");
+
   const recognition = new webkitSpeechRecognition();
   recognition.lang = "en-US";
   recognition.interimResults = false;
 
   recognition.onresult = (event) => {
+    listening.classList.add("hidden");
     const transcript = event.results[0][0].transcript;
     askAI(transcript);
   };
+
+  recognition.onerror = () => {
+    listening.classList.add("hidden");
+  };
+
+  recognition.onend = () => {
+    listening.classList.add("hidden");
+  };
+
+  recognition.start();
+}
+
 
   recognition.start();
 }
