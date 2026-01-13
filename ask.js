@@ -64,14 +64,33 @@ function startVoice() {
    🔊 Voice Output
    ========================= */
 function speak(text) {
-  if (!voiceEnabled) return;
+  if (!voiceEnabled || !("speechSynthesis" in window)) return;
+
+  speechSynthesis.cancel(); // stop overlap
 
   const msg = new SpeechSynthesisUtterance(text);
-  msg.rate = 1;
-  msg.pitch = 1;
+  }
+  // Calm, friendly delivery
+  msg.rate = 0.95;     // slightly slower = reassuring
+  msg.pitch = 1.0;     // natural tone
+  msg.volume = 1.0;
   msg.lang = "en-US";
+
+  // Try to pick a natural voice if available
+  const voices = speechSynthesis.getVoices();
+  const preferred = voices.find(v =>
+    v.name.includes("Google") ||
+    v.name.includes("Natural") ||
+    v.name.includes("Samantha")
+  );
+
+  if (preferred) {
+    msg.voice = preferred;
+  }
+
   speechSynthesis.speak(msg);
 }
+
 
 /* =========================
    🔇 Voice Toggle
