@@ -1,6 +1,10 @@
-/* =========================
-   Petneeds.ai Global Styles
-   ========================= */
+:root {
+  --primary: #2FA4A9;
+  --secondary: #E8F6F7;
+  --accent: #7ED6A3;
+  --dark: #2B2B2B;
+  --light: #ffffff;
+}
 
 * {
   box-sizing: border-box;
@@ -8,289 +12,164 @@
 
 body {
   margin: 0;
-  font-family: "Segoe UI", "Inter", "Helvetica Neue", Arial, sans-serif;
-  background-color: #f9fafb;
-  color: #333;
+  font-family: "Inter", sans-serif;
+  color: var(--dark);
   line-height: 1.6;
 }
 
-/* =========================
-   Navigation
-   ========================= */
-
-.nav {
-  background: #111827;
-  padding: 12px 20px;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 1.25rem;
 }
 
-.nav-container {
-  max-width: 1000px;
-  margin: auto;
+.header {
+  background: var(--light);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 70px;
 }
 
 .logo {
-  color: #ffffff;
-  text-decoration: none;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
-.nav-links a {
-  color: #d1d5db;
+.logo span {
+  color: var(--primary);
+}
+
+nav a {
+  margin: 0 0.75rem;
   text-decoration: none;
-  margin-left: 18px;
+  color: var(--dark);
   font-weight: 500;
 }
 
-.nav-links a:hover {
-  color: #ffffff;
-}
-
-/* =========================
-   Hero / Header
-   ========================= */
-
-.hero {
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
-  color: #ffffff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.hero h1 {
-  margin: 15px 0 10px;
-  font-size: 2.4rem;
-}
-
-.hero p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.05rem;
-}
-
-/* Badge */
-.badge {
-  display: inline-block;
-  background: #facc15;
-  color: #000;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 700;
-}
-
-/* =========================
-   Main Layout
-   ========================= */
-
-.main {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-section {
-  margin-bottom: 50px;
-}
-
-h2 {
-  color: #4f46e5;
-  margin-bottom: 10px;
-}
-
-/* =========================
-   Call to Action
-   ========================= */
-
-.cta {
-  background: #eef2ff;
-  padding: 30px;
-  border-radius: 8px;
-  text-align: center;
-}
-
-.email-capture {
-  margin-top: 20px;
-}
-
-.email-capture input {
-  padding: 10px;
-  width: 240px;
-  max-width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.email-capture button {
-  padding: 10px 18px;
-  margin-left: 8px;
-  background: #4f46e5;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.email-capture button:hover {
-  background: #4338ca;
-}
-
-/* =========================
-   Footer
-   ========================= */
-
-.footer {
-  background: #111827;
-  color: #d1d5db;
-  padding: 30px 20px;
-  font-size: 0.85rem;
-  text-align: center;
-}
-
-.footer a {
-  color: #9ca3af;
+.btn {
+  padding: 0.6rem 1.1rem;
+  border-radius: 6px;
   text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.disclaimer {
-  margin-top: 15px;
-  font-size: 0.8rem;
-  color: #9ca3af;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
-}
-
-.product-card {
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-.product-card a {
-  display: inline-block;
-  margin-top: 10px;
-  color: #4f46e5;
   font-weight: 600;
 }
-/* =========================
-   AI Chat Styles
-   ========================= */
 
-.chat-box {
-  max-width: 600px;
-  margin: 20px auto;
-  text-align: left;
+.primary {
+  background: var(--primary);
+  color: white;
 }
 
-#chat-log {
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 6px;
-  height: 200px;
-  overflow-y: auto;
-  margin-bottom: 10px;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+.secondary {
+  border: 1px solid var(--primary);
+  color: var(--primary);
 }
 
-#chat-log p {
-  margin: 6px 0;
-  font-size: 0.9rem;
+.hero {
+  background: var(--secondary);
+  padding: 4rem 0;
 }
 
-#user-input {
-  width: 70%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.chat-box button {
-  padding: 10px 15px;
-  background: #4f46e5;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.chat-box button:hover { 
-  background: #4338ca;
-}
-.cta {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-/* =========================
-   Chat Controls UI
-   ========================= */
-
-.chat-controls {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   align-items: center;
 }
 
-.chat-controls input {
-  flex: 1;
-  min-width: 200px;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.chat-controls button {
-  padding: 10px 14px;
-  background: #4f46e5;
-  color: #ffffff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.95rem;
+.hero-actions {
+  margin-top: 1.5rem;
 }
 
-.chat-controls button:hover {
-  background: #4338ca;
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
 }
 
-#voice-toggle {
-  background: #16a34a;
+.features,
+.topics {
+  padding: 4rem 0;
 }
 
-#voice-toggle:hover {
-  background: #15803d;
-}
-/* =========================
-   Voice Listening Indicator
-   ========================= */
-
-.listening {
-  margin-top: 10px;
-  font-weight: 600;
-  color: #4f46e5;
-  animation: pulse 1.2s infinite;
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.hidden {
-  display: none;
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.04);
 }
 
-@keyframes pulse {
-  0% { opacity: 0.4; }
-  50% { opacity: 1; }
-  100% { opacity: 0.4; }
+.trust {
+  background: #f9fafa;
+  padding: 4rem 0;
 }
 
+.trust-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
 
+.trust-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.preview {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.preview .btn {
+  margin-top: 1.5rem;
+}
+
+.footer {
+  background: #f3f3f3;
+  padding: 2rem 0;
+}
+
+.footer-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: var(--dark);
+}
+
+@media (max-width: 768px) {
+  .hero-grid,
+  .trust-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  nav {
+    display: none;
+  }
+}
 
