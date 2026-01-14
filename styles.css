@@ -172,4 +172,19 @@ nav a {
     display: none;
   }
 }
+/* Waitlist Form */
+.waitlist-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.waitlist-form input {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-width: 240px;
+}
 
