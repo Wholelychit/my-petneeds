@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dog Care Guide | Petneeds.ai</title>
-  <meta name="description" content="Educational guidance for dogs including nutrition, health, behavior, and safety." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Trusted dog care guidance including nutrition, behavior, health, and safety.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
-    <a class="logo" href="index.html">Petneeds.ai</a>
+    <a href="index.html" class="logo">Petneeds.ai</a>
     <div class="nav-links">
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
@@ -22,337 +23,59 @@
   </div>
 </nav>
 
+<!-- Hero Section -->
 <header class="hero">
+  <span class="badge">Expert-Guided Dog Care</span>
   <h1>Dog Care Essentials</h1>
-  <p>Nutrition, exercise, training, and health guidance for dogs of all breeds and sizes.</p>
-  <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=1200&q=80" alt="Happy dog playing outside" style="width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-top:15px;">
+  <p>Nutrition, behavior, health, and enrichment for every stage of your dog's life.</p>
+  <img src="images/dog-hero.jpg" alt="Happy dog running" style="max-width:100%; border-radius:12px; margin-top:15px;">
 </header>
 
 <main class="main">
 
+<!-- Nutrition -->
 <section>
   <h2>Feeding & Nutrition</h2>
-  <img src="https://images.unsplash.com/photo-1601758123927-35c7a5aa1f25?auto=format&fit=crop&w=600&q=80" alt="Dog food and bowls" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:10px;">
-  <p>Provide a balanced diet with appropriate portions and high-quality ingredients to maintain your dog's health.</p>
+  <p>Provide a balanced diet with high-quality protein, proper vitamins, and minerals for your dog's health.</p>
+  <img src="images/dog-food.jpg" alt="Dog food in a bowl" style="max-width:100%; border-radius:8px;">
 </section>
 
+<!-- Behavior & Enrichment -->
 <section>
-  <h2>Exercise & Play</h2>
-  <img src="https://images.unsplash.com/photo-1558788353-01a42ec10a5c?auto=format&fit=crop&w=600&q=80" alt="Dog running in park" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:10px;">
-  <p>Daily walks, playtime, and mental stimulation help keep your dog healthy and happy.</p>
+  <h2>Behavior & Enrichment</h2>
+  <p>Regular play, walks, and mental stimulation keep dogs happy and prevent destructive behaviors.</p>
+  <img src="images/dog-play.jpg" alt="Dog playing with toy" style="max-width:100%; border-radius:8px;">
 </section>
 
-<section>
-  <h2>Behavior & Training</h2>
-  <img src="https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=600&q=80" alt="Dog training with owner" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:10px;">
-  <p>Positive reinforcement, consistent routines, and socialization ensure good behavior and strong bonds.</p>
-</section>
-
+<!-- Health & Safety -->
 <section>
   <h2>Health & Safety</h2>
-  <img src="https://images.unsplash.com/photo-1617196032992-b68946a01b68?auto=format&fit=crop&w=600&q=80" alt="Vet checking dog health" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:10px;">
-  <p>Regular vet checkups, vaccinations, parasite prevention, and dental care are essential for long-term health.</p>
+  <p>Routine vet visits, vaccinations, parasite prevention, and safe exercise environments are essential.</p>
+  <img src="images/dog-vet.jpg" alt="Dog at the vet" style="max-width:100%; border-radius:8px;">
 </section>
 
-<section class="cta" id="ai-chat">
-  <h2>Ask Petneeds.ai About Dogs</h2>
-  <p>Get general guidance. Not a substitute for veterinary advice.</p>
+<!-- AI Chat -->
+<section class="cta">
+  <h2>Ask Petneeds.ai (Dogs)</h2>
+  <p>Get general dog care guidance. Not a substitute for veterinary advice.</p>
 
   <div class="chat-box">
     <div id="chat-log"></div>
-    <input type="text" id="user-input" placeholder="Ask a dog care question..." />
+    <input type="text" id="user-input" placeholder="Ask a dog care question...">
     <button onclick="askAI()">Ask</button>
+    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
   </div>
 </section>
 
 </main>
 
+<!-- Footer -->
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
 
-<script src="ask.js"></script>
-</body>
-</html>
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Dog Care Guide | Petneeds.ai</title>
-  <meta name="description" content="Educational dog care guidance including nutrition, training, health, and safety. Not a substitute for veterinary care." />
-
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-<!-- =========================
-     Navigation
-     ========================= -->
-<nav class="nav">
-  <div class="nav-container">
-    <a href="index.html" class="logo">Petneeds.ai</a>
-    <div class="nav-links">
-      <a href="dogs.html">Dogs</a>
-      <a href="cats.html">Cats</a>
-      <a href="other-pets.html">Other Pets</a>
-      <a href="about.html">About</a>
-    </div>
-  </div>
-</nav>
-
-<!-- =========================
-     Hero
-     ========================= -->
-<header class="hero">
-  <span class="badge">Expert-Guided Dog Care</span>
-  <h1>Dog Care Essentials</h1>
-  <p>
-    Educational guidance on nutrition, training, enrichment, and wellness
-    for dogs at every life stage.
-  </p>
-</header>
-
-<!-- =========================
-     Main Content
-     ========================= -->
-<main class="main">
-
-  <section>
-    <h2>Nutrition & Feeding</h2>
-    <p>
-      Dogs thrive on balanced diets appropriate for their age, size, and activity level.
-      Fresh water should always be available, and sudden diet changes should be avoided.
-    </p>
-  </section>
-
-  <section>
-    <h2>Training & Behavior</h2>
-    <p>
-      Positive reinforcement training builds trust and improves learning.
-      Consistent routines, socialization, and mental stimulation help prevent
-      behavior problems.
-    </p>
-  </section>
-
-  <section>
-    <h2>Exercise & Enrichment</h2>
-    <p>
-      Daily physical activity supports both physical and mental health.
-      Walks, play, and problem-solving toys help reduce stress and boredom.
-    </p>
-  </section>
-
-  <section>
-    <h2>Health & Safety</h2>
-    <p>
-      Routine veterinary checkups, vaccinations, parasite prevention,
-      and dental care are essential parts of responsible dog ownership.
-    </p>
-  </section>
-
-  <!-- =========================
-       AI Chat Section
-       ========================= -->
-  <section class="cta" id="ai-chat">
-    <h2>Ask Petneeds.ai (Dogs)</h2>
-    <p>
-      Ask general dog care questions. Educational guidance only —
-      not a substitute for professional veterinary advice.
-    </p>
-
-    <div class="chat-box">
-      <div id="chat-log"></div>
-
-      <div class="chat-controls">
-        <input
-          type="text"
-          id="user-input"
-          placeholder="Ask a dog care question..."
-        />
-        <button onclick="askAI()">Ask</button>
-        <button onclick="startVoice()">🎤 Speak</button>
-        <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- =========================
-     Footer
-     ========================= -->
-<footer class="footer">
-  <p>© 2026 Petneeds.ai</p>
-
-  <section class="disclaimer">
-    <h2>Important Veterinary Disclaimer</h2>
-    <p>
-      The information provided on Petneeds.ai is for educational and informational
-      purposes only and is not intended as a substitute for professional veterinary
-      advice, diagnosis, or treatment.
-    </p>
-    <p>
-      Always seek the advice of a licensed veterinarian with any questions regarding
-      your pet’s health. Never disregard professional veterinary advice because of
-      information found on this website.
-    </p>
-  </section>
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Petneeds.ai – Educational Pet Care Guidance</title>
-  <meta name="description" content="Petneeds.ai provides educational guidance for dogs, cats, birds, reptiles, fish, and small mammals. Learn about nutrition, behavior, and wellness." />
-
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-<!-- =========================
-     Navigation
-     ========================= -->
-<nav class="nav">
-  <div class="nav-container">
-    <a href="index.html" class="logo">Petneeds.ai</a>
-    <div class="nav-links">
-      <a href="dogs.html">Dogs</a>
-      <a href="cats.html">Cats</a>
-      <a href="other-pets.html">Other Pets</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Resources</a>
-    </div>
-  </div>
-</nav>
-
-<!-- =========================
-     Hero Section
-     ========================= -->
-<header class="hero">
-  <span class="badge">Trusted Educational Guidance</span>
-  <h1>Petneeds.ai – Learn to Care for Your Pets</h1>
-  <p>
-    Clear, safe, and educational guidance for dogs, cats, birds, reptiles, fish, and small mammals. No commercial links, no product promotion — purely educational.
-  </p>
-</header>
-
-<!-- =========================
-     Main Content
-     ========================= -->
-<main class="main">
-
-  <section>
-    <h2>For Dog Owners</h2>
-    <p>
-      Explore tips for nutrition, training, behavior, and overall wellness for dogs of all breeds and ages.
-    </p>
-    <a href="dogs.html">Learn More &rarr;</a>
-  </section>
-
-  <section>
-    <h2>For Cat Owners</h2>
-    <p>
-      Learn about feline nutrition, enrichment, health care, and behavior management for happy, healthy cats.
-    </p>
-    <a href="cats.html">Learn More &rarr;</a>
-  </section>
-
-  <section>
-    <h2>For Other Pets</h2>
-    <p>
-      Birds, reptiles, fish, rabbits, and small mammals all have unique care needs. Discover habitat, nutrition, and enrichment guidance.
-    </p>
-    <a href="other-pets.html">Learn More &rarr;</a>
-  </section>
-
-  <section class="cta" id="ai-chat">
-    <h2>Ask Petneeds.ai</h2>
-    <p>Get general educational guidance about pet care. Not a substitute for veterinary advice.</p>
-
-    <div class="chat-box">
-      <div id="chat-log"></div>
-
-      <div class="chat-controls">
-        <input type="text" id="user-input" placeholder="Ask a pet care question..." />
-        <button onclick="askAI()">Ask</button>
-        <button onclick="startVoice()">🎤 Speak</button>
-        <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<!-- =========================
-     Footer
-     ========================= -->
-<footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only.</p>
-
-  <section class="disclaimer">
-    <h2>Important Veterinary Disclaimer</h2>
-    <p>
-      All content is educational. Always consult a licensed veterinarian for questions about your pet’s health, behavior, or treatment.
-    </p>
-  </section>
-</footer>
-
-<!-- =========================
-     Structured Data
-     ========================= -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Petneeds.ai",
-  "url": "https://petneeds.ai",
-  "description": "Educational pet care guidance for dogs, cats, birds, reptiles, fish, and small mammals."
-}
-</script>
-
-<!-- =========================
-     AI Script
-     ========================= -->
+<!-- AI Chat Script -->
 <script src="ask.js"></script>
 
 </body>
 </html>
-
-</footer>
-
-<!-- =========================
-     Structured Data
-     ========================= -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Dog Care Guide",
-  "description": "Educational dog care content provided by Petneeds.ai.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Petneeds.ai"
-  },
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Dog Owners"
-  }
-}
-</script>
-
-<!-- =========================
-     AI Script
-     ========================= -->
-<script src="ask.js"></script>
-
-</body>
-</html>
-<figure>
-  <img src="..." alt="Cat on a tree" />
-  <figcaption>Healthy cats love climbing and exploring safely.</figcaption>
-</figure>
-
-
