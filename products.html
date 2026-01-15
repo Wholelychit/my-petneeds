@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Resources | Petneeds.ai</title>
-  <meta name="description" content="Educational resources for pet care, including nutrition, enrichment, safety, and wellness guidance for dogs, cats, and other pets." />
+  <title>Pet Care Resources | Petneeds.ai</title>
+  <meta name="description" content="Educational guidance and resources for pet owners, covering food, toys, grooming, and health supplies." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
     <a class="logo" href="index.html">Petneeds.ai</a>
@@ -22,49 +23,65 @@
   </div>
 </nav>
 
+<!-- Hero Section -->
 <header class="hero">
   <h1>Pet Care Resources</h1>
-  <p>Trusted educational content to support your pet’s health, wellness, and enrichment.</p>
-  <img src="https://images.unsplash.com/photo-1592194996308-8c1bfa6341de?auto=format&fit=crop&w=1200&q=80" alt="Collage of dog, cat, and small pets" style="width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-top:15px;">
+  <p>Explore educational guides on nutrition, toys, grooming, and safe care for your pets.</p>
+  <img src="images/resources-hero.jpg" alt="Pet care resources" style="max-width:100%; border-radius:12px; margin-top:15px;">
 </header>
 
 <main class="main">
 
+<!-- Food & Nutrition -->
 <section>
   <h2>Nutrition Guides</h2>
-  <p>Learn about feeding requirements for dogs, cats, birds, reptiles, and small mammals. Understand portion sizes, essential nutrients, and safe treats.</p>
-  <img src="https://images.unsplash.com/photo-1617196032042-bf4749d1df59?auto=format&fit=crop&w=600&q=80" alt="Healthy pet food" style="width:100%; max-width:600px; border-radius:8px; margin-top:10px;">
+  <p>Learn about proper diets for dogs, cats, and other pets. Understand portion sizes, safe treats, and feeding schedules.</p>
+  <img src="images/nutrition.jpg" alt="Pet food" style="max-width:100%; border-radius:8px;">
 </section>
 
+<!-- Toys & Enrichment -->
 <section>
-  <h2>Enrichment & Activity</h2>
-  <p>Discover ways to keep your pets mentally and physically stimulated through toys, puzzles, climbing structures, and interactive play.</p>
-  <img src="https://images.unsplash.com/photo-1583337130417-3702b26b03ea?auto=format&fit=crop&w=600&q=80" alt="Pet playing with toys" style="width:100%; max-width:600px; border-radius:8px; margin-top:10px;">
+  <h2>Toys & Enrichment</h2>
+  <p>Ideas for interactive play, mental stimulation, and physical exercise for all kinds of pets.</p>
+  <img src="images/toys.jpg" alt="Pet toys" style="max-width:100%; border-radius:8px;">
 </section>
 
+<!-- Grooming & Health -->
 <section>
-  <h2>Health & Safety</h2>
-  <p>Educational resources on basic wellness, preventative care, and environmental safety for all types of pets.</p>
-  <img src="https://images.unsplash.com/photo-1604079625647-8d374d8c9943?auto=format&fit=crop&w=600&q=80" alt="Pet health and safety" style="width:100%; max-width:600px; border-radius:8px; margin-top:10px;">
+  <h2>Grooming & Health</h2>
+  <p>Guidance on safe grooming, basic hygiene, and recognizing signs of illness. Includes brushing, nail care, and bath tips.</p>
+  <img src="images/grooming.jpg" alt="Pet grooming" style="max-width:100%; border-radius:8px;">
 </section>
 
-<section class="cta" id="ai-chat">
+<!-- Supplies & Accessories -->
+<section>
+  <h2>Supplies & Accessories</h2>
+  <p>Learn about bedding, crates, cages, leashes, collars, and other essential supplies for your pets' safety and comfort.</p>
+  <img src="images/supplies.jpg" alt="Pet supplies" style="max-width:100%; border-radius:8px;">
+</section>
+
+<!-- AI Chat Section -->
+<section class="cta">
   <h2>Ask Petneeds.ai</h2>
-  <p>Get general guidance about pet care. Educational use only, not a substitute for veterinary advice.</p>
+  <p>Get general pet care guidance from our AI assistant. Educational purposes only, not a substitute for veterinary advice.</p>
 
   <div class="chat-box">
     <div id="chat-log"></div>
-    <input type="text" id="user-input" placeholder="Ask a question..." />
+    <input type="text" id="user-input" placeholder="Ask a question...">
     <button onclick="askAI()">Ask</button>
+    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
   </div>
 </section>
 
 </main>
 
+<!-- Footer -->
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
 
+<!-- AI Chat Script -->
 <script src="ask.js"></script>
+
 </body>
 </html>
