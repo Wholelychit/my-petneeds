@@ -3,135 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>About Petneeds.ai</title>
-  <meta name="description" content="Learn about Petneeds.ai, our mission, and our commitment to educational pet care guidance." />
-
+  <meta name="description" content="Learn about Petneeds.ai, our mission to provide educational pet care guidance, and our team of experts." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- =========================
-     Navigation
-     ========================= -->
 <nav class="nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">Petneeds.ai</a>
+    <a class="logo" href="index.html">Petneeds.ai</a>
     <div class="nav-links">
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
       <a href="other-pets.html">Other Pets</a>
+      <a href="products.html">Resources</a>
       <a href="about.html">About</a>
     </div>
   </div>
 </nav>
 
-<!-- =========================
-     Hero
-     ========================= -->
 <header class="hero">
-  <span class="badge">Educational Pet Guidance</span>
   <h1>About Petneeds.ai</h1>
-  <p>
-    Our mission is to provide clear, safe, and educational guidance for pet owners.
-    We cover dogs, cats, birds, reptiles, fish, and small mammals.
-  </p>
+  <p>Providing safe, educational, and expert-guided pet care resources for all pet owners.</p>
+  <img src="https://images.unsplash.com/photo-1592194996308-8c1bfa6341de?auto=format&fit=crop&w=1200&q=80" alt="Collage of dogs, cats, and small pets" style="width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-top:15px;">
 </header>
 
-<!-- =========================
-     Main Content
-     ========================= -->
 <main class="main">
 
-  <section>
-    <h2>Our Mission</h2>
-    <p>
-      Petneeds.ai is dedicated to helping pet owners make informed decisions
-      about their pets' welfare. All content is educational and not a substitute
-      for professional veterinary care.
-    </p>
-  </section>
+<section>
+  <h2>Our Mission</h2>
+  <p>Petneeds.ai is dedicated to providing accessible, accurate, and safe educational information about pet care. We focus on responsible pet ownership, enrichment, nutrition, and wellness guidance for dogs, cats, and other pets.</p>
+  <img src="https://images.unsplash.com/photo-1583337130417-3702b26b03ea?auto=format&fit=crop&w=600&q=80" alt="Pet owner reading about pet care" style="width:100%; max-width:600px; border-radius:8px; margin-top:10px;">
+</section>
 
-  <section>
-    <h2>What We Provide</h2>
-    <ul>
-      <li>Species-specific care guidance</li>
-      <li>Nutrition, enrichment, and behavioral advice</li>
-      <li>AI-assisted Q&A for general pet questions</li>
-      <li>Resources for safe and responsible pet ownership</li>
-    </ul>
-  </section>
+<section>
+  <h2>Our Team</h2>
+  <p>Our contributors include veterinary consultants, animal behavior specialists, and experienced pet owners. While we provide general guidance, we always recommend consulting a licensed veterinarian for medical concerns.</p>
+  <img src="https://images.unsplash.com/photo-1604079625647-8d374d8c9943?auto=format&fit=crop&w=600&q=80" alt="Veterinary team" style="width:100%; max-width:600px; border-radius:8px; margin-top:10px;">
+</section>
 
-  <section>
-    <h2>Our Approach</h2>
-    <p>
-      We combine research-based information with easy-to-understand explanations.
-      Petneeds.ai is focused purely on educational guidance — no product sales,
-      no affiliate links, and no commercial promotion.
-    </p>
-  </section>
+<section>
+  <h2>Educational Focus</h2>
+  <p>We aim to educate pet owners on proper nutrition, enrichment, safety, and wellness. Our content is designed to support informed decisions for a happy, healthy pet lifestyle.</p>
+  <img src="https://images.unsplash.com/photo-1592194996308-0d47b0a2bc2e?auto=format&fit=crop&w=600&q=80" alt="Pet educational materials" style="width:100%; max-width:600px; border-radius:8px; margin-top:10px;">
+</section>
 
-  <section class="cta">
-    <h2>Ask Petneeds.ai</h2>
-    <p>Use our AI to ask general pet care questions. This tool is educational only and not veterinary advice.</p>
+<section class="cta" id="ai-chat">
+  <h2>Ask Petneeds.ai</h2>
+  <p>Have a question about pet care? Ask our AI for general guidance. This is educational only and not a substitute for professional veterinary advice.</p>
 
-    <div class="chat-box">
-      <div id="chat-log"></div>
-
-      <div class="chat-controls">
-        <input
-          type="text"
-          id="user-input"
-          placeholder="Ask a general pet care question..."
-        />
-        <button onclick="askAI()">Ask</button>
-        <button onclick="startVoice()">🎤 Speak</button>
-        <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-      </div>
-    </div>
-  </section>
+  <div class="chat-box">
+    <div id="chat-log"></div>
+    <input type="text" id="user-input" placeholder="Ask a question..." />
+    <button onclick="askAI()">Ask</button>
+  </div>
+</section>
 
 </main>
 
-<!-- =========================
-     Footer
-     ========================= -->
 <footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only.</p>
-
-  <section class="disclaimer">
-    <h2>Important Veterinary Disclaimer</h2>
-    <p>
-      All guidance on this site is educational. Always consult a licensed
-      veterinarian for questions regarding your pet's health, behavior, or treatment.
-    </p>
-  </section>
+  <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
 
-<!-- =========================
-     Structured Data
-     ========================= -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "About Petneeds.ai",
-  "description": "Educational pet care guidance and mission of Petneeds.ai.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Petneeds.ai"
-  },
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Pet Owners"
-  }
-}
-</script>
-
-<!-- =========================
-     AI Script
-     ========================= -->
 <script src="ask.js"></script>
-
 </body>
 </html>
