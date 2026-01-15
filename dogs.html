@@ -3,92 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dog Care Guidance | Petneeds.ai</title>
-  <meta name="description" content="Responsible dog care guidance including nutrition, training, behavior, and wellness." />
+
+  <title>Dog Care Guide | Petneeds.ai</title>
+  <meta name="description" content="Educational dog care guidance including nutrition, training, health, and safety. Not a substitute for veterinary care." />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+<!-- =========================
+     Navigation
+     ========================= -->
 <nav class="nav">
   <div class="nav-container">
-    <a class="logo" href="index.html">Petneeds.ai</a>
+    <a href="index.html" class="logo">Petneeds.ai</a>
     <div class="nav-links">
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
       <a href="other-pets.html">Other Pets</a>
-      <a href="products.html">Resources</a>
       <a href="about.html">About</a>
     </div>
   </div>
 </nav>
 
+<!-- =========================
+     Hero
+     ========================= -->
 <header class="hero">
-  <h1>Dog Care Insights</h1>
-  <p>Clear, safe guidance to help your dog live a healthier, happier life.</p>
+  <span class="badge">Expert-Guided Dog Care</span>
+  <h1>Dog Care Essentials</h1>
+  <p>
+    Educational guidance on nutrition, training, enrichment, and wellness
+    for dogs at every life stage.
+  </p>
 </header>
 
+<!-- =========================
+     Main Content
+     ========================= -->
 <main class="main">
+
   <section>
     <h2>Nutrition & Feeding</h2>
-    <p>Learn what to feed your dog at each life stage with a focus on balance, safety, and evidence-based guidance.</p>
+    <p>
+      Dogs thrive on balanced diets appropriate for their age, size, and activity level.
+      Fresh water should always be available, and sudden diet changes should be avoided.
+    </p>
   </section>
 
   <section>
     <h2>Training & Behavior</h2>
-    <p>Understand dog behaviors, positive training methods, and how to strengthen your bond.</p>
+    <p>
+      Positive reinforcement training builds trust and improves learning.
+      Consistent routines, socialization, and mental stimulation help prevent
+      behavior problems.
+    </p>
   </section>
 
   <section>
-    <h2>Health & Wellness</h2>
-    <p>Explore preventive care, warning signs, and when to consult a veterinarian.</p>
+    <h2>Exercise & Enrichment</h2>
+    <p>
+      Daily physical activity supports both physical and mental health.
+      Walks, play, and problem-solving toys help reduce stress and boredom.
+    </p>
   </section>
 
+  <section>
+    <h2>Health & Safety</h2>
+    <p>
+      Routine veterinary checkups, vaccinations, parasite prevention,
+      and dental care are essential parts of responsible dog ownership.
+    </p>
+  </section>
+
+  <!-- =========================
+       AI Chat Section
+       ========================= -->
   <section class="cta" id="ai-chat">
-    <h2>Ask Our Dog Care AI</h2>
-    <p>Coming soon: general guidance for dog care. Not a substitute for veterinary advice.</p>
+    <h2>Ask Petneeds.ai (Dogs)</h2>
+    <p>
+      Ask general dog care questions. Educational guidance only —
+      not a substitute for professional veterinary advice.
+    </p>
 
     <div class="chat-box">
       <div id="chat-log"></div>
+
       <div class="chat-controls">
-  <input
-    id="user-input"
-    type="text"
-    placeholder="Ask a cat care question..."
-  />
-
-  <button onclick="askAI()">Ask</button>
-  <button onclick="startVoice()" title="Speak">🎤</button>
-  <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-</div>
-
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask a dog care question..."
+        />
+        <button onclick="askAI()">Ask</button>
+        <button onclick="startVoice()">🎤 Speak</button>
+        <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+      </div>
     </div>
   </section>
+
 </main>
 
+<!-- =========================
+     Footer
+     ========================= -->
 <footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
+  <p>© 2026 Petneeds.ai</p>
+
+  <section class="disclaimer">
+    <h2>Important Veterinary Disclaimer</h2>
+    <p>
+      The information provided on Petneeds.ai is for educational and informational
+      purposes only and is not intended as a substitute for professional veterinary
+      advice, diagnosis, or treatment.
+    </p>
+    <p>
+      Always seek the advice of a licensed veterinarian with any questions regarding
+      your pet’s health. Never disregard professional veterinary advice because of
+      information found on this website.
+    </p>
+  </section>
 </footer>
 
-<script>
-async function askAI() {
-  const input = document.getElementById("user-input");
-  const chat = document.getElementById("chat-log");
-  const question = input.value.trim();
-  if (!question) return;
-
-  chat.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
-  input.value = "";
-
-  try {
-    const response = await fetch(`/api/ask?q=${encodeURIComponent(question)}`);
-    const data = await response.json();
-    chat.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.answer}</p>`;
-    chat.scrollTop = chat.scrollHeight;
-  } catch {
-    chat.innerHTML += `<p><em>AI service unavailable.</em></p>`;
+<!-- =========================
+     Structured Data
+     ========================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Dog Care Guide",
+  "description": "Educational dog care content provided by Petneeds.ai.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Petneeds.ai"
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Dog Owners"
   }
 }
 </script>
 
+<!-- =========================
+     AI Script
+     ========================= -->
+<script src="ask.js"></script>
+
 </body>
 </html>
+
