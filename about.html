@@ -1,32 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About | Petneeds.ai</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Petneeds.ai</title>
+  <meta name="description" content="Learn about Petneeds.ai, our mission, and our commitment to educational pet care guidance." />
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<section class="trust">
-  <div class="container">
-    <h1>About Petneeds.ai</h1>
-
-    <p>
-      Petneeds.ai was created to help pet owners make better decisions
-      through understanding — not guesswork.
-    </p>
-
-    <p>
-      We combine education, data-informed insights, and future smart
-      products designed to support healthier pets.
-    </p>
-
-    <p>
-      Products are in development. Education comes first.
-    </p>
+<!-- =========================
+     Navigation
+     ========================= -->
+<nav class="nav">
+  <div class="nav-container">
+    <a href="index.html" class="logo">Petneeds.ai</a>
+    <div class="nav-links">
+      <a href="dogs.html">Dogs</a>
+      <a href="cats.html">Cats</a>
+      <a href="other-pets.html">Other Pets</a>
+      <a href="about.html">About</a>
+    </div>
   </div>
-</section>
+</nav>
+
+<!-- =========================
+     Hero
+     ========================= -->
+<header class="hero">
+  <span class="badge">Educational Pet Guidance</span>
+  <h1>About Petneeds.ai</h1>
+  <p>
+    Our mission is to provide clear, safe, and educational guidance for pet owners.
+    We cover dogs, cats, birds, reptiles, fish, and small mammals.
+  </p>
+</header>
+
+<!-- =========================
+     Main Content
+     ========================= -->
+<main class="main">
+
+  <section>
+    <h2>Our Mission</h2>
+    <p>
+      Petneeds.ai is dedicated to helping pet owners make informed decisions
+      about their pets' welfare. All content is educational and not a substitute
+      for professional veterinary care.
+    </p>
+  </section>
+
+  <section>
+    <h2>What We Provide</h2>
+    <ul>
+      <li>Species-specific care guidance</li>
+      <li>Nutrition, enrichment, and behavioral advice</li>
+      <li>AI-assisted Q&A for general pet questions</li>
+      <li>Resources for safe and responsible pet ownership</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Our Approach</h2>
+    <p>
+      We combine research-based information with easy-to-understand explanations.
+      Petneeds.ai is focused purely on educational guidance — no product sales,
+      no affiliate links, and no commercial promotion.
+    </p>
+  </section>
+
+  <section class="cta">
+    <h2>Ask Petneeds.ai</h2>
+    <p>Use our AI to ask general pet care questions. This tool is educational only and not veterinary advice.</p>
+
+    <div class="chat-box">
+      <div id="chat-log"></div>
+
+      <div class="chat-controls">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask a general pet care question..."
+        />
+        <button onclick="askAI()">Ask</button>
+        <button onclick="startVoice()">🎤 Speak</button>
+        <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================
+     Footer
+     ========================= -->
+<footer class="footer">
+  <p>© 2026 Petneeds.ai · Educational content only.</p>
+
+  <section class="disclaimer">
+    <h2>Important Veterinary Disclaimer</h2>
+    <p>
+      All guidance on this site is educational. Always consult a licensed
+      veterinarian for questions regarding your pet's health, behavior, or treatment.
+    </p>
+  </section>
+</footer>
+
+<!-- =========================
+     Structured Data
+     ========================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Petneeds.ai",
+  "description": "Educational pet care guidance and mission of Petneeds.ai.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Petneeds.ai"
+  },
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Pet Owners"
+  }
+}
+</script>
+
+<!-- =========================
+     AI Script
+     ========================= -->
+<script src="ask.js"></script>
 
 </body>
 </html>
