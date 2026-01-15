@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat Care Guide | Petneeds.ai</title>
-  <meta name="description" content="Educational guidance for cats including nutrition, health, behavior, and safety." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Trusted cat care guidance including nutrition, behavior, health, and safety.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
-    <a class="logo" href="index.html">Petneeds.ai</a>
+    <a href="index.html" class="logo">Petneeds.ai</a>
     <div class="nav-links">
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
@@ -22,143 +23,59 @@
   </div>
 </nav>
 
+<!-- Hero Section -->
 <header class="hero">
+  <span class="badge">Expert-Guided Cat Care</span>
   <h1>Cat Care Essentials</h1>
   <p>Nutrition, behavior, health, and enrichment for every stage of your cat’s life.</p>
-  <img src="https://images.unsplash.com/photo-1604079625647-8d374d8c9943?auto=format&fit=crop&w=1200&q=80" alt="Cat lying on a sofa" style="width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-top:15px;">
+  <img src="images/cat-hero.jpg" alt="Playful cat" style="max-width:100%; border-radius:12px; margin-top:15px;">
 </header>
 
 <main class="main">
 
+<!-- Nutrition -->
 <section>
   <h2>Feeding & Nutrition</h2>
-  <img src="https://images.unsplash.com/photo-1592194996308-0d47b0a2bc2e?auto=format&fit=crop&w=600&q=80" alt="Cat eating from bowl" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:10px;">
-  <p>Provide high-protein diets with essential nutrients like taurine. Feed according to age, weight, and activity level.</p>
+  <p>Cats require a high-protein diet with taurine to maintain heart and eye health. Offer fresh water daily.</p>
+  <img src="images/cat-food.jpg" alt="Cat eating food" style="max-width:100%; border-radius:8px;">
 </section>
 
+<!-- Behavior & Enrichment -->
 <section>
   <h2>Behavior & Enrichment</h2>
-  <img src="https://images.unsplash.com/photo-1592194996308-8f5c2eb9e7e1?auto=format&fit=crop&w=600&q=80" alt="Cat playing with toy" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:10px;">
-  <p>Interactive play, scratching posts, and climbing spaces help reduce stress and prevent boredom.</p>
+  <p>Scratching posts, climbing spaces, and interactive play reduce stress and boredom for indoor and outdoor cats.</p>
+  <img src="images/cat-play.jpg" alt="Cat playing with toy" style="max-width:100%; border-radius:8px;">
 </section>
 
+<!-- Health & Safety -->
 <section>
   <h2>Health & Safety</h2>
-  <img src="https://images.unsplash.com/photo-1583337130417-3702b26b03ea?auto=format&fit=crop&w=600&q=80" alt="Cat at veterinary clinic" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:10px;">
-  <p>Regular vet visits, vaccinations, parasite prevention, and dental care are crucial for your cat’s wellbeing.</p>
+  <p>Regular vet visits, parasite prevention, and dental care are essential. Provide a safe environment for indoor cats.</p>
+  <img src="images/cat-vet.jpg" alt="Cat at the vet" style="max-width:100%; border-radius:8px;">
 </section>
 
-<section class="cta" id="ai-chat">
-  <h2>Ask Petneeds.ai About Cats</h2>
-  <p>Get general guidance. Not a substitute for veterinary advice.</p>
+<!-- AI Chat -->
+<section class="cta">
+  <h2>Ask Petneeds.ai (Cats)</h2>
+  <p>Get general cat care guidance. Not a substitute for veterinary advice.</p>
 
   <div class="chat-box">
     <div id="chat-log"></div>
-    <input type="text" id="user-input" placeholder="Ask a cat care question..." />
+    <input type="text" id="user-input" placeholder="Ask a cat care question...">
     <button onclick="askAI()">Ask</button>
+    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
   </div>
 </section>
 
 </main>
 
+<!-- Footer -->
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
 
+<!-- AI Chat Script -->
 <script src="ask.js"></script>
-</body>
-</html>
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cat Care Guidance | Petneeds.ai</title>
-  <meta name="description" content="Responsible cat care guidance including nutrition, behavior, health, and enrichment." />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-<nav class="nav">
-  <div class="nav-container">
-    <a class="logo" href="index.html">Petneeds.ai</a>
-    <div class="nav-links">
-      <a href="dogs.html">Dogs</a>
-      <a href="cats.html">Cats</a>
-      <a href="other-pets.html">Other Pets</a>
-      <a href="products.html">Resources</a>
-      <a href="about.html">About</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero">
-  <h1>Cat Care Essentials</h1>
-  <p>Responsible guidance for cat health, behavior, nutrition, and enrichment.</p>
-</header>
-
-<main class="main">
-  <section>
-    <h2>Feeding & Nutrition</h2>
-    <p>High-protein diets and essential nutrients to support cat health at all life stages.</p>
-  </section>
-
-  <section>
-    <h2>Behavior & Enrichment</h2>
-    <p>Scratching, climbing, and interactive play to reduce stress and encourage natural behaviors.</p>
-  </section>
-
-  <section>
-    <h2>Health & Wellness</h2>
-    <p>Regular checkups, vaccinations, and preventive care to keep cats happy and healthy.</p>
-  </section>
-
-  <section class="cta" id="ai-chat">
-    <h2>Ask Our Cat Care AI</h2>
-    <p>Coming soon: general guidance for cat care. Not a substitute for veterinary advice.</p>
-
-    <div class="chat-box">
-      <div id="chat-log"></div>
-      <div class="chat-controls">
-  <input
-    id="user-input"
-    type="text"
-    placeholder="Ask a cat care question..."
-  />
-
-  <button onclick="askAI()">Ask</button>
-  <button onclick="startVoice()" title="Speak">🎤</button>
-  <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-</div>
-
-    </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
-</footer>
-
-<script>
-async function askAI() {
-  const input = document.getElementById("user-input");
-  const chat = document.getElementById("chat-log");
-  const question = input.value.trim();
-  if (!question) return;
-
-  chat.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
-  input.value = "";
-
-  try {
-    const response = await fetch(`/api/ask?q=${encodeURIComponent(question)}`);
-    const data = await response.json();
-    chat.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.answer}</p>`;
-    chat.scrollTop = chat.scrollHeight;
-  } catch {
-    chat.innerHTML += `<p><em>AI service unavailable.</em></p>`;
-  }
-}
-</script>
 
 </body>
 </html>
