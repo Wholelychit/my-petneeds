@@ -44,6 +44,32 @@
     </div>
   </div>
 </section>
+<script>
+async function askAI() {
+  const input = document.getElementById("user-input");
+  const chat = document.getElementById("chat-log");
+  const question = input.value.trim();
+  if (!question) return;
+
+  chat.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
+  input.value = "";
+
+  try {
+    const response = await fetch("/api/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: question })
+    });
+
+    const data = await response.json();
+    chat.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.reply}</p>`;
+    chat.scrollTop = chat.scrollHeight;
+
+  } catch {
+    chat.innerHTML += `<p><em>AI service unavailable.</em></p>`;
+  }
+}
+</script>
 
 </body>
 </html>
