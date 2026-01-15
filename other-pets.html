@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Other Pet Care | Petneeds.ai</title>
-  <meta name="description" content="Educational guidance for birds, fish, reptiles, rabbits, and small mammals." />
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Educational guidance for birds, fish, reptiles, rabbits, and small mammals.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
-    <a class="logo" href="index.html">Petneeds.ai</a>
+    <a href="index.html" class="logo">Petneeds.ai</a>
     <div class="nav-links">
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
@@ -22,120 +23,58 @@
   </div>
 </nav>
 
+<!-- Hero Section -->
 <header class="hero">
   <h1>Care for Birds, Fish, Reptiles & Small Mammals</h1>
   <p>Educational overviews of basic needs and responsible pet care.</p>
-  <img src="https://images.unsplash.com/photo-1592194996308-0d47b0a2bc2e?auto=format&fit=crop&w=1200&q=80" alt="Assorted small pets including rabbit and bird" style="width:100%; max-height:400px; object-fit:cover; border-radius:8px; margin-top:15px;">
+  <img src="images/other-pets-hero.jpg" alt="Birds, fish, reptiles, and small mammals" style="max-width:100%; border-radius:12px; margin-top:15px;">
 </header>
 
 <main class="main">
 
+<!-- Habitats -->
 <section>
   <h2>Habitats & Housing</h2>
-  <img src="https://images.unsplash.com/photo-1604079625647-8d374d8c9943?auto=format&fit=crop&w=600&q=80" alt="Birdcage and small pet habitat" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:10px;">
-  <p>Ensure proper housing, temperature, ventilation, and safety for birds, fish, reptiles, and small mammals.</p>
+  <p>Learn about proper housing, temperature, and safety for birds, fish, reptiles, rabbits, and small mammals.</p>
+  <img src="images/pet-habitat.jpg" alt="Pet habitats" style="max-width:100%; border-radius:8px;">
 </section>
 
+<!-- Nutrition -->
 <section>
   <h2>Nutrition & Feeding</h2>
-  <img src="https://images.unsplash.com/photo-1592194996308-8f5c2eb9e7e1?auto=format&fit=crop&w=600&q=80" alt="Feeding small mammals" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:10px;">
-  <p>Provide species-appropriate diets, including portion sizes, safe foods, and supplements if needed.</p>
+  <p>Understand diet requirements for each species, including portion sizes and safe foods.</p>
+  <img src="images/pet-food.jpg" alt="Pet feeding" style="max-width:100%; border-radius:8px;">
 </section>
 
+<!-- Enrichment -->
 <section>
   <h2>Enrichment & Wellness</h2>
-  <img src="https://images.unsplash.com/photo-1583337130417-3702b26b03ea?auto=format&fit=crop&w=600&q=80" alt="Pet rabbit playing with toy" style="width:100%; max-width:600px; border-radius:8px; margin-bottom:10px;">
-  <p>Provide toys, climbing areas, and activities to keep pets mentally and physically healthy.</p>
+  <p>Toys, climbing areas, and activity items keep pets mentally and physically healthy.</p>
+  <img src="images/pet-enrichment.jpg" alt="Pet enrichment" style="max-width:100%; border-radius:8px;">
 </section>
 
-<section class="cta" id="ai-chat">
-  <h2>Ask Petneeds.ai About Other Pets</h2>
-  <p>Get general guidance for small and exotic pets. Not a substitute for veterinary care.</p>
+<!-- AI Chat -->
+<section class="cta">
+  <h2>Ask Petneeds.ai (Other Pets)</h2>
+  <p>Coming soon: general guidance for small and exotic pets. Not a substitute for veterinary care.</p>
 
   <div class="chat-box">
-    <div id="chat-log"></d
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Other Pet Care | Petneeds.ai</title>
-  <meta name="description" content="Educational guidance for birds, fish, reptiles, rabbits, and small mammals." />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-<nav class="nav">
-  <div class="nav-container">
-    <a class="logo" href="index.html">Petneeds.ai</a>
-    <div class="nav-links">
-      <a href="dogs.html">Dogs</a>
-      <a href="cats.html">Cats</a>
-      <a href="other-pets.html">Other Pets</a>
-      <a href="products.html">Resources</a>
-      <a href="about.html">About</a>
-    </div>
+    <div id="chat-log"></div>
+    <input type="text" id="user-input" placeholder="Ask a question...">
+    <button onclick="askAI()">Ask</button>
+    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
   </div>
-</nav>
+</section>
 
-<header class="hero">
-  <h1>Care for Birds, Fish, Reptiles & Small Mammals</h1>
-  <p>Educational overviews of basic needs and responsible pet care.</p>
-</header>
-
-<main class="main">
-  <section>
-    <h2>Habitats & Housing</h2>
-    <p>Learn about proper housing, temperature, and safety for birds, fish, reptiles, and small mammals.</p>
-  </section>
-
-  <section>
-    <h2>Nutrition & Feeding</h2>
-    <p>Understand diet requirements for each species, including portion sizes and safe foods.</p>
-  </section>
-
-  <section>
-    <h2>Enrichment & Wellness</h2>
-    <p>Toys, climbing areas, and activity items to keep pets mentally and physically healthy.</p>
-  </section>
-
-  <section class="cta" id="ai-chat">
-    <h2>Ask Our AI for Educational Guidance</h2>
-    <p>Coming soon: general guidance for small and exotic pets. Not a substitute for veterinary care.</p>
-
-    <div class="chat-box">
-      <div id="chat-log"></div>
-      <input type="text" id="user-input" placeholder="Ask a question..." />
-      <button onclick="askAI()">Ask</button>
-    </div>
-  </section>
 </main>
 
+<!-- Footer -->
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
 
-<script>
-async function askAI() {
-  const input = document.getElementById("user-input");
-  const chat = document.getElementById("chat-log");
-  const question = input.value.trim();
-  if (!question) return;
-
-  chat.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
-  input.value = "";
-
-  try {
-    const response = await fetch(`/api/ask?q=${encodeURIComponent(question)}`);
-    const data = await response.json();
-    chat.innerHTML += `<p><strong>Petneeds.ai:</strong> ${data.answer}</p>`;
-    chat.scrollTop = chat.scrollHeight;
-  } catch {
-    chat.innerHTML += `<p><em>AI service unavailable.</em></p>`;
-  }
-}
-</script>
+<!-- AI Chat Script -->
+<script src="ask.js"></script>
 
 </body>
 </html>
-
