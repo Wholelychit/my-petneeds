@@ -3,119 +3,101 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Petneeds.ai – Educational Pet Care Guidance</title>
-  <meta name="description" content="Petneeds.ai provides educational guidance for dogs, cats, birds, reptiles, fish, and small mammals. Learn about nutrition, behavior, and wellness." />
-
+  <title>Petneeds.ai - Educational Pet Care Guides</title>
+  <meta name="description" content="Petneeds.ai provides educational pet care guidance for dogs, cats, birds, fish, reptiles, and small mammals." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- =========================
-     Navigation
-     ========================= -->
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">Petneeds.ai</a>
+    <a class="logo" href="index.html">Petneeds.ai</a>
     <div class="nav-links">
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
       <a href="other-pets.html">Other Pets</a>
-      <a href="about.html">About</a>
       <a href="products.html">Resources</a>
+      <a href="about.html">About</a>
     </div>
   </div>
 </nav>
 
-<!-- =========================
-     Hero Section
-     ========================= -->
+<!-- Hero Section -->
 <header class="hero">
-  <span class="badge">Trusted Educational Guidance</span>
-  <h1>Petneeds.ai – Learn to Care for Your Pets</h1>
-  <p>
-    Clear, safe, and educational guidance for dogs, cats, birds, reptiles, fish, and small mammals. No commercial links, no product promotion — purely educational.
-  </p>
+  <span class="badge">Expert-Guided Pet Care</span>
+  <h1>Welcome to Petneeds.ai</h1>
+  <p>Trusted educational guides for dogs, cats, birds, fish, reptiles, and small mammals.</p>
+  <img src="images/hero-pets.jpg" alt="Happy pets" style="max-width:100%; border-radius:12px; margin-top:15px;">
 </header>
 
-<!-- =========================
-     Main Content
-     ========================= -->
 <main class="main">
 
-  <section>
-    <h2>For Dog Owners</h2>
-    <p>
-      Explore tips for nutrition, training, behavior, and overall wellness for dogs of all breeds and ages.
-    </p>
-    <a href="dogs.html">Learn More &rarr;</a>
-  </section>
-
-  <section>
-    <h2>For Cat Owners</h2>
-    <p>
-      Learn about feline nutrition, enrichment, health care, and behavior management for happy, healthy cats.
-    </p>
-    <a href="cats.html">Learn More &rarr;</a>
-  </section>
-
-  <section>
-    <h2>For Other Pets</h2>
-    <p>
-      Birds, reptiles, fish, rabbits, and small mammals all have unique care needs. Discover habitat, nutrition, and enrichment guidance.
-    </p>
-    <a href="other-pets.html">Learn More &rarr;</a>
-  </section>
-
-  <section class="cta" id="ai-chat">
-    <h2>Ask Petneeds.ai</h2>
-    <p>Get general educational guidance about pet care. Not a substitute for veterinary advice.</p>
-
-    <div class="chat-box">
-      <div id="chat-log"></div>
-
-      <div class="chat-controls">
-        <input type="text" id="user-input" placeholder="Ask a pet care question..." />
-        <button onclick="askAI()">Ask</button>
-        <button onclick="startVoice()">🎤 Speak</button>
-        <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-      </div>
+<!-- Quick Links -->
+<section>
+  <h2>Explore Pet Categories</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <h3>Dogs</h3>
+      <img src="images/dogs.jpg" alt="Dogs" style="width:100%; border-radius:8px;">
+      <a href="dogs.html">Learn More</a>
     </div>
-  </section>
+    <div class="product-card">
+      <h3>Cats</h3>
+      <img src="images/cats.jpg" alt="Cats" style="width:100%; border-radius:8px;">
+      <a href="cats.html">Learn More</a>
+    </div>
+    <div class="product-card">
+      <h3>Other Pets</h3>
+      <img src="images/other-pets.jpg" alt="Other Pets" style="width:100%; border-radius:8px;">
+      <a href="other-pets.html">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Resources -->
+<section>
+  <h2>Featured Resources</h2>
+  <p>Educational content covering nutrition, toys, grooming, and safe pet care practices.</p>
+  <div class="product-grid">
+    <div class="product-card">
+      <h3>Nutrition Guides</h3>
+      <img src="images/nutrition.jpg" alt="Pet food" style="width:100%; border-radius:8px;">
+      <a href="products.html#nutrition">Explore</a>
+    </div>
+    <div class="product-card">
+      <h3>Toys & Enrichment</h3>
+      <img src="images/toys.jpg" alt="Pet toys" style="width:100%; border-radius:8px;">
+      <a href="products.html#toys">Explore</a>
+    </div>
+    <div class="product-card">
+      <h3>Grooming & Health</h3>
+      <img src="images/grooming.jpg" alt="Pet grooming" style="width:100%; border-radius:8px;">
+      <a href="products.html#grooming">Explore</a>
+    </div>
+  </div>
+</section>
+
+<!-- AI Chat Section -->
+<section class="cta">
+  <h2>Ask Petneeds.ai</h2>
+  <p>Get general pet care guidance from our AI assistant. Educational purposes only, not a substitute for veterinary advice.</p>
+
+  <div class="chat-box">
+    <div id="chat-log"></div>
+    <input type="text" id="user-input" placeholder="Ask a question...">
+    <button onclick="askAI()">Ask</button>
+    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+  </div>
+</section>
 
 </main>
 
-<!-- =========================
-     Footer
-     ========================= -->
+<!-- Footer -->
 <footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only.</p>
-
-  <section class="disclaimer">
-    <h2>Important Veterinary Disclaimer</h2>
-    <p>
-      All content is educational. Always consult a licensed veterinarian for questions about your pet’s health, behavior, or treatment.
-    </p>
-  </section>
+  <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
 
-<!-- =========================
-     Structured Data
-     ========================= -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Petneeds.ai",
-  "url": "https://petneeds.ai",
-  "description": "Educational pet care guidance for dogs, cats, birds, reptiles, fish, and small mammals."
-}
-</script>
-
-<!-- =========================
-     AI Script
-     ========================= -->
 <script src="ask.js"></script>
-
 </body>
 </html>
