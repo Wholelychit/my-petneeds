@@ -4,12 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cat Care Guide | Petneeds.ai</title>
-  <meta name="description" content="Trusted cat care guidance including nutrition, behavior, health, and safety.">
+  <meta name="description" content="Educational cat care guidance including nutrition, behavior, health, and enrichment.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
     <a href="index.html" class="logo">Petneeds.ai</a>
@@ -23,58 +22,45 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
 <header class="hero">
-  <span class="badge">Expert-Guided Cat Care</span>
+  <img src="images/cats.jpg" alt="Happy cats" style="max-width:100%; border-radius:10px; margin-bottom:20px;">
   <h1>Cat Care Essentials</h1>
-  <p>Nutrition, behavior, health, and enrichment for every stage of your cat’s life.</p>
-  <img src="images/cat-hero.jpg" alt="Playful cat" style="max-width:100%; border-radius:12px; margin-top:15px;">
+  <p>Nutrition, behavior, health, and enrichment for cats of all ages.</p>
 </header>
 
 <main class="main">
+  <section>
+    <h2>Nutrition</h2>
+    <p>Cats need high-protein diets with taurine for heart and eye health. Avoid harmful foods like chocolate, onions, and garlic.</p>
+  </section>
 
-<!-- Nutrition -->
-<section>
-  <h2>Feeding & Nutrition</h2>
-  <p>Cats require a high-protein diet with taurine to maintain heart and eye health. Offer fresh water daily.</p>
-  <img src="images/cat-food.jpg" alt="Cat eating food" style="max-width:100%; border-radius:8px;">
-</section>
+  <section>
+    <h2>Behavior & Enrichment</h2>
+    <p>Provide scratching posts, climbing structures, and interactive toys to keep cats stimulated and stress-free.</p>
+  </section>
 
-<!-- Behavior & Enrichment -->
-<section>
-  <h2>Behavior & Enrichment</h2>
-  <p>Scratching posts, climbing spaces, and interactive play reduce stress and boredom for indoor and outdoor cats.</p>
-  <img src="images/cat-play.jpg" alt="Cat playing with toy" style="max-width:100%; border-radius:8px;">
-</section>
+  <section>
+    <h2>Health & Safety</h2>
+    <p>Regular vet visits, parasite prevention, and dental care are essential for healthy cats.</p>
+  </section>
 
-<!-- Health & Safety -->
-<section>
-  <h2>Health & Safety</h2>
-  <p>Regular vet visits, parasite prevention, and dental care are essential. Provide a safe environment for indoor cats.</p>
-  <img src="images/cat-vet.jpg" alt="Cat at the vet" style="max-width:100%; border-radius:8px;">
-</section>
-
-<!-- AI Chat -->
-<section class="cta">
-  <h2>Ask Petneeds.ai (Cats)</h2>
-  <p>Get general cat care guidance. Not a substitute for veterinary advice.</p>
-
-  <div class="chat-box">
-    <div id="chat-log"></div>
-    <input type="text" id="user-input" placeholder="Ask a cat care question...">
-    <button onclick="askAI()">Ask</button>
-    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-  </div>
-</section>
-
+  <section class="cta" id="ai-chat">
+    <h2>Ask Petneeds.ai (Cats)</h2>
+    <p>Get general cat care guidance. Not a substitute for veterinary advice.</p>
+    <div class="chat-box">
+      <div id="chat-log"></div>
+      <input type="text" id="user-input" placeholder="Ask a cat care question..." />
+      <button onclick="askAI()">Ask</button>
+      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+      <button onclick="startVoice()">🎤 Speak</button>
+    </div>
+  </section>
 </main>
 
-<!-- Footer -->
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
 
-<!-- AI Chat Script -->
 <script src="ask.js"></script>
 
 </body>
