@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Other Pet Care | Petneeds.ai</title>
+  <title>Other Pets | Petneeds.ai</title>
   <meta name="description" content="Educational guidance for birds, fish, reptiles, rabbits, and small mammals.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">Petneeds.ai</a>
+    <a class="logo" href="index.html">Petneeds.ai</a>
     <div class="nav-links">
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
@@ -23,58 +22,47 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
 <header class="hero">
+  <img src="images/other-pets.jpg" alt="Birds, reptiles, rabbits, fish" style="max-width:100%; border-radius:10px; margin-bottom:20px;">
   <h1>Care for Birds, Fish, Reptiles & Small Mammals</h1>
   <p>Educational overviews of basic needs and responsible pet care.</p>
-  <img src="images/other-pets-hero.jpg" alt="Birds, fish, reptiles, and small mammals" style="max-width:100%; border-radius:12px; margin-top:15px;">
 </header>
 
 <main class="main">
+  <section>
+    <h2>Habitats & Housing</h2>
+    <p>Proper enclosures, temperature, lighting, and safety precautions for each species.</p>
+  </section>
 
-<!-- Habitats -->
-<section>
-  <h2>Habitats & Housing</h2>
-  <p>Learn about proper housing, temperature, and safety for birds, fish, reptiles, rabbits, and small mammals.</p>
-  <img src="images/pet-habitat.jpg" alt="Pet habitats" style="max-width:100%; border-radius:8px;">
-</section>
+  <section>
+    <h2>Nutrition & Feeding</h2>
+    <p>Safe diets and feeding practices for birds, fish, reptiles, and small mammals.</p>
+  </section>
 
-<!-- Nutrition -->
-<section>
-  <h2>Nutrition & Feeding</h2>
-  <p>Understand diet requirements for each species, including portion sizes and safe foods.</p>
-  <img src="images/pet-food.jpg" alt="Pet feeding" style="max-width:100%; border-radius:8px;">
-</section>
+  <section>
+    <h2>Enrichment & Wellness</h2>
+    <p>Toys, climbing areas, and exercise opportunities to keep pets healthy and stimulated.</p>
+  </section>
 
-<!-- Enrichment -->
-<section>
-  <h2>Enrichment & Wellness</h2>
-  <p>Toys, climbing areas, and activity items keep pets mentally and physically healthy.</p>
-  <img src="images/pet-enrichment.jpg" alt="Pet enrichment" style="max-width:100%; border-radius:8px;">
-</section>
-
-<!-- AI Chat -->
-<section class="cta">
-  <h2>Ask Petneeds.ai (Other Pets)</h2>
-  <p>Coming soon: general guidance for small and exotic pets. Not a substitute for veterinary care.</p>
-
-  <div class="chat-box">
-    <div id="chat-log"></div>
-    <input type="text" id="user-input" placeholder="Ask a question...">
-    <button onclick="askAI()">Ask</button>
-    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-  </div>
-</section>
-
+  <section class="cta" id="ai-chat">
+    <h2>Ask Petneeds.ai</h2>
+    <p>Get general guidance about other pets. Not a substitute for veterinary care.</p>
+    <div class="chat-box">
+      <div id="chat-log"></div>
+      <input type="text" id="user-input" placeholder="Ask a question..." />
+      <button onclick="askAI()">Ask</button>
+      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+      <button onclick="startVoice()">🎤 Speak</button>
+    </div>
+  </section>
 </main>
 
-<!-- Footer -->
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
 
-<!-- AI Chat Script -->
 <script src="ask.js"></script>
 
 </body>
 </html>
+
