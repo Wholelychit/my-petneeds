@@ -280,11 +280,12 @@
   <footer>
     <p>© 2025 Petneeds.ai. All rights reserved.</p>
   </footer>
-
+ <script src="ask.js"></script>
 </body>
 </html>
 
   
+
 
 
 
