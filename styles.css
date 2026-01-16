@@ -191,5 +191,24 @@ footer a {
   color: #9ca3af;
   text-decoration: none;
 }
+/* Hero section */
+.hero {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  color: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.hero p {
+  max-width: 720px;
+  margin: 15px auto 0;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
 
 
