@@ -63,11 +63,6 @@
   <img src="images/dog-vet.jpg" alt="Dog at the vet" style="max-width:100%; border-radius:8px;">
 </section>
 
-<!-- AI Chat -->
-<section class="cta">
-  <h2>Ask Petneeds.ai (Dogs)</h2>
-  <p>Get general dog care guidance. Not a substitute for veterinary advice.</p>
-
   <div class="chat-box">
     <div id="chat-log"></div>
     <input type="text" id="user-input" placeholder="Ask a dog care question...">
@@ -77,6 +72,18 @@
 </section>
 
 </main>
+<section class="cta" id="ai-chat">
+  <h2>Ask Petneeds.ai</h2>
+  <p>General guidance only — not medical advice.</p>
+
+  <div class="chat-box">
+    <div id="chat-log"></div>
+    <input id="user-input" placeholder="Ask a dog care question..." />
+    <button onclick="askAI()">Ask</button>
+  </div>
+</section>
+
+<script src="ask.js"></script>
 
 <!-- Footer -->
 <footer class="footer">
