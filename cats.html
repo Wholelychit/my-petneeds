@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +8,10 @@
   <meta name="description" content="Educational cat care guidance including nutrition, behavior, health, and enrichment.">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
     <a href="index.html" class="logo">Petneeds.ai</a>
@@ -17,63 +19,73 @@
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
       <a href="other-pets.html">Other Pets</a>
-      <a href="products.html">Resources</a>
+      <a href="resources.html">Resources</a>
       <a href="about.html">About</a>
     </div>
   </div>
 </nav>
 
-<header class="hero" style="background-image:url('images/hero-cat.jpg')">
-  <h1>Cat Care Essentials</h1>
-  <p>Healthy living, enrichment, and behavior support.</p>
+<!-- Hero -->
+<header class="hero" style="background-image: url('images/hero-cat.jpg');">
+  <div class="hero-overlay">
+    <h1>Cat Care Essentials</h1>
+    <p>Healthy living, enrichment, and behavior support.</p>
+  </div>
 </header>
 
-
 <main class="main">
-  <section>
-    <h2>Nutrition</h2>
-    <p>Cats need high-protein diets with taurine for heart and eye health. Avoid harmful foods like chocolate, onions, and garlic.</p>
-  </secti<section class="info-box image-box">
+
+<!-- Intro Box -->
+<section class="info-box image-box">
   <img src="images/cat-care.jpg" alt="Cat care guidance">
   <div>
     <h2>Healthy Cat Living</h2>
     <p>Nutrition, enrichment, and stress reduction.</p>
   </div>
 </section>
-on>
 
-  <section>
-    <h2>Behavior & Enrichment</h2>
-    <p>Provide scratching posts, climbing structures, and interactive toys to keep cats stimulated and stress-free.</p>
-  </section>
+<!-- Nutrition -->
+<section>
+  <h2>Nutrition</h2>
+  <p>
+    Cats require high-protein diets with taurine for heart and eye health.
+    Avoid toxic foods such as chocolate, onions, and garlic.
+  </p>
+</section>
 
-  <section>
-    <h2>Health & Safety</h2>
-    <p>Regular vet visits, parasite prevention, and dental care are essential for healthy cats.</p>
-  </section>
+<!-- Behavior -->
+<section>
+  <h2>Behavior & Enrichment</h2>
+  <p>
+    Scratching posts, climbing structures, and interactive toys help reduce
+    stress and destructive behaviors.
+  </p>
+</section>
 
-  <section class="cta" id="ai-chat">
-    <h2>Ask Petneeds.ai (Cats)</h2>
-    <p>Get general cat care guidance. Not a substitute for veterinary advice.</p>
-    <div class="chat-box">
-      <div id="chat-log"></div>
-      <input type="text" id="user-input" placeholder="Ask a cat care question..." />
-      <button onclick="askAI()">Ask</button>
-      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-      <button onclick="startVoice()">🎤 Speak</button>
-    </div>
-  </section>
+<!-- Health -->
+<section>
+  <h2>Health & Safety</h2>
+  <p>
+    Regular vet visits, parasite prevention, dental care, and safe indoor
+    environments are essential.
+  </p>
+</section>
+
 </main>
-<section class="cta" id="ai-chat">
-  <h2>Ask Petneeds.ai</h2>
-  <p>General guidance only — not medical advice.</p>
 
- 
+<!-- AI Chat -->
+<section class="cta" id="ai-chat">
+  <h2>Ask Petneeds.ai (Cats)</h2>
+  <p>General guidance only — not a substitute for veterinary advice.</p>
+
+  <div class="chat-box">
+    <div id="chat-log"></div>
+    <input id="user-input" placeholder="Ask a cat care question..." />
+    <button onclick="askAI()">Ask</button>
   </div>
 </section>
 
-<script src="ask.js"></script>
-
+<!-- Footer -->
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
@@ -82,3 +94,4 @@ on>
 
 </body>
 </html>
+
