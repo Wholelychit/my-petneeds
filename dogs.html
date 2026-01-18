@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
 
 <head>
   <meta charset="UTF-8">
@@ -9,6 +8,7 @@
   <meta name="description" content="Trusted dog care guidance including nutrition, behavior, health, and safety.">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <!-- Navigation -->
@@ -19,59 +19,55 @@
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
       <a href="other-pets.html">Other Pets</a>
-      <a href="products.html">Resources</a>
+      <a href="resources.html">Resources</a>
       <a href="about.html">About</a>
     </div>
   </div>
 </nav>
 
 <!-- Hero Section -->
-<header class="hero" style="background-image:url('images/hero-dog.jpg')">
-  <h1>Dog Care Essentials</h1>
-  <p>Clear, responsible guidance for dogs of all ages.</p>
+<header class="hero" style="background-image: url('images/hero-dog.jpg');">
+  <div class="hero-overlay">
+    <h1>Dog Care Essentials</h1>
+    <p>Clear, responsible guidance for dogs of all ages.</p>
+  </div>
 </header>
-
 
 <main class="main">
 
-<!-- Nutrition -->
-<section>
-  <section class="info-box image-box">
-  <img src="images/dog-care.jpg" alt="Dog care information">
+<!-- Daily Care -->
+<section class="info-box image-box">
+  <img src="images/dog-care.jpg" alt="Daily dog care">
   <div>
     <h2>Daily Dog Care</h2>
     <p>Feeding, exercise, training, and enrichment.</p>
   </div>
 </section>
 
+<!-- Nutrition -->
+<section>
   <h2>Feeding & Nutrition</h2>
-  <p>Provide a balanced diet with high-quality protein, proper vitamins, and minerals for your dog's health.</p>
-  <img src="images/dog-food.jpg" alt="Dog food in a bowl" style="max-width:100%; border-radius:8px;">
+  <p>Provide a balanced diet with high-quality protein, proper vitamins, and minerals.</p>
+  <img src="images/dog-food.jpg" alt="Dog food in a bowl" class="responsive-img">
 </section>
 
-<!-- Behavior & Enrichment -->
+<!-- Behavior -->
 <section>
   <h2>Behavior & Enrichment</h2>
-  <p>Regular play, walks, and mental stimulation keep dogs happy and prevent destructive behaviors.</p>
-  <img src="images/dog-play.jpg" alt="Dog playing with toy" style="max-width:100%; border-radius:8px;">
+  <p>Play, walks, and mental stimulation prevent boredom and destructive behaviors.</p>
+  <img src="images/dog-play.jpg" alt="Dog playing with toy" class="responsive-img">
 </section>
 
-<!-- Health & Safety -->
+<!-- Health -->
 <section>
   <h2>Health & Safety</h2>
-  <p>Routine vet visits, vaccinations, parasite prevention, and safe exercise environments are essential.</p>
-  <img src="images/dog-vet.jpg" alt="Dog at the vet" style="max-width:100%; border-radius:8px;">
-</section>
-
-  <div class="chat-box">
-    <div id="chat-log"></div>
-    <input type="text" id="user-input" placeholder="Ask a dog care question...">
-    <button onclick="askAI()">Ask</button>
-    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-  </div>
+  <p>Vet visits, vaccinations, parasite prevention, and safe environments are essential.</p>
+  <img src="images/dog-vet.jpg" alt="Dog at the vet" class="responsive-img">
 </section>
 
 </main>
+
+<!-- AI Chat -->
 <section class="cta" id="ai-chat">
   <h2>Ask Petneeds.ai</h2>
   <p>General guidance only — not medical advice.</p>
@@ -83,14 +79,11 @@
   </div>
 </section>
 
-<script src="ask.js"></script>
-
 <!-- Footer -->
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
 </footer>
 
-<!-- AI Chat Script -->
 <script src="ask.js"></script>
 
 </body>
