@@ -1,61 +1,51 @@
 import OpenAI from "openai";
 
-export async function onRequest(context) {
-  const { request, env } = context;
+export async function onRequestGet({ request, env }) {
+  if (!env.OPENAI_API_KEY) {
+    return new Response(
+      JSON.stringify({ answer: "Server configuration error." }),
+      { status: 500 }
+    );
+  }
 
   const url = new URL(request.url);
   const question = url.searchParams.get("q");
 
   if (!question) {
-    return json({ answer: "Please enter a question." });
+    return new Response(
+      JSON.stringify({ answer: "Please enter a question." }),
+      { headers: { "Content-Type": "application/json" } }
+    );
   }
-
-  if (!env.OPENAI_API_KEY) {
-    return json({ answer: "Server configuration error." }, 500);
-  }
-
-  const client = new OpenAI({
-    apiKey: env.OPENAI_API_KEY
-  });
 
   try {
-    const response = await client.responses.create({
-      model: "gpt-4.1-mini",
-      input: [
-        {
-          role: "system",
-          content:
-            "You are Petneeds.ai. Provide general pet care guidance only. Do not diagnose, prescribe medication, or replace a veterinarian. Always include a gentle disclaimer."
-        },
-        {
-          role: "user",
-          content: question
-        }
-      ]
+    const client = new OpenAI({
+      apiKey: env.OPENAI_API_KEY
     });
 
-    const answer =
-      response.output?.[0]?.content?.[0]?.text ??
-      "Sorry — no response from AI.";
+    const response = await client.responses.create({
+      model: "gpt-5-nano",
+      input: `
+You are Petneeds.ai.
+Provide educational pet care guidance only.
+Do NOT diagnose or prescribe.
+Always recommend a licensed veterinarian for medical concerns.
 
-    return json({ answer });
+User question: ${question}
+`
+    });
+
+    return new Response(
+      JSON.stringify({
+        answer: response.output_text || "No response available."
+      }),
+      { headers: { "Content-Type": "application/json" } }
+    );
 
   } catch (err) {
-    console.error(err);
-    return json(
-      { answer: "AI service temporarily unavailable." },
-      500
+    return new Response(
+      JSON.stringify({ answer: "AI service error." }),
+      { status: 500 }
     );
   }
 }
-
-function json(data, status = 200) {
-  return new Response(JSON.stringify(data), {
-    status,
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*"
-    }
-  });
-}
-
