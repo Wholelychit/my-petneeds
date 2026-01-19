@@ -7,7 +7,7 @@
   <title>Cat Care Guidance | Petneeds.ai</title>
   <meta name="description" content="Educational cat care guidance covering nutrition, behavior, enrichment, and wellness." />
 
-  <!-- ROOT-ABSOLUTE CSS -->
+  <!-- Global Styles -->
   <link rel="stylesheet" href="/styles.css" />
 </head>
 
@@ -34,16 +34,16 @@
     background-image: url('/images/hero-cat.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
   "
 >
   <h1>Cat Care Guidance</h1>
   <p>Safe, practical information for cats of all ages.</p>
 </header>
 
-<!-- Main -->
+<!-- Main Content -->
 <main class="main">
 
+  <!-- Info Section -->
   <section class="info-box image-box">
     <img
       src="/images/cat-care.jpg"
@@ -59,18 +59,23 @@
     </div>
   </section>
 
+  <!-- AI Chat -->
   <section class="cta">
     <h2>Ask About Cats</h2>
     <p>Educational guidance only. Not veterinary advice.</p>
 
     <div class="chat-box">
       <div id="chat-log"></div>
-      <input
-        type="text"
-        id="user-input"
-        placeholder="Ask a cat care question…"
-      >
-      <button onclick="askAI()">Ask</button>
+
+      <div class="chat-controls">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask a cat care question…"
+        >
+        <button onclick="askAI()">Ask</button>
+        <button onclick="startVoice()">🎤</button>
+      </div>
     </div>
   </section>
 
@@ -81,7 +86,7 @@
   <p>© 2026 Petneeds.ai · Educational content only · Not veterinary advice</p>
 </footer>
 
-<!-- AI Chat -->
+<!-- AI Chat Script -->
 <script src="/ask.js"></script>
 
 </body>
