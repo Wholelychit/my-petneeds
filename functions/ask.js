@@ -1,44 +1,61 @@
-export async function onRequestPost({ request, env }) {
+import OpenAI from "openai";
+
+export async function onRequest(context) {
+  const { request, env } = context;
+
+  const url = new URL(request.url);
+  const question = url.searchParams.get("q");
+
+  if (!question) {
+    return json({ answer: "Please enter a question." });
+  }
+
+  if (!env.OPENAI_API_KEY) {
+    return json({ answer: "Server configuration error." }, 500);
+  }
+
+  const client = new OpenAI({
+    apiKey: env.OPENAI_API_KEY
+  });
+
   try {
-    const { message } = await request.json();
-
-    if (!message) {
-      return new Response(JSON.stringify({ error: "Missing message" }), {
-        status: 400,
-        headers: { "Content-Type": "application/json" }
-      });
-    }
-
-    const aiResponse = await fetch("https://api.openai.com/v1/responses", {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${env.OPENAI_API_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({
-        model: "gpt-5-nano",
-        input: `
-You are Petneeds.ai.
-Provide responsible, educational pet care guidance.
-Do NOT give medical diagnoses or treatment.
-Always recommend a licensed veterinarian for medical concerns.
-
-User question: ${message}
-`
-      })
+    const response = await client.responses.create({
+      model: "gpt-4.1-mini",
+      input: [
+        {
+          role: "system",
+          content:
+            "You are Petneeds.ai. Provide general pet care guidance only. Do not diagnose, prescribe medication, or replace a veterinarian. Always include a gentle disclaimer."
+        },
+        {
+          role: "user",
+          content: question
+        }
+      ]
     });
 
-    const data = await aiResponse.json();
+    const answer =
+      response.output?.[0]?.content?.[0]?.text ??
+      "Sorry — no response from AI.";
 
-    return new Response(
-      JSON.stringify({ reply: data.output_text || "No response available." }),
-      { headers: { "Content-Type": "application/json" } }
-    );
+    return json({ answer });
 
   } catch (err) {
-    return new Response(
-      JSON.stringify({ error: "Server error" }),
-      { status: 500 }
+    console.error(err);
+    return json(
+      { answer: "AI service temporarily unavailable." },
+      500
     );
   }
 }
+
+function json(data, status = 200) {
+  return new Response(JSON.stringify(data), {
+    status,
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*"
+    }
+  });
+}
+
