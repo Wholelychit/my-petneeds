@@ -3,7 +3,7 @@ import OpenAI from "openai";
 export async function onRequest(context) {
   const { request, env } = context;
 
-  // Read question from URL
+  // Get question from query string
   const url = new URL(request.url);
   const question = url.searchParams.get("q");
 
@@ -14,7 +14,7 @@ export async function onRequest(context) {
     );
   }
 
-  // Initialize OpenAI securely with Cloudflare secret
+  // Initialize OpenAI with Cloudflare environment secret
   const openai = new OpenAI({
     apiKey: env.OPENAI_API_KEY
   });
@@ -24,7 +24,7 @@ export async function onRequest(context) {
       model: "gpt-5-nano",
       input: `
 You are Petneeds.ai, a responsible pet care assistant.
-Provide general cat care information only.
+Provide general pet care guidance only.
 Do NOT diagnose, prescribe medication, or replace a veterinarian.
 Always include a gentle disclaimer.
 
@@ -33,14 +33,15 @@ ${question}
       `
     });
 
-    return new Response(
-      JSON.stringify({
-        answer: response.output_text
-      }),
-      { headers: { "Content-Type": "application/json" } }
-    );
+    // For GPT-5-mini style responses, use `response.output_text`
+    const answer = response.output_text || "Sorry, no response from AI.";
 
-  } catch (error) {
+    return new Response(JSON.stringify({ answer }), {
+      headers: { "Content-Type": "application/json" }
+    });
+
+  } catch (err) {
+    console.error("OpenAI error:", err);
     return new Response(
       JSON.stringify({
         answer: "Sorry — the AI service is temporarily unavailable."
@@ -49,3 +50,4 @@ ${question}
     );
   }
 }
+
