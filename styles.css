@@ -28,12 +28,16 @@ body {
 }
 
 .hero {
+  background-image: url("images/hero-dog.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   color: #fff;
   padding: 70px 20px;
   text-align: center;
+  min-height: 70vh;
 }
+
 
 .badge {
   display: inline-block;
