@@ -7,7 +7,8 @@
   <title>Petneeds.ai | Trusted Pet Care Guidance</title>
   <meta name="description" content="Educational pet care guidance for dogs, cats, and other pets." />
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- ROOT-ABSOLUTE CSS -->
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
@@ -15,13 +16,13 @@
 <!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
-    <a class="logo" href="index.html">Petneeds.ai 🐾</a>
+    <a class="logo" href="/index.html">Petneeds.ai 🐾</a>
     <div class="nav-links">
-      <a href="dogs.html">Dogs</a>
-      <a href="cats.html">Cats</a>
-      <a href="other-pets.html">Other Pets</a>
-      <a href="products.html">Resources</a>
-      <a href="about.html">About</a>
+      <a href="/dogs.html">Dogs</a>
+      <a href="/cats.html">Cats</a>
+      <a href="/other-pets.html">Other Pets</a>
+      <a href="/products.html">Resources</a>
+      <a href="/about.html">About</a>
     </div>
   </div>
 </nav>
@@ -30,7 +31,7 @@
 <header
   class="hero"
   style="
-    background-image: url('images/hero-dog.jpg');
+    background-image: url('/images/hero-dog.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,7 +48,7 @@
   <!-- Intro -->
   <section class="info-box image-box">
     <img
-      src="images/dog-care.jpg"
+      src="/images/dog-care.jpg"
       alt="Dog care guidance"
       loading="lazy"
     >
@@ -61,36 +62,24 @@
   <section class="product-grid">
 
     <div class="product-card">
-      <img
-        src="images/dog-care.jpg"
-        alt="Dog care"
-        loading="lazy"
-      >
+      <img src="/images/dog-care.jpg" alt="Dog care" loading="lazy">
       <h3>Dogs</h3>
       <p>Behavior, nutrition, training, and wellness guidance.</p>
-      <a href="dogs.html">Learn More</a>
+      <a href="/dogs.html">Learn More</a>
     </div>
 
     <div class="product-card">
-      <img
-        src="images/cat-care.jpg"
-        alt="Cat care"
-        loading="lazy"
-      >
+      <img src="/images/cat-care.jpg" alt="Cat care" loading="lazy">
       <h3>Cats</h3>
       <p>Feeding, enrichment, and healthy home environments.</p>
-      <a href="cats.html">Learn More</a>
+      <a href="/cats.html">Learn More</a>
     </div>
 
     <div class="product-card">
-      <img
-        src="images/other-pets.jpg"
-        alt="Other pets"
-        loading="lazy"
-      >
+      <img src="/images/other-pets.jpg" alt="Other pets" loading="lazy">
       <h3>Other Pets</h3>
       <p>Birds, fish, reptiles, rabbits, and small mammals.</p>
-      <a href="other-pets.html">Learn More</a>
+      <a href="/other-pets.html">Learn More</a>
     </div>
 
   </section>
@@ -101,23 +90,4 @@
     <p>General educational guidance only. Not veterinary advice.</p>
 
     <div class="chat-box">
-      <div id="chat-log"></div>
-      <input
-        type="text"
-        id="user-input"
-        placeholder="Ask a pet care question…"
-      >
-      <button onclick="askAI()">Ask</button>
-    </div>
-  </section>
-
-</main>
-
-<!-- Footer -->
-<footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only</p>
-</footer>
-
-<script src="ask.js"></script>
-</body>
-</html>
+      <div id="chat
