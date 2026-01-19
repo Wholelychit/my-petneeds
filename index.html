@@ -12,6 +12,7 @@
 
 <body>
 
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
     <a class="logo" href="index.html">Petneeds.ai 🐾</a>
@@ -25,60 +26,94 @@
   </div>
 </nav>
 
-<header class="hero" style="background-image:url('images/hero-dog.jpg')">
+<!-- Hero -->
+<header
+  class="hero"
+  style="
+    background-image: url('images/hero-dog.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+>
   <span class="badge">Trusted Pet Care</span>
   <h1>Smarter Pet Care Starts Here</h1>
   <p>Clear, responsible guidance for everyday pet owners.</p>
 </header>
 
+<!-- Main -->
 <main class="main">
 
-<section class="info-box image-box">
-  <img src="images/dog-care.jpg" alt="Dog care guidance">
-  <div>
-    <h2>Everyday Pet Care</h2>
-    <p>Nutrition, enrichment, safety, and wellness — explained simply.</p>
-  </div>
-</section>
+  <!-- Intro -->
+  <section class="info-box image-box">
+    <img
+      src="images/dog-care.jpg"
+      alt="Dog care guidance"
+      loading="lazy"
+    >
+    <div>
+      <h2>Everyday Pet Care</h2>
+      <p>Nutrition, enrichment, safety, and wellness — explained simply.</p>
+    </div>
+  </section>
 
-<section class="product-grid">
+  <!-- Categories -->
+  <section class="product-grid">
 
-  <div class="product-card">
-    <img src="images/dog-care.jpg" alt="Dog care">
-    <h3>Dogs</h3>
-    <p>Behavior, nutrition, training, and wellness guidance.</p>
-    <a href="dogs.html">Learn More</a>
-  </div>
+    <div class="product-card">
+      <img
+        src="images/dog-care.jpg"
+        alt="Dog care"
+        loading="lazy"
+      >
+      <h3>Dogs</h3>
+      <p>Behavior, nutrition, training, and wellness guidance.</p>
+      <a href="dogs.html">Learn More</a>
+    </div>
 
-  <div class="product-card">
-    <img src="images/cat-care.jpg" alt="Cat care">
-    <h3>Cats</h3>
-    <p>Feeding, enrichment, and healthy home environments.</p>
-    <a href="cats.html">Learn More</a>
-  </div>
+    <div class="product-card">
+      <img
+        src="images/cat-care.jpg"
+        alt="Cat care"
+        loading="lazy"
+      >
+      <h3>Cats</h3>
+      <p>Feeding, enrichment, and healthy home environments.</p>
+      <a href="cats.html">Learn More</a>
+    </div>
 
-  <div class="product-card">
-    <img src="images/other-pets.jpg" alt="Other pets">
-    <h3>Other Pets</h3>
-    <p>Birds, fish, reptiles, rabbits, and small mammals.</p>
-    <a href="other-pets.html">Learn More</a>
-  </div>
+    <div class="product-card">
+      <img
+        src="images/other-pets.jpg"
+        alt="Other pets"
+        loading="lazy"
+      >
+      <h3>Other Pets</h3>
+      <p>Birds, fish, reptiles, rabbits, and small mammals.</p>
+      <a href="other-pets.html">Learn More</a>
+    </div>
 
-</section>
+  </section>
 
-<section class="cta" id="ai-chat">
-  <h2>Ask Petneeds.ai</h2>
-  <p>General educational guidance only. Not veterinary advice.</p>
+  <!-- AI Chat -->
+  <section class="cta" id="ai-chat">
+    <h2>Ask Petneeds.ai</h2>
+    <p>General educational guidance only. Not veterinary advice.</p>
 
-  <div class="chat-box">
-    <div id="chat-log"></div>
-    <input type="text" id="user-input" placeholder="Ask a pet care question…" />
-    <button onclick="askAI()">Ask</button>
-  </div>
-</section>
+    <div class="chat-box">
+      <div id="chat-log"></div>
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Ask a pet care question…"
+      >
+      <button onclick="askAI()">Ask</button>
+    </div>
+  </section>
 
 </main>
 
+<!-- Footer -->
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only</p>
 </footer>
