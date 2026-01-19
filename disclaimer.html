@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Disclaimer | Petneeds.ai</title>
-  <meta name="description" content="Petneeds.ai disclaimer. Informational content only, not a substitute for professional veterinary advice." />
+  <meta
+    name="description"
+    content="Petneeds.ai disclaimer. Informational content only, not a substitute for professional veterinary advice."
+  />
+
+  <!-- Global Styles -->
   <link rel="stylesheet" href="/styles.css" />
 </head>
+
 <body>
 
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
     <a class="logo" href="/index.html">Petneeds.ai 🐾</a>
@@ -22,34 +30,61 @@
   </div>
 </nav>
 
-<header class="hero" style="background-image:url('/images/logo-paw.svg');">
+<!-- Hero -->
+<header
+  class="hero"
+  style="
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  "
+>
   <h1>Disclaimer</h1>
   <p>Educational content only. Not a substitute for professional veterinary advice.</p>
 </header>
 
+<!-- Main -->
 <main class="main">
+
   <section class="info-box">
     <h2>Important Notice</h2>
-    <p>Petneeds.ai provides general guidance and information. Always consult a licensed veterinarian for medical concerns or emergencies.</p>
+    <p>
+      Petneeds.ai provides general educational information about pet care.
+      This content is not intended to diagnose, treat, cure, or prevent any disease.
+    </p>
+    <p>
+      Always consult a licensed veterinarian or qualified professional for
+      medical concerns, emergencies, or specific treatment decisions.
+    </p>
   </section>
 
-  <section class="cta" id="ai-chat">
-    <h2>Ask Petneeds.ai About Disclaimers</h2>
-    <p>Educational guidance only. Not veterinary advice.</p>
+  <!-- AI Chat -->
+  <section class="cta">
+    <h2>Ask Petneeds.ai</h2>
+    <p>General educational guidance only. Not veterinary advice.</p>
+
     <div class="chat-box">
       <div id="chat-log"></div>
-      <input type="text" id="user-input" placeholder="Ask about disclaimer…" />
-      <button onclick="askAI()">Ask</button>
-      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-      <button onclick="startVoice()">🎤 Speak</button>
+
+      <div class="chat-controls">
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Ask about our disclaimer…"
+        >
+        <button onclick="askAI()">Ask</button>
+        <button onclick="startVoice()">🎤</button>
+      </div>
     </div>
   </section>
+
 </main>
 
+<!-- Footer -->
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only</p>
 </footer>
 
+<!-- AI Chat Script -->
 <script src="/ask.js"></script>
+
 </body>
 </html>
