@@ -9,35 +9,25 @@ body {
   background: #111827;
   padding: 12px 20px;
 }
-
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .nav a {
   color: #d1d5db;
   text-decoration: none;
   margin-right: 16px;
 }
-
-.logo {
-  color: #fff;
-  font-weight: 700;
-}
+.logo { color: #fff; font-weight: 700; }
 
 .hero {
-  background-image: url("images/hero-dog.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   color: #fff;
   padding: 70px 20px;
   text-align: center;
-  min-height: 70vh;
 }
-
 
 .badge {
   display: inline-block;
@@ -47,11 +37,7 @@ body {
   margin-bottom: 12px;
 }
 
-.main {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
+.main { max-width: 1000px; margin: 40px auto; padding: 0 20px; }
 
 .info-box {
   background: #fff;
@@ -60,39 +46,14 @@ body {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   margin-bottom: 30px;
 }
+.image-box { display: flex; gap: 20px; align-items: center; }
+.image-box img { width: 220px; border-radius: 8px; }
 
-.image-box {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
+.product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap: 25px; }
+.product-card img { width: 100%; border-radius: 8px; }
 
-.image-box img {
-  width: 220px;
-  border-radius: 8px;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  gap: 25px;
-}
-
-.product-card img {
-  width: 100%;
-  border-radius: 8px;
-}
-
-.chat-box {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-}
-
-#chat-log {
-  min-height: 80px;
-  margin-bottom: 10px;
-}
+.chat-box { background: #fff; padding: 15px; border-radius: 8px; }
+#chat-log { min-height: 80px; margin-bottom: 10px; overflow-y: auto; max-height: 300px; }
 
 .footer {
   background: #111827;
@@ -101,4 +62,3 @@ body {
   padding: 25px;
   margin-top: 40px;
 }
-
