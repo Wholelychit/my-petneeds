@@ -1,7 +1,19 @@
-hero-dog.jpg
-hero-cat.jpg
-dog-care.jpg
-cat-care.jpg
-other-pets.jpg
-logo-paw.svg  
+my-petneeds/
+├─ index.html
+├─ about.html
+├─ dogs.html
+├─ cats.html
+├─ other-pets.html
+├─ products.html
+├─ privacy.html
+├─ disclaimer.html
+├─ styles.css
+├─ ask.js          <-- AI chat script
+├─ images/
+│   ├─ hero-dog.jpg
+│   ├─ hero-cat.jpg
+│   ├─ dog-care.jpg
+│   ├─ cat-care.jpg
+│   ├─ other-pets.jpg
+│   ├─ logo-paw.svg
 
