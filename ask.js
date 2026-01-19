@@ -10,13 +10,16 @@ function startVoice() {
     alert("Voice input not supported in this browser.");
     return;
   }
+
   const recognition = new webkitSpeechRecognition();
   recognition.lang = "en-US";
   recognition.interimResults = false;
+
   recognition.onresult = (event) => {
     const transcript = event.results[0][0].transcript;
     askAI(transcript);
   };
+
   recognition.start();
 }
 
@@ -58,9 +61,11 @@ async function askAI(textFromVoice = null) {
 
     chatLog.innerHTML += `<p><strong>Petneeds.ai:</strong> ${answer}</p>`;
     chatLog.scrollTop = chatLog.scrollHeight;
+
     speak(answer);
   } catch (err) {
     chatLog.innerHTML += `<p><em>AI service unavailable.</em></p>`;
     chatLog.scrollTop = chatLog.scrollHeight;
+    console.error(err);
   }
 }
