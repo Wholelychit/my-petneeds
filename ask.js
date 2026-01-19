@@ -74,9 +74,10 @@ async function askAI(textFromVoice = null) {
   }
 }
 
-
+/* =========================
+   Cloudflare Worker: API Endpoint
+   ========================= */
 export async function onRequestPost({ request, env }) {
-  
   try {
     const body = await request.json();
     const message = body.message;
@@ -117,4 +118,3 @@ User question: ${message}`
     );
   }
 }
-
