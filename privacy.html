@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
- 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy | Petneeds.ai</title>
   <meta name="description" content="Privacy Policy for Petneeds.ai explaining how we collect, use, and protect user information." />
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<main style="max-width:900px; margin:40px auto; padding:20px;">
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-container">
+    <a class="logo" href="/index.html">Petneeds.ai 🐾</a>
+    <div class="nav-links">
+      <a href="/dogs.html">Dogs</a>
+      <a href="/cats.html">Cats</a>
+      <a href="/other-pets.html">Other Pets</a>
+      <a href="/products.html">Resources</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main" style="max-width:900px; margin:40px auto; padding:20px;">
   <h1>Privacy Policy</h1>
   <p><strong>Last updated:</strong> 2026</p>
 
@@ -37,8 +50,29 @@
   <h2>Your Consent</h2>
   <p>By using this site, you consent to this Privacy Policy.</p>
 
-  <p><a href="index.html">← Back to Home</a></p>
+  <p><a href="/index.html">← Back to Home</a></p>
 </main>
 
+<!-- AI Chat Section -->
+<section class="cta" id="ai-chat">
+  <h2>Ask Petneeds.ai About Privacy</h2>
+  <p>Educational guidance only. Not legal advice.</p>
+  <div class="chat-box">
+    <div id="chat-log"></div>
+    <div class="chat-controls">
+      <input type="text" id="user-input" placeholder="Ask about privacy…" />
+      <button onclick="askAI()">Ask</button>
+      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+      <button onclick="startVoice()">🎤 Speak</button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 Petneeds.ai · Educational content only · Not legal advice</p>
+</footer>
+
+<script src="/ask.js"></script>
 </body>
 </html>
