@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Petneeds.ai</title>
+  <meta name="description" content="Learn about Petneeds.ai, our mission, and commitment to safe pet care education." />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -21,42 +22,36 @@
   </div>
 </nav>
 
-<header class="hero" style="background-image:url('/images/hero-cat.jpg')">
+<header class="hero" style="background-image:url('/images/hero-cat.jpg');">
   <h1>About Petneeds.ai</h1>
   <p>Our mission is to provide safe, educational guidance for responsible pet care.</p>
 </header>
 
 <main class="main">
-<section class="info-box">
-  <h2>Our Vision</h2>
-  <p>We aim to be a trusted, non-commercial source of pet care education for pet owners worldwide.</p>
-</section>
+  <section class="info-box">
+    <h2>Our Vision</h2>
+    <p>We aim to be a trusted, non-commercial source of pet care education worldwide.</p>
+  </section>
+  <section class="info-box">
+    <h2>Our Approach</h2>
+    <p>All information is research-backed, non-commercial, and emphasizes safety and well-being.</p>
+  </section>
 
-<section class="info-box">
-  <h2>Our Approach</h2>
-  <p>All information is research-backed, non-commercial, and emphasizes safety and well-being.</p>
-</section>
-
-<section class="info-box">
-  <h2>Contact</h2>
-  <p>Email us: <a href="mailto:info@petneeds.ai">info@petneeds.ai</a></p>
-</section>
-
-<section class="cta" id="ai-chat">
-  <h2>Ask Petneeds.ai</h2>
-  <p>General educational guidance only. Not veterinary advice.</p>
-  <div class="chat-box">
-    <div id="chat-log"></div>
-    <input type="text" id="user-input" placeholder="Ask a pet care question…" />
-    <button onclick="askAI()">Ask</button>
-    <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-    <button onclick="startVoice()">🎤 Speak</button>
-  </div>
-</section>
+  <section class="cta" id="ai-chat">
+    <h2>Ask Petneeds.ai About Us</h2>
+    <p>Educational guidance only. Not veterinary advice.</p>
+    <div class="chat-box">
+      <div id="chat-log"></div>
+      <input type="text" id="user-input" placeholder="Ask about Petneeds.ai…" />
+      <button onclick="askAI()">Ask</button>
+      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+      <button onclick="startVoice()">🎤 Speak</button>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
+  <p>© 2026 Petneeds.ai · Educational content only · Not a substitute for veterinary advice</p>
 </footer>
 
 <script src="/ask.js"></script>
