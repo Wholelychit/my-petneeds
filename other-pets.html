@@ -3,16 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Other Pet Care Guidance | Petneeds.ai</title>
-  <meta name="description" content="Educational pet care guidance for birds, fish, reptiles, rabbits, and small mammals." />
-
+  <title>Other Pets Guidance | Petneeds.ai</title>
+  <meta name="description" content="Educational guidance for birds, fish, reptiles, rabbits, and small mammals." />
   <link rel="stylesheet" href="/styles.css" />
 </head>
-
 <body>
 
-<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
     <a class="logo" href="/index.html">Petneeds.ai 🐾</a>
@@ -26,58 +22,37 @@
   </div>
 </nav>
 
-<!-- Hero -->
-<header
-  class="hero"
-  style="
-    background-image: url('/images/other-pets.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  "
->
-  <h1>Other Pet Care Guidance</h1>
-  <p>Safe, practical information for a variety of pets beyond dogs and cats.</p>
+<header class="hero" style="background-image:url('/images/other-pets.jpg');">
+  <h1>Other Pets Guidance</h1>
+  <p>Care and wellness tips for small and exotic pets.</p>
 </header>
 
-<!-- Main -->
 <main class="main">
-
   <section class="info-box image-box">
-    <img
-      src="/images/other-pets.jpg"
-      alt="Other pets"
-      loading="lazy"
-    >
+    <img src="/images/other-pets.jpg" alt="Other pets guidance" loading="lazy" />
     <div>
       <h2>Small & Exotic Pets</h2>
-      <p>Guidance for birds, fish, reptiles, rabbits, and small mammals: feeding, habitat, enrichment, and general care.</p>
+      <p>Birds, fish, reptiles, rabbits, and small mammals — basic care and enrichment tips.</p>
     </div>
   </section>
 
-  <section class="cta">
-    <h2>Ask About Other Pets</h2>
+  <section class="cta" id="ai-chat">
+    <h2>Ask Petneeds.ai About Other Pets</h2>
     <p>Educational guidance only. Not veterinary advice.</p>
-
     <div class="chat-box">
       <div id="chat-log"></div>
-      <input
-        type="text"
-        id="user-input"
-        placeholder="Ask a question about your pet…"
-      >
+      <input type="text" id="user-input" placeholder="Ask about other pets…" />
       <button onclick="askAI()">Ask</button>
+      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+      <button onclick="startVoice()">🎤 Speak</button>
     </div>
   </section>
-
 </main>
 
-<!-- Footer -->
 <footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only · Not veterinary advice</p>
+  <p>© 2026 Petneeds.ai · Educational content only · Not a substitute for veterinary advice</p>
 </footer>
 
 <script src="/ask.js"></script>
-
 </body>
 </html>
