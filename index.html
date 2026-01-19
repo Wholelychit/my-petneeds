@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Petneeds.ai | Trusted Pet Care Guidance</title>
-  <meta name="description" content="Educational pet care guidance for dogs, cats, and other pets. Safe, expert-informed information." />
+  <meta name="description" content="Educational pet care guidance for dogs, cats, and other pets." />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
-    <a class="logo" href="index.html"><img src="images/logo-paw.svg" alt="Petneeds.ai Logo" class="logo-img"> Petneeds.ai</a>
+    <a class="logo" href="index.html">Petneeds.ai 🐾</a>
     <div class="nav-links">
       <a href="dogs.html">Dogs</a>
       <a href="cats.html">Cats</a>
@@ -24,73 +25,64 @@
   </div>
 </nav>
 
-<!-- Hero Section -->
-<header class="hero" style="background-image: url('images/hero-dog.jpg');">
+<header class="hero" style="background-image:url('images/hero-dog.jpg')">
   <span class="badge">Trusted Pet Care</span>
   <h1>Smarter Pet Care Starts Here</h1>
   <p>Clear, responsible guidance for everyday pet owners.</p>
 </header>
 
-<!-- Main Content -->
 <main class="main">
 
-  <!-- Featured Info -->
-  <section class="info-box image-box">
-    <img src="images/dog-care.jpg" alt="Dog care guidance">
-    <div>
-      <h2>Everyday Pet Care</h2>
-      <p>Nutrition, enrichment, safety, and wellness guidance for all pets.</p>
-    </div>
-  </section>
+<section class="info-box image-box">
+  <img src="images/dog-care.jpg" alt="Dog care guidance">
+  <div>
+    <h2>Everyday Pet Care</h2>
+    <p>Nutrition, enrichment, safety, and wellness — explained simply.</p>
+  </div>
+</section>
 
-  <!-- Featured Categories -->
-  <section class="product-grid">
-    <div class="product-card">
-      <img src="images/hero-dog.jpg" alt="Dogs" class="product-img">
-      <h3>Dogs</h3>
-      <p>Guidance on nutrition, behavior, training, and health care for your canine companions.</p>
-      <a href="dogs.html">Learn More</a>
-    </div>
+<section class="product-grid">
 
-    <div class="product-card">
-      <img src="images/hero-cat.jpg" alt="Cats" class="product-img">
-      <h3>Cats</h3>
-      <p>Safe advice on feeding, enrichment, behavior, and health for cats of all ages.</p>
-      <a href="cats.html">Learn More</a>
-    </div>
+  <div class="product-card">
+    <img src="images/dog-care.jpg" alt="Dog care">
+    <h3>Dogs</h3>
+    <p>Behavior, nutrition, training, and wellness guidance.</p>
+    <a href="dogs.html">Learn More</a>
+  </div>
 
-    <div class="product-card">
-      <img src="images/other-pets.jpg" alt="Other Pets" class="product-img">
-      <h3>Other Pets</h3>
-      <p>Information on birds, fish, reptiles, rabbits, and small mammals, including care and wellness tips.</p>
-      <a href="other-pets.html">Learn More</a>
-    </div>
-  </section>
+  <div class="product-card">
+    <img src="images/cat-care.jpg" alt="Cat care">
+    <h3>Cats</h3>
+    <p>Feeding, enrichment, and healthy home environments.</p>
+    <a href="cats.html">Learn More</a>
+  </div>
 
-  <!-- AI Chat Section -->
-  <section class="cta" id="ai-chat">
-    <h2>Ask Petneeds.ai</h2>
-    <p>Get general guidance about pet care. Not a substitute for veterinary advice.</p>
+  <div class="product-card">
+    <img src="images/other-pets.jpg" alt="Other pets">
+    <h3>Other Pets</h3>
+    <p>Birds, fish, reptiles, rabbits, and small mammals.</p>
+    <a href="other-pets.html">Learn More</a>
+  </div>
 
-    <div class="chat-box">
-      <div id="chat-log"></div>
-      <input type="text" id="user-input" placeholder="Ask a question..." />
-      <button onclick="askAI()">Ask</button>
-      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-      <button onclick="startVoice()">🎤 Speak</button>
-    </div>
-  </section>
+</section>
+
+<section class="cta" id="ai-chat">
+  <h2>Ask Petneeds.ai</h2>
+  <p>General educational guidance only. Not veterinary advice.</p>
+
+  <div class="chat-box">
+    <div id="chat-log"></div>
+    <input type="text" id="user-input" placeholder="Ask a pet care question…" />
+    <button onclick="askAI()">Ask</button>
+  </div>
+</section>
 
 </main>
 
-<!-- Footer -->
 <footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
+  <p>© 2026 Petneeds.ai · Educational content only</p>
 </footer>
-  
 
-<!-- AI Chat Script -->
 <script src="ask.js"></script>
-
 </body>
 </html>
