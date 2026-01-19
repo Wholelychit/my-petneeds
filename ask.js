@@ -62,3 +62,4 @@ async function askAI(textFromVoice = null) {
     chatLog.scrollTop = chatLog.scrollHeight;
   }
 }
+
