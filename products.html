@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pet Care Resources | Petneeds.ai</title>
+  <meta name="description" content="Educational content about pet care supplies and categories." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-container">
+    <a class="logo" href="/index.html">Petneeds.ai 🐾</a>
+    <div class="nav-links">
+      <a href="/dogs.html">Dogs</a>
+      <a href="/cats.html">Cats</a>
+      <a href="/other-pets.html">Other Pets</a>
+      <a href="/products.html">Resources</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="background-image:url('/images/logo-paw.svg');">
+  <h1>Pet Care Resources</h1>
+  <p>Educational guidance on pet products and categories.</p>
+</header>
+
+<main class="main">
+  <section class="info-box image-box">
+    <img src="/images/logo-paw.svg" alt="Resources" loading="lazy" />
+    <div>
+      <h2>Pet Supplies Guidance</h2>
+      <p>Learn about different product categories and safe pet care essentials.</p>
+    </div>
+  </section>
+
+  <section class="cta" id="ai-chat">
+    <h2>Ask Petneeds.ai About Resources</h2>
+    <p>Educational guidance only. Not veterinary advice.</p>
+    <div class="chat-box">
+      <div id="chat-log"></div>
+      <input type="text" id="user-input" placeholder="Ask about pet products…" />
+      <button onclick="askAI()">Ask</button>
+      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+      <button onclick="startVoice()">🎤 Speak</button>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© 2026 Petneeds.ai · Educational content only · Not a substitute for veterinary advice</p>
+</footer>
+
+<script src="/ask.js"></script>
+</body>
+</html>
 
