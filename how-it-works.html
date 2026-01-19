@@ -1,19 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
- 
 <head>
   <meta charset="UTF-8">
-  <title>How It Works | Petneeds.ai</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <title>How It Works | Petneeds.ai</title>
+  <meta name="description" content="Learn how Petneeds.ai provides safe, educational guidance for pet care.">
+  <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
-<section class="features">
-  <div class="container">
-    <h1>How Petneeds.ai Works</h1>
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-container">
+    <a class="logo" href="/index.html">Petneeds.ai 🐾</a>
+    <div class="nav-links">
+      <a href="/dogs.html">Dogs</a>
+      <a href="/cats.html">Cats</a>
+      <a href="/other-pets.html">Other Pets</a>
+      <a href="/products.html">Resources</a>
+      <a href="/about.html">About</a>
+    </div>
+  </div>
+</nav>
 
+<!-- Hero -->
+<header class="hero" style="background: linear-gradient(135deg, #2563eb, #1e3a8a);">
+  <h1>How Petneeds.ai Works</h1>
+  <p>Educational, safe guidance for everyday pet care.</p>
+</header>
+
+<!-- Main -->
+<main class="main">
+
+  <section class="info-box">
+    <h2>Step-by-Step</h2>
     <div class="card-grid">
       <div class="card">
         <h3>1. Learn</h3>
@@ -30,8 +50,28 @@
         <p>Use intelligent tools as they become available.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  <!-- AI Chat Section -->
+  <section class="cta">
+    <h2>Ask Petneeds.ai</h2>
+    <p>General educational guidance only. Not veterinary advice.</p>
+
+    <div class="chat-box">
+      <div id="chat-log"></div>
+      <input type="text" id="user-input" placeholder="Ask a question…">
+      <button onclick="askAI()">Ask</button>
+      <button onclick="startVoice()">🎤</button>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>© 2026 Petneeds.ai · Educational content only · Not veterinary advice</p>
+</footer>
+
+<script src="/ask.js"></script>
 </body>
 </html>
