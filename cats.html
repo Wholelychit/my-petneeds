@@ -1,97 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cat Care Guide | Petneeds.ai</title>
-  <meta name="description" content="Educational cat care guidance including nutrition, behavior, health, and enrichment.">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cat Care Guidance | Petneeds.ai</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
 
-<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
-    <a href="index.html" class="logo">Petneeds.ai</a>
-    <div class="nav-links">
-      <a href="dogs.html">Dogs</a>
-      <a href="cats.html">Cats</a>
-      <a href="other-pets.html">Other Pets</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
-    </div>
+    <a class="logo" href="index.html">Petneeds.ai 🐾</a>
   </div>
 </nav>
 
-<!-- Hero -->
-<header class="hero" style="background-image: url('images/hero-cat.jpg');">
-  <div class="hero-overlay">
-    <h1>Cat Care Essentials</h1>
-    <p>Healthy living, enrichment, and behavior support.</p>
-  </div>
+<header class="hero" style="background-image:url('images/hero-cat.jpg')">
+  <h1>Cat Care Guidance</h1>
+  <p>Safe, practical information for cats of all ages.</p>
 </header>
 
 <main class="main">
 
-<!-- Intro Box -->
 <section class="info-box image-box">
-  <img src="images/cat-care.jpg" alt="Cat care guidance">
+  <img src="images/cat-care.jpg" alt="Cat care">
   <div>
     <h2>Healthy Cat Living</h2>
-    <p>Nutrition, enrichment, and stress reduction.</p>
+    <p>Nutrition, litter habits, enrichment, and stress reduction.</p>
   </div>
 </section>
 
-<!-- Nutrition -->
-<section>
-  <h2>Nutrition</h2>
-  <p>
-    Cats require high-protein diets with taurine for heart and eye health.
-    Avoid toxic foods such as chocolate, onions, and garlic.
-  </p>
-</section>
-
-<!-- Behavior -->
-<section>
-  <h2>Behavior & Enrichment</h2>
-  <p>
-    Scratching posts, climbing structures, and interactive toys help reduce
-    stress and destructive behaviors.
-  </p>
-</section>
-
-<!-- Health -->
-<section>
-  <h2>Health & Safety</h2>
-  <p>
-    Regular vet visits, parasite prevention, dental care, and safe indoor
-    environments are essential.
-  </p>
-</section>
-
-</main>
-
-<!-- AI Chat -->
-<section class="cta" id="ai-chat">
-  <h2>Ask Petneeds.ai (Cats)</h2>
-  <p>General guidance only — not a substitute for veterinary advice.</p>
-
+<section class="cta">
+  <h2>Ask About Cats</h2>
   <div class="chat-box">
     <div id="chat-log"></div>
-    <input id="user-input" placeholder="Ask a cat care question..." />
+    <input type="text" id="user-input" placeholder="Ask a cat care question…" />
     <button onclick="askAI()">Ask</button>
   </div>
 </section>
 
-<!-- Footer -->
+</main>
+
 <footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
+  <p>Educational content only. Not veterinary advice.</p>
 </footer>
 
 <script src="ask.js"></script>
-
 </body>
 </html>
 
