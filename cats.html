@@ -3,49 +3,86 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Cat Care Guidance | Petneeds.ai</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Educational cat care guidance covering nutrition, behavior, enrichment, and wellness." />
+
+  <!-- ROOT-ABSOLUTE CSS -->
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 
 <body>
 
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
-    <a class="logo" href="index.html">Petneeds.ai 🐾</a>
+    <a class="logo" href="/index.html">Petneeds.ai 🐾</a>
+    <div class="nav-links">
+      <a href="/dogs.html">Dogs</a>
+      <a href="/cats.html">Cats</a>
+      <a href="/other-pets.html">Other Pets</a>
+      <a href="/products.html">Resources</a>
+      <a href="/about.html">About</a>
+    </div>
   </div>
 </nav>
 
-<header class="hero" style="background-image:url('images/hero-cat.jpg')">
+<!-- Hero -->
+<header
+  class="hero"
+  style="
+    background-image: url('/images/hero-cat.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+>
   <h1>Cat Care Guidance</h1>
   <p>Safe, practical information for cats of all ages.</p>
 </header>
 
+<!-- Main -->
 <main class="main">
 
-<section class="info-box image-box">
-  <img src="images/cat-care.jpg" alt="Cat care">
-  <div>
-    <h2>Healthy Cat Living</h2>
-    <p>Nutrition, litter habits, enrichment, and stress reduction.</p>
-  </div>
-</section>
+  <section class="info-box image-box">
+    <img
+      src="/images/cat-care.jpg"
+      alt="Cat care guidance"
+      loading="lazy"
+    >
+    <div>
+      <h2>Healthy Cat Living</h2>
+      <p>
+        Nutrition, litter habits, enrichment, stress reduction,
+        and creating a safe home environment.
+      </p>
+    </div>
+  </section>
 
-<section class="cta">
-  <h2>Ask About Cats</h2>
-  <div class="chat-box">
-    <div id="chat-log"></div>
-    <input type="text" id="user-input" placeholder="Ask a cat care question…" />
-    <button onclick="askAI()">Ask</button>
-  </div>
-</section>
+  <section class="cta">
+    <h2>Ask About Cats</h2>
+    <p>Educational guidance only. Not veterinary advice.</p>
+
+    <div class="chat-box">
+      <div id="chat-log"></div>
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Ask a cat care question…"
+      >
+      <button onclick="askAI()">Ask</button>
+    </div>
+  </section>
 
 </main>
 
+<!-- Footer -->
 <footer class="footer">
-  <p>Educational content only. Not veterinary advice.</p>
+  <p>© 2026 Petneeds.ai · Educational content only · Not veterinary advice</p>
 </footer>
 
-<script src="ask.js"></script>
+<!-- AI Chat -->
+<script src="/ask.js"></script>
+
 </body>
 </html>
-
