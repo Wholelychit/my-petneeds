@@ -1,70 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="styles.css">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Other Pets | Petneeds.ai</title>
-  <meta name="description" content="Educational guidance for birds, fish, reptiles, rabbits, and small mammals.">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Other Pet Care Guidance | Petneeds.ai</title>
+  <meta name="description" content="Educational pet care guidance for birds, fish, reptiles, rabbits, and small mammals." />
+
+  <link rel="stylesheet" href="/styles.css" />
 </head>
+
 <body>
 
+<!-- Navigation -->
 <nav class="nav">
   <div class="nav-container">
-    <a class="logo" href="index.html">Petneeds.ai</a>
+    <a class="logo" href="/index.html">Petneeds.ai 🐾</a>
     <div class="nav-links">
-      <a href="dogs.html">Dogs</a>
-      <a href="cats.html">Cats</a>
-      <a href="other-pets.html">Other Pets</a>
-      <a href="products.html">Resources</a>
-      <a href="about.html">About</a>
+      <a href="/dogs.html">Dogs</a>
+      <a href="/cats.html">Cats</a>
+      <a href="/other-pets.html">Other Pets</a>
+      <a href="/products.html">Resources</a>
+      <a href="/about.html">About</a>
     </div>
   </div>
 </nav>
 
-<header class="hero">
-  <img src="images/other-pets.jpg" alt="Birds, reptiles, rabbits, fish" style="max-width:100%; border-radius:10px; margin-bottom:20px;">
-  <h1>Care for Birds, Fish, Reptiles & Small Mammals</h1>
-  <p>Educational overviews of basic needs and responsible pet care.</p>
+<!-- Hero -->
+<header
+  class="hero"
+  style="
+    background-image: url('/images/other-pets.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  "
+>
+  <h1>Other Pet Care Guidance</h1>
+  <p>Safe, practical information for a variety of pets beyond dogs and cats.</p>
 </header>
 
+<!-- Main -->
 <main class="main">
-  <section>
-    <h2>Habitats & Housing</h2>
-    <p>Proper enclosures, temperature, lighting, and safety precautions for each species.</p>
-  </section>
 
-  <section>
-    <h2>Nutrition & Feeding</h2>
-    <p>Safe diets and feeding practices for birds, fish, reptiles, and small mammals.</p>
-  </section>
-
-  <section>
-    <h2>Enrichment & Wellness</h2>
-    <p>Toys, climbing areas, and exercise opportunities to keep pets healthy and stimulated.</p>
-  </section>
-
-  <section class="cta" id="ai-chat">
-    <h2>Ask Petneeds.ai</h2>
-    <p>Get general guidance about other pets. Not a substitute for veterinary care.</p>
-    <div class="chat-box">
-      <div id="chat-log"></div>
-      <input type="text" id="user-input" placeholder="Ask a question..." />
-      <button onclick="askAI()">Ask</button>
-      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-      <button onclick="startVoice()">🎤 Speak</button>
+  <section class="info-box image-box">
+    <img
+      src="/images/other-pets.jpg"
+      alt="Other pets"
+      loading="lazy"
+    >
+    <div>
+      <h2>Small & Exotic Pets</h2>
+      <p>Guidance for birds, fish, reptiles, rabbits, and small mammals: feeding, habitat, enrichment, and general care.</p>
     </div>
   </section>
+
+  <section class="cta">
+    <h2>Ask About Other Pets</h2>
+    <p>Educational guidance only. Not veterinary advice.</p>
+
+    <div class="chat-box">
+      <div id="chat-log"></div>
+      <input
+        type="text"
+        id="user-input"
+        placeholder="Ask a question about your pet…"
+      >
+      <button onclick="askAI()">Ask</button>
+    </div>
+  </section>
+
 </main>
 
+<!-- Footer -->
 <footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only. Not a substitute for veterinary advice.</p>
+  <p>© 2026 Petneeds.ai · Educational content only · Not veterinary advice</p>
 </footer>
 
-<script src="ask.js"></script>
+<script src="/ask.js"></script>
 
 </body>
 </html>
-
