@@ -1,95 +1,47 @@
-/* =========================
-   Petneeds.ai AI Chat Script
-   ========================= */
+import OpenAI from "openai";
 
-let voiceEnabled = true;
-let recognition;
-
-/* 🎤 Voice input */
-function startVoice() {
-  if (!("webkitSpeechRecognition" in window)) {
-    alert("Voice input not supported in this browser.");
-    return;
-  }
-
-  recognition = new webkitSpeechRecognition();
-  recognition.lang = "en-US";
-  recognition.interimResults = false;
-
-  recognition.onresult = (event) => {
-    const transcript = event.results[0][0].transcript;
-    document.getElementById("user-input").value = transcript;
-    askAI(transcript);
-  };
-
-  recognition.onerror = (event) => {
-    console.error("Voice recognition error:", event.error);
-  };
-
-  recognition.start();
-}
-
-/* Toggle voice button label */
-function toggleVoice() {
-  voiceEnabled = !voiceEnabled;
-  const btn = document.getElementById("voice-toggle");
-  btn.textContent = voiceEnabled ? "🔊 Voice On" : "🔇 Voice Off";
-}
-
-/* 📝 Ask AI */
-async function askAI(messageInput) {
-  const inputField = document.getElementById("user-input");
-  const chatLog = document.getElementById("chat-log");
-  const message = messageInput || inputField.value.trim();
-
-  if (!message) return;
-
-  // Append user message
-  const userMsg = document.createElement("div");
-  userMsg.textContent = `You: ${message}`;
-  userMsg.style.fontWeight = "bold";
-  chatLog.appendChild(userMsg);
-  chatLog.scrollTop = chatLog.scrollHeight;
-
-  inputField.value = "";
-
-  try {
-    const response = await fetch("/api/ask", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ message })
-    });
-
-    const data = await response.json();
-    const replyMsg = document.createElement("div");
-    replyMsg.textContent = `Petneeds.ai: ${data.reply}`;
-    chatLog.appendChild(replyMsg);
-    chatLog.scrollTop = chatLog.scrollHeight;
-
-    // Optional: speak reply
-    if (voiceEnabled && "speechSynthesis" in window) {
-      const utterance = new SpeechSynthesisUtterance(data.reply);
-      window.speechSynthesis.speak(utterance);
+export default {
+  async fetch(request, env) {
+    if (request.method !== "POST") {
+      return new Response("Method not allowed", { status: 405 });
     }
-  } catch (err) {
-    console.error(err);
-    const errorMsg = document.createElement("div");
-    errorMsg.textContent = "Petneeds.ai: Sorry, AI service is unavailable.";
-    chatLog.appendChild(errorMsg);
-  }
-}
 
-/* Optional: allow pressing Enter to submit */
-document.addEventListener("DOMContentLoaded", () => {
-  const inputField = document.getElementById("user-input");
-  if (inputField) {
-    inputField.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") {
-        askAI();
-        e.preventDefault();
+    try {
+      const { message } = await request.json();
+
+      if (!message) {
+        return new Response(
+          JSON.stringify({ reply: "Please enter a question." }),
+          { headers: { "Content-Type": "application/json" } }
+        );
       }
-    });
-  }
-});
 
-   
+      // Initialize OpenAI with environment variable
+      const openai = new OpenAI({ apiKey: env.OPENAI_API_KEY });
+
+      const response = await openai.responses.create({
+        model: "gpt-5-nano",
+        input: `
+You are Petneeds.ai, a responsible pet care assistant.
+Provide general pet care guidance only.
+Do NOT diagnose, prescribe medication, or replace a veterinarian.
+Always include a gentle disclaimer.
+
+User question:
+${message}
+        `
+      });
+
+      return new Response(
+        JSON.stringify({ reply: response.output_text || "No response from AI." }),
+        { headers: { "Content-Type": "application/json" } }
+      );
+    } catch (err) {
+      console.error("Worker /api/ask error:", err);
+      return new Response(
+        JSON.stringify({ reply: "AI service temporarily unavailable." }),
+        { headers: { "Content-Type": "application/json" } }
+      );
+    }
+  }
+};
