@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Dog Care | Petneeds.ai</title>
-<meta name="description" content="Educational dog care guidance." />
-<link rel="stylesheet" href="/styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dog Care Guidance | Petneeds.ai</title>
+  <meta name="description" content="Trusted dog care guidance: nutrition, training, health, and wellness." />
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="/ask.js" defer></script>
 </head>
-
 <body>
 
 <nav class="nav">
   <div class="nav-container">
-    <a class="logo" href="/index.html">Petneeds.ai</a>
+    <a class="logo" href="/index.html">Petneeds.ai 🐾</a>
     <div class="nav-links">
       <a href="/dogs.html">Dogs</a>
       <a href="/cats.html">Cats</a>
@@ -23,38 +23,37 @@
   </div>
 </nav>
 
-<header class="hero placeholder">
+<header class="hero" style="background-image:url('/images/hero-dog.jpg');">
   <h1>Dog Care Guidance</h1>
-  <p>Nutrition, exercise, enrichment, and safety.</p>
+  <p>Safe, practical information for dogs of all ages.</p>
 </header>
 
 <main class="main">
-  <section class="info-box">
-    <h2>Daily Dog Care</h2>
-    <p>
-      Learn about feeding routines, exercise needs, mental stimulation,
-      grooming, and safe environments for dogs.
-    </p>
+  <section class="info-box image-box">
+    <img src="/images/dog-care.jpg" alt="Dog care" loading="lazy" />
+    <div>
+      <h2>Healthy Dog Living</h2>
+      <p>Nutrition, training, exercise, behavior, and wellness tips.</p>
+    </div>
   </section>
 
-  <!-- CHAT -->
-  <section class="cta">
-    <h2>Ask About Dogs</h2>
+  <!-- Chat Section -->
+  <section class="cta" id="ai-chat">
+    <h2>Ask Petneeds.ai About Dogs</h2>
+    <p>Educational guidance only. Not veterinary advice.</p>
     <div class="chat-box">
       <div id="chat-log"></div>
-      <div class="chat-controls">
-        <input id="question" type="text" placeholder="Ask a dog care question…" />
-        <button onclick="ask()">Ask</button>
-        <button onclick="startVoice()">🎤</button>
-      </div>
+      <input type="text" id="user-input" placeholder="Ask a dog care question…" />
+      <button onclick="askAI()">Ask</button>
+      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+      <button onclick="startVoice()">🎤 Speak</button>
     </div>
   </section>
 </main>
 
 <footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational only</p>
+  <p>© 2026 Petneeds.ai · Educational content only · Not veterinary advice</p>
 </footer>
 
-<script src="/ask.js"></script>
 </body>
 </html>
