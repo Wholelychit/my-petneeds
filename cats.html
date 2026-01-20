@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cat Care Guidance | Petneeds.ai</title>
-  <meta name="description" content="Trusted cat care guidance: nutrition, enrichment, health, and wellness." />
-  <link rel="stylesheet" href="/styles.css" />
-  <script src="/ask.js" defer></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cat Care Guidance | Petneeds.ai</title>
+<meta name="description" content="Educational cat care guidance covering nutrition, behavior, enrichment, and wellness." />
+<link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
@@ -17,8 +16,9 @@
       <a href="/dogs.html">Dogs</a>
       <a href="/cats.html">Cats</a>
       <a href="/other-pets.html">Other Pets</a>
-      <a href="/products.html">Resources</a>
-      <a href="/about.html">About</a>
+      <a href="/products.html">Products</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/privacy.html">Privacy</a>
     </div>
   </div>
 </nav>
@@ -30,20 +30,19 @@
 
 <main class="main">
   <section class="info-box image-box">
-    <img src="/images/cat-care.jpg" alt="Cat care" loading="lazy" />
+    <img src="/images/cat-care.jpg" alt="Cat care guidance" loading="lazy" />
     <div>
       <h2>Healthy Cat Living</h2>
-      <p>Nutrition, litter habits, enrichment, and wellness tips.</p>
+      <p>Nutrition, litter habits, enrichment, stress reduction, and creating a safe home environment.</p>
     </div>
   </section>
 
-  <!-- Chat Section -->
   <section class="cta" id="ai-chat">
     <h2>Ask Petneeds.ai About Cats</h2>
     <p>Educational guidance only. Not veterinary advice.</p>
     <div class="chat-box">
       <div id="chat-log"></div>
-      <input type="text" id="user-input" placeholder="Ask a cat care question…" />
+      <input type="text" id="user-input" placeholder="Ask about cats…" />
       <button onclick="askAI()">Ask</button>
       <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
       <button onclick="startVoice()">🎤 Speak</button>
@@ -55,5 +54,6 @@
   <p>© 2026 Petneeds.ai · Educational content only · Not veterinary advice</p>
 </footer>
 
+<script src="/ask.js"></script>
 </body>
 </html>
