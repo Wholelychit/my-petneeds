@@ -1,47 +1,65 @@
-import OpenAI from "openai";
+/* =========================
+   Petneeds.ai AI Chat Script
+   ========================= */
 
-export default {
-  async fetch(request, env) {
-    if (request.method !== "POST") {
-      return new Response("Method not allowed", { status: 405 });
-    }
+let voiceEnabled = true;
 
-    try {
-      const { message } = await request.json();
-
-      if (!message) {
-        return new Response(
-          JSON.stringify({ reply: "Please enter a question." }),
-          { headers: { "Content-Type": "application/json" } }
-        );
-      }
-
-      // Initialize OpenAI with environment variable
-      const openai = new OpenAI({ apiKey: env.OPENAI_API_KEY });
-
-      const response = await openai.responses.create({
-        model: "gpt-5-nano",
-        input: `
-You are Petneeds.ai, a responsible pet care assistant.
-Provide general pet care guidance only.
-Do NOT diagnose, prescribe medication, or replace a veterinarian.
-Always include a gentle disclaimer.
-
-User question:
-${message}
-        `
-      });
-
-      return new Response(
-        JSON.stringify({ reply: response.output_text || "No response from AI." }),
-        { headers: { "Content-Type": "application/json" } }
-      );
-    } catch (err) {
-      console.error("Worker /api/ask error:", err);
-      return new Response(
-        JSON.stringify({ reply: "AI service temporarily unavailable." }),
-        { headers: { "Content-Type": "application/json" } }
-      );
-    }
+/* 🎤 Voice input */
+function startVoice() {
+  if (!("webkitSpeechRecognition" in window)) {
+    alert("Voice input not supported in this browser.");
+    return;
   }
-};
+
+  const recognition = new webkitSpeechRecognition();
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+
+  recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    document.getElementById("user-input").value = transcript;
+    askAI(transcript);
+  };
+
+  recognition.start();
+}
+
+/* 🔊 Toggle voice reading of AI responses */
+function toggleVoice() {
+  voiceEnabled = !voiceEnabled;
+  document.getElementById("voice-toggle").innerText = voiceEnabled ? "🔊 Voice On" : "🔇 Voice Off";
+}
+
+/* 💬 Send question to Worker API */
+async function askAI(message) {
+  const inputEl = document.getElementById("user-input");
+  if (!message) message = inputEl.value.trim();
+  if (!message) return;
+
+  const logEl = document.getElementById("chat-log");
+  logEl.innerHTML += `<div><strong>You:</strong> ${message}</div>`;
+  inputEl.value = "";
+
+  try {
+    const res = await fetch("/api/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message })
+    });
+    const data = await res.json();
+    const reply = data.reply || "Sorry, no response.";
+
+    logEl.innerHTML += `<div><strong>Petneeds.ai:</strong> ${reply}</div>`;
+    logEl.scrollTop = logEl.scrollHeight;
+
+    if (voiceEnabled && "speechSynthesis" in window) {
+      const utterance = new SpeechSynthesisUtterance(reply);
+      utterance.lang = "en-US";
+      window.speechSynthesis.speak(utterance);
+    }
+  } catch (err) {
+    console.error(err);
+    logEl.innerHTML += `<div><strong>Petneeds.ai:</strong> AI service unavailable.</div>`;
+  }
+}
+
