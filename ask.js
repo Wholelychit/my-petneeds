@@ -17,55 +17,61 @@ function startVoice() {
 
   recognition.onresult = (event) => {
     const transcript = event.results[0][0].transcript;
+    document.getElementById("user-input").value = transcript;
     askAI(transcript);
+  };
+
+  recognition.onerror = (event) => {
+    console.error("Voice recognition error:", event.error);
   };
 
   recognition.start();
 }
 
-/* 🔊 Voice output */
-function speak(text) {
-  if (!voiceEnabled) return;
-  const msg = new SpeechSynthesisUtterance(text);
-  msg.rate = 1;
-  msg.pitch = 1;
-  msg.lang = "en-US";
-  speechSynthesis.speak(msg);
-}
-
-/* Toggle voice */
+/* 🔊 Toggle voice feedback */
 function toggleVoice() {
   voiceEnabled = !voiceEnabled;
   const btn = document.getElementById("voice-toggle");
-  if (btn) btn.textContent = voiceEnabled ? "🔊 Voice On" : "🔇 Voice Off";
-  if (!voiceEnabled) speechSynthesis.cancel();
+  btn.textContent = voiceEnabled ? "🔊 Voice On" : "🔇 Voice Off";
 }
 
-/* 📝 Ask AI function */
-async function askAI(textFromVoice = null) {
-  const input = document.getElementById("user-input");
+/* 💬 Send question to Worker */
+async function askAI(question = null) {
+  const inputEl = document.getElementById("user-input");
   const chatLog = document.getElementById("chat-log");
-  if (!chatLog || !input) return;
 
-  const question = textFromVoice || input.value.trim();
-  if (!question) return;
+  // Use parameter or input box
+  const userMessage = question || inputEl.value.trim();
+  if (!userMessage) return;
 
-  chatLog.innerHTML += `<p><strong>You:</strong> ${question}</p>`;
-  input.value = "";
+  // Show user message
+  chatLog.innerHTML += `<div><strong>You:</strong> ${userMessage}</div>`;
   chatLog.scrollTop = chatLog.scrollHeight;
 
+  inputEl.value = ""; // Clear input
+
   try {
-    const response = await fetch("/api/ask?q=" + encodeURIComponent(question));
-    const data = await response.json();
-    const answer = data.answer || "AI did not respond.";
+    const res = await fetch("https://my-petneeds.wholelychit.workers.dev/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: userMessage }),
+    });
 
-    chatLog.innerHTML += `<p><strong>Petneeds.ai:</strong> ${answer}</p>`;
+    const data = await res.json();
+    const aiReply = data.reply || "Sorry, no response from AI.";
+
+    // Show AI reply
+    chatLog.innerHTML += `<div><strong>Petneeds.ai:</strong> ${aiReply}</div>`;
     chatLog.scrollTop = chatLog.scrollHeight;
 
-    speak(answer);
+    // Optional: voice output
+    if (voiceEnabled && "speechSynthesis" in window) {
+      const utterance = new SpeechSynthesisUtterance(aiReply);
+      speechSynthesis.speak(utterance);
+    }
+
   } catch (err) {
-    chatLog.innerHTML += `<p><em>AI service unavailable.</em></p>`;
-    chatLog.scrollTop = chatLog.scrollHeight;
-    console.error(err);
+    console.error("Error fetching AI response:", err);
+    chatLog.innerHTML += `<div><strong>Petneeds.ai:</strong> Sorry, AI service is unavailable.</div>`;
   }
 }
