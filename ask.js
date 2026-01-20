@@ -1,48 +1,54 @@
-import OpenAI from "openai";
+/* =========================
+   Petneeds.ai AI Chat Script
+========================= */
 
-export default {
-  async fetch(request, env) {
-    if (request.method !== "POST") {
-      return new Response("Method not allowed", { status: 405 });
-    }
+let voiceEnabled = true;
 
-    const { message } = await request.json();
+async function askAI(message) {
+  const inputEl = document.getElementById("user-input");
+  const chatLog = document.getElementById("chat-log");
 
-    if (!message) {
-      return new Response(
-        JSON.stringify({ reply: "Please enter a question." }),
-        { headers: { "Content-Type": "application/json" } }
-      );
-    }
+  const question = message || inputEl.value.trim();
+  if (!question) return;
 
-    const openai = new OpenAI({
-      apiKey: env.OPENAI_API_KEY
+  chatLog.innerHTML += `<div><strong>You:</strong> ${question}</div>`;
+  inputEl.value = "";
+
+  try {
+    const res = await fetch("/api/ask", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: question })
     });
-
-    try {
-      const response = await openai.responses.create({
-        model: "gpt-5-nano",
-        input: `
-You are Petneeds.ai, a responsible pet care assistant.
-Provide general pet care guidance only.
-Do NOT diagnose, prescribe medication, or replace a veterinarian.
-Always include a gentle disclaimer.
-
-User question:
-${message}
-        `
-      });
-
-      return new Response(
-        JSON.stringify({ reply: response.output_text }),
-        { headers: { "Content-Type": "application/json" } }
-      );
-
-    } catch (err) {
-      return new Response(
-        JSON.stringify({ reply: "AI service temporarily unavailable." }),
-        { headers: { "Content-Type": "application/json" } }
-      );
-    }
+    const data = await res.json();
+    chatLog.innerHTML += `<div><strong>Petneeds.ai:</strong> ${data.reply}</div>`;
+    chatLog.scrollTop = chatLog.scrollHeight;
+  } catch {
+    chatLog.innerHTML += `<div><strong>Petneeds.ai:</strong> Sorry, AI service unavailable.</div>`;
   }
-};
+}
+
+/* 🎤 Voice input */
+function startVoice() {
+  if (!("webkitSpeechRecognition" in window)) {
+    alert("Voice input not supported in this browser.");
+    return;
+  }
+
+  const recognition = new webkitSpeechRecognition();
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+
+  recognition.onresult = (event) => {
+    const transcript = event.results[0][0].transcript;
+    askAI(transcript);
+  };
+
+  recognition.start();
+}
+
+function toggleVoice() {
+  voiceEnabled = !voiceEnabled;
+  const btn = document.getElementById("voice-toggle");
+  if (btn) btn.textContent = voiceEnabled ? "🔊 Voice On" : "🔇 Voice Off";
+}
