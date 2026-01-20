@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pet Care Resources | Petneeds.ai</title>
-  <meta name="description" content="Educational content about pet care supplies and categories." />
+  <title>Pet Products Guidance | Petneeds.ai</title>
+  <meta name="description" content="Educational guidance on pet care products and categories for dogs, cats, and other pets." />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -17,7 +17,7 @@
       <a href="/dogs.html">Dogs</a>
       <a href="/cats.html">Cats</a>
       <a href="/other-pets.html">Other Pets</a>
-      <a href="/products.html">Resources</a>
+      <a href="/products.html">Products</a>
       <a href="/about.html">About</a>
     </div>
   </div>
@@ -25,32 +25,50 @@
 
 <!-- Hero -->
 <header class="hero" style="background-image:url('/images/logo-paw.svg');">
-  <h1>Pet Care Resources</h1>
-  <p>Educational guidance on pet products and categories.</p>
+  <h1>Pet Products Guidance</h1>
+  <p>Educational guidance on pet care essentials and categories.</p>
 </header>
 
-<!-- Main -->
 <main class="main">
+  <!-- Product Guidance -->
   <section class="info-box image-box">
-    <img src="/images/logo-paw.svg" alt="Resources" loading="lazy" />
+    <img src="/images/logo-paw.svg" alt="Pet products guidance" loading="lazy" />
     <div>
-      <h2>Pet Supplies Guidance</h2>
-      <p>Learn about different product categories and safe pet care essentials.</p>
+      <h2>Pet Supplies & Categories</h2>
+      <p>Learn about safe products, essentials, and categories for your pets.</p>
     </div>
   </section>
 
-  <!-- AI Chat Section -->
+  <section class="product-grid">
+    <div class="product-card">
+      <img src="/images/dog-food.jpg" alt="Dog Food" loading="lazy" />
+      <h3>Dog Food</h3>
+      <p>Guidance on types, nutrition, and feeding recommendations.</p>
+    </div>
+
+    <div class="product-card">
+      <img src="/images/cat-toys.jpg" alt="Cat Toys" loading="lazy" />
+      <h3>Cat Toys</h3>
+      <p>Safe and enriching play options for your cat’s health.</p>
+    </div>
+
+    <div class="product-card">
+      <img src="/images/small-pets.jpg" alt="Small Pets" loading="lazy" />
+      <h3>Small & Exotic Pets</h3>
+      <p>Guidance on bedding, habitats, and essentials for birds, rabbits, and more.</p>
+    </div>
+  </section>
+
+  <!-- AI Chat -->
   <section class="cta" id="ai-chat">
-    <h2>Ask Petneeds.ai About Resources</h2>
+    <h2>Ask Petneeds.ai About Products</h2>
     <p>Educational guidance only. Not veterinary advice.</p>
     <div class="chat-box">
       <div id="chat-log"></div>
-      <div class="chat-controls">
-        <input type="text" id="user-input" placeholder="Ask about pet products…" />
-        <button onclick="askAI()">Ask</button>
-        <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
-        <button onclick="startVoice()">🎤 Speak</button>
-      </div>
+      <input type="text" id="user-input" placeholder="Ask about pet products…" />
+      <button onclick="askAI()">Ask</button>
+      <button id="voice-toggle" onclick="toggleVoice()">🔊 Voice On</button>
+      <button onclick="startVoice()">🎤 Speak</button>
     </div>
   </section>
 </main>
