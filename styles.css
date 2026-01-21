@@ -7,6 +7,7 @@ body {
   color: #2f2f2f;
   background-color: #fafafa;
   line-height: 1.6;
+  margin: 0;
 }
 
 /* =========================
@@ -18,6 +19,7 @@ body {
   font-size: 1.9rem;
   color: #2e7d6f;
   letter-spacing: 0.5px;
+  text-decoration: none;
 }
 
 /* =========================
@@ -28,6 +30,7 @@ h1, h2, h3 {
   font-family: 'Nunito', sans-serif;
   font-weight: 700;
   color: #244d46;
+  margin-top: 0;
 }
 
 h1 {
@@ -54,6 +57,7 @@ section {
   display: flex;
   gap: 1.5rem;
   align-items: center;
+  flex-wrap: wrap; /* mobile safety */
 }
 
 .image-box img {
@@ -68,8 +72,15 @@ section {
    Hero Overlay (Warm)
 ========================= */
 
+.hero {
+  background-size: cover;
+  background-position: center;
+}
+
 .hero-overlay {
   background: rgba(0, 0, 0, 0.45);
   padding: 4rem 2rem;
   color: #ffffff;
+  text-align: center;
 }
+
