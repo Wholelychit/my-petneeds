@@ -1,60 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cat Care Guidance | Petneeds.ai</title>
-  <meta name="description" content="Educational cat care guidance including nutrition, behavior, enrichment, and safety." />
-  <link rel="stylesheet" href="/styles.css" />
+  <meta charset="UTF-8">
+  <title>Cat Care Guide | Petneeds.ai</title>
+  <meta name="description" content="Responsible cat care guidance for nutrition, enrichment, and health.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <nav class="nav">
   <div class="nav-container">
-    <a href="/index.html" class="logo">Petneeds.ai 🐾</a>
+    <a href="index.html" class="logo">Petneeds.ai 🐾</a>
     <div class="nav-links">
-      <a href="/dogs.html">Dogs</a>
-      <a href="/cats.html">Cats</a>
-      <a href="/other-pets.html">Other Pets</a>
-      <a href="/products.html">Resources</a>
-      <a href="/about.html">About</a>
+      <a href="dogs.html">Dogs</a>
+      <a href="cats.html">Cats</a>
+      <a href="other-pets.html">Other Pets</a>
+      <a href="resources.html">Resources</a>
+      <a href="about.html">About</a>
     </div>
   </div>
 </nav>
 
-<header class="hero" style="background:#0f766e;">
-  <h1>Cat Care Guidance</h1>
-  <p>Behavior, nutrition, enrichment, and wellness.</p>
+<header class="hero" style="background-image:url('images/hero-cat.jpg')">
+  <h1>Cat Care Essentials</h1>
+  <p>Healthy living for curious cats.</p>
 </header>
 
+<!-- AVATAR -->
+<section class="avatar-section">
+  <div class="avatar-wrap">
+    <iframe src="https://app.heygen.com/embedded-player/5e20f1226555443ba649a40768f4a7ce"
+      allow="encrypted-media; fullscreen;" loading="lazy"></iframe>
+    <div class="avatar-text">
+      <h2>Cat Questions?</h2>
+      <p>Ask about feeding, enrichment, stress, and indoor safety.</p>
+    </div>
+  </div>
+</section>
+
 <main class="main">
-
-<section class="info-box image-box">
-  <img src="/images/placeholder-cat.jpg" width="220" height="220" alt="Cat illustration" />
-  <div>
-    <h2>Understanding Your Cat</h2>
-    <p>Cats have unique behavioral and nutritional needs. Learn how to support their physical and mental health.</p>
-  </div>
-</section>
-
-<section class="cta">
-  <h2>Ask About Cats</h2>
-  <p>Educational guidance only · Not veterinary advice</p>
-  <div class="chat-box">
-    <div id="chat-log"></div>
-    <input id="user-input" type="text" placeholder="Ask about cat care…" />
-    <button onclick="askAI()">Ask</button>
-    <button onclick="startVoice()">🎤</button>
-    <button onclick="toggleVoice()">🔊</button>
-  </div>
-</section>
-
+  <section class="info-box image-box">
+    <img src="images/cat-care.jpg" alt="Healthy cat living">
+    <div>
+      <h2>Healthy Living</h2>
+      <p>Cats need protein-rich diets and calm, enriched environments.</p>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">
   <p>© 2026 Petneeds.ai · Educational content only</p>
 </footer>
 
-<script src="/ask.js"></script>
 </body>
 </html>
