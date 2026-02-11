@@ -185,3 +185,190 @@
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Daily Pet Spotlight | Petneeds.ai</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 30px 15px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    /* GALLERY GRID */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .pet-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .pet-card:hover {
+      transform: scale(1.03);
+    }
+
+    .pet-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .pet-info {
+      padding: 10px;
+      text-align: center;
+    }
+
+    .pet-name {
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .pet-owner {
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #ff9900;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 50px;
+      transition: transform 0.2s;
+    }
+
+    .cta a:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>🐾 Daily Pet Spotlight</h1>
+    <div class="subtitle">
+      Meet some of the amazing pets from the Petneeds.ai community
+    </div>
+
+    <!-- GALLERY -->
+    <div class="gallery-grid">
+
+      <!-- PET CARD 1 -->
+      <a href="#img1" class="pet-card">
+        <img src="images/pets/dog1.jpg" alt="Buddy the Dog">
+        <div class="pet-info">
+          <div class="pet-name">Buddy</div>
+          <div class="pet-owner">Submitted by Sarah J.</div>
+        </div>
+      </a>
+
+      <!-- PET CARD 2 -->
+      <a href="#img2" class="pet-card">
+        <img src="images/pets/cat1.jpg" alt="Whiskers the Cat">
+        <div class="pet-info">
+          <div class="pet-name">Whiskers</div>
+          <div class="pet-owner">Submitted by Mark T.</div>
+        </div>
+      </a>
+
+      <!-- PET CARD 3 -->
+      <a href="#img3" class="pet-card">
+        <img src="images/pets/dog2.jpg" alt="Luna the Dog">
+        <div class="pet-info">
+          <div class="pet-name">Luna</div>
+          <div class="pet-owner">Submitted by Emily R.</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+      <a href="upload.html">Submit Your Pet</a>
+    </div>
+  </div>
+
+  <!-- LIGHTBOXES -->
+  <div id="img1" class="lightbox">
+    <a href="#">
+      <img src="images/pets/dog1.jpg" alt="">
+    </a>
+  </div>
+
+  <div id="img2" class="lightbox">
+    <a href="#">
+      <img src="images/pets/cat1.jpg" alt="">
+    </a>
+  </div>
+
+  <div id="img3" class="lightbox">
+    <a href="#">
+      <img src="images/pets/dog2.jpg" alt="">
+    </a>
+  </div>
+
+</body>
+</html>
