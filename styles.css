@@ -160,4 +160,26 @@ section {
 }
 Thank you! Click here to return to Petneeds.ai:
 https://petneeds.ai
+.spotlight-form-container {
+  max-width: 640px;
+  margin: 30px auto;
+  padding: 15px;
+  background-color: #ffffff;
+  border: 2px solid #ff9900; /* Petneeds.ai brand color */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.form-responsive-wrapper {
+  width: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media screen and (max-width: 480px) {
+  iframe {
+    height: 1100px;
+  }
+}
 
