@@ -3,88 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Petneeds.ai | Friendly AI Pet Care Guidance</title>
-  <meta name="description" content="Friendly, responsible AI-powered pet care education for dogs, cats, and other pets.">
-  <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="styles.css">
+  <title>Petneeds.ai – Smart Pet Advice</title>
+  <style>
+    /* Reset & basics */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background-color: #fefefe; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Header / Navbar */
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: #4CAF50; color: white; position: sticky; top: 0; z-index: 1000; }
+    header img { height: 50px; }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 20px; }
+    nav ul li a { color: white; font-weight: bold; transition: color 0.3s; }
+    nav ul li a:hover { color: #e0f7e0; }
+
+    /* Hero Section */
+    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 20px; background: linear-gradient(to right, #a8e063, #56ab2f); color: white; }
+    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; }
+    .cta-btn { padding: 15px 30px; font-size: 1.1rem; color: white; background-color: #ff9800; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
+    .cta-btn:hover { background-color: #e68a00; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header { flex-direction: column; padding: 15px; }
+      nav ul { flex-direction: column; margin-top: 10px; }
+      nav ul li { margin: 10px 0; }
+      .hero h1 { font-size: 2.2rem; }
+      .hero p { font-size: 1rem; }
+    }
+  </style>
 </head>
 <body>
 
-<nav class="nav">
-  <div class="nav-container">
-    <a href="index.html" class="logo">Petneeds.ai</a>
-    <div class="nav-links">
-      <a href="dogs.html">Dogs</a>
-      <a href="cats.html">Cats</a>
-      <a href="other-pets.html">Other Pets</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
-    </div>
-  </div>
-</nav>
+  <!-- Header / Navigation -->
+  <header>
+    <img src="logo.png" alt="Petneeds.ai Logo"> <!-- Replace with your logo file -->
+    <nav>
+      <ul>
+        <li><a href="#dogs">Dogs</a></li>
+        <li><a href="#cats">Cats</a></li>
+        <li><a href="#other">Other Pets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header class="hero" style="background-image:url('images/hero-dog.jpg')">
-  <div class="hero-overlay">
-    <h1>Pet Care, Made Friendly</h1>
-    <p>Clear guidance for happier pets and confident owners.</p>
-  </div>
-</header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1 id="hero-title"></h1>
+    <p>Get instant AI-driven pet advice, tips, and guides for dogs, cats, and all kinds of pets. Keep your furry friends happy and healthy!</p>
+    <button class="cta-btn" onclick="window.location.href='#contact'">Ask About Your Pet</button>
+  </section>
 
-<main class="main">
-
-<section class="image-box">
-  <img src="images/dog-care.jpg" alt="Happy dog">
-  <div>
-    <h2>Dogs</h2>
-    <p>Nutrition, training, health, and everyday care.</p>
-    <a href="dogs.html">Explore dog care →</a>
-  </div>
-</section>
-
-<section class="image-box">
-  <img src="images/cat-care.jpg" alt="Relaxed cat">
-  <div>
-    <h2>Cats</h2>
-    <p>Behavior, enrichment, and wellness guidance.</p>
-    <a href="cats.html">Explore cat care →</a>
-  </div>
-</section>
-
-<section class="image-box">
-  <img src="images/other-pets.jpg" alt="Small pets">
-  <div>
-    <h2>Other Pets</h2>
-    <p>Helpful basics for birds, rabbits, reptiles, and more.</p>
-    <a href="other-pets.html">Explore other pets →</a>
-  </div>
-</section>
-
-<section class="cta">
-  <h2>Share Your Pet 🐾</h2>
-  <p>Upload a square 220×220 photo to be featured on Petneeds.ai.</p>
-
-  <iframe
-    src="PASTE_GOOGLE_FORM_EMBED_URL_HERE"
-    width="100%"
-    height="620"
-    frameborder="0">
-    Loading…
-  </iframe>
-
-  <p class="note">Photos are reviewed before publishing.</p>
-</section>
-
-</main>
-
-<div class="floating-avatar">
-  <iframe src="https://app.heygen.com/embedded-player/5e20f1226555443ba649a40768f4a7ce" allow="encrypted-media; fullscreen;"></iframe>
-</div>
-
-<footer class="footer">
-  <p>© 2026 Petneeds.ai · Educational content only · Not veterinary advice</p>
-  <p>Contact: <a href="mailto:support@petneeds.ai">support@petneeds.ai</a></p>
-  <p><a href="privacy.html">Privacy</a> · <a href="disclaimer.html">Disclaimer</a></p>
-</footer>
+  <script>
+    // Scripted Title Animation
+    const title = "Petneeds.ai – Smart Pet Advice";
+    let i = 0;
+    const heroTitle = document.getElementById("hero-title");
+    
+    function typeWriter() {
+      if (i < title.length) {
+        heroTitle.innerHTML += title.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100); // Adjust speed here
+      }
+    }
+    typeWriter();
+  </script>
 
 </body>
 </html>
