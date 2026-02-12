@@ -8,8 +8,19 @@ my-petneeds/
 ├─ products.html
 ├─ privacy.html
 ├─ disclaimer.html
-├─ styles.css
-├─ ask.js
+│
+├─ blog/
+│   ├─ best-senior-dog-food.html
+│   ├─ dog-itching-causes.html
+│   ├─ cat-not-eating.html
+│   ├─ best-cat-litter-odor.html
+│   └─ aggressive-chewer-toys.html
+│
+├─ css/
+│   └─ styles.css
+│
+├─ js/
+│   └─ ask.js
 │
 ├─ images/
 │   ├─ logo/
@@ -17,24 +28,21 @@ my-petneeds/
 │   │
 │   ├─ hero/
 │   │   ├─ hero-dog.webp
-│   │   ├─ hero-cat.webp
+│   │   └─ hero-cat.webp
 │   │
 │   ├─ category/
 │   │   ├─ dog-care.webp
 │   │   ├─ cat-care.webp
-│   │   ├─ other-pets.webp
+│   │   └─ other-pets.webp
 │   │
-│   ├─ pets/
-│   │   ├─ pet1.webp
-│   │   ├─ pet2.webp
+│   ├─ blog/
+│   │   ├─ senior-dog-food.webp
+│   │   ├─ dog-itching.webp
+│   │   ├─ cat-not-eating.webp
+│   │   ├─ cat-litter.webp
+│   │   └─ chewer-toys.webp
 │   │
-│   ├─ products/
-│   │   ├─ product1.webp
-│   │
-│   ├─ banners/
-│   │
-│   └─ icons/
+│   └─ products/
+│       └─ product1.webp
 │
-└─ README.md (optional)
-
- 
+└─ README.md
