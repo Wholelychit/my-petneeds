@@ -1,7 +1,7 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
     <loc>https://petneeds.ai/</loc>
     <lastmod>2026-02-11</lastmod>
@@ -9,7 +9,6 @@
     <priority>1.0</priority>
   </url>
 
-  <!-- Dogs page -->
   <url>
     <loc>https://petneeds.ai/dogs.html</loc>
     <lastmod>2026-02-11</lastmod>
@@ -17,7 +16,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Cats page -->
   <url>
     <loc>https://petneeds.ai/cats.html</loc>
     <lastmod>2026-02-11</lastmod>
@@ -25,7 +23,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Other Pets page -->
   <url>
     <loc>https://petneeds.ai/other-pets.html</loc>
     <lastmod>2026-02-11</lastmod>
@@ -33,7 +30,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Products page -->
   <url>
     <loc>https://petneeds.ai/products.html</loc>
     <lastmod>2026-02-11</lastmod>
@@ -41,7 +37,6 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- About page -->
   <url>
     <loc>https://petneeds.ai/about.html</loc>
     <lastmod>2026-02-11</lastmod>
@@ -49,7 +44,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Contact page (if separate) -->
   <url>
     <loc>https://petneeds.ai/contact.html</loc>
     <lastmod>2026-02-11</lastmod>
@@ -58,3 +52,4 @@
   </url>
 
 </urlset>
+
