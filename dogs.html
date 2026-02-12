@@ -1,71 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-  <h2>Helpful Articles</h2>
-<ul>
-  <li><a href="blog/best-senior-dog-food.html">Best Dog Food for Senior Dogs</a></li>
-</ul>
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog Care Guide | Petneeds.ai</title>
-  <meta name="description" content="Educational dog care guidance covering nutrition, behavior, health, and safety.">
-  <meta name="robots" content="index, follow">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dog Care Tips | PetNeeds.ai</title>
+<meta name="description" content="Dog care guides, training, food, grooming, and health tips for all dog owners.">
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="preload" as="image" href="images/category/dog-care.webp">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Dog Care Guides",
+  "author": {
+    "@type": "Organization",
+    "name": "PetNeeds.ai"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PetNeeds.ai",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://petneeds.ai/images/logo/logo-paw.svg"
+    }
+  }
+}
+</script>
 </head>
+
 <body>
 
-<nav class="nav">
-  <div class="nav-container">
-    <a href="index.html" class="logo">Petneeds.ai</a>
-    <div class="nav-links">
-      <a href="dogs.html">Dogs</a>
-      <a href="cats.html">Cats</a>
-      <a href="other-pets.html">Other Pets</a>
-      <a href="resources.html">Resources</a>
-      <a href="about.html">About</a>
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo-paw.svg" alt="PetNeeds.ai Logo" width="40" height="40">
+            <span>PetNeeds.ai</span>
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="dogs.html" class="active">Dogs</a></li>
+                <li><a href="cats.html">Cats</a></li>
+                <li><a href="other-pets.html">Other Pets</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
     </div>
-  </div>
-</nav>
-
-<header class="hero" style="background-image:url('images/hero-dog.jpg')">
-  <div class="hero-overlay">
-    <h1>Dog Care Essentials</h1>
-    <p>Healthy routines for every stage of life.</p>
-  </div>
 </header>
 
-<main class="main">
-
-<section class="image-box">
-  <img src="images/dog-care.jpg" alt="Dog care">
-  <div>
-    <h2>Daily Care</h2>
-    <p>Balanced meals, exercise, training, and enrichment.</p>
-  </div>
+<section class="category-hero">
+    <div class="container">
+        <h1>Dog Care Tips</h1>
+        <img src="images/category/dog-care.webp" alt="Dog care tips" width="800" height="400" loading="eager">
+        <p>Training, grooming, feeding, and keeping your dog healthy and happy.</p>
+    </div>
 </section>
 
-<section>
-  <h2>Health & Safety</h2>
-  <p>Routine vet visits, vaccinations, parasite prevention, and safe environments.</p>
+<section class="dog-guides">
+    <div class="container">
+        <h2>Popular Guides</h2>
+        <ul>
+            <li><a href="blog/best-senior-dog-food.html">Best Dog Food for Senior Dogs</a></li>
+            <li><a href="#">Why Is My Dog Itching?</a></li>
+            <li><a href="#">How to Train a Puppy</a></li>
+        </ul>
+    </div>
 </section>
 
-<section class="cta">
-  <h2>Share Your Dog 🐕</h2>
-  <iframe src="PASTE_GOOGLE_FORM_EMBED_URL_HERE" width="100%" height="620" frameborder="0"></iframe>
-</section>
-
-</main>
-
-<div class="floating-avatar">
-  <iframe src="https://app.heygen.com/embedded-player/5e20f1226555443ba649a40768f4a7ce"></iframe>
-</div>
-
-<footer class="footer">
-  <p>Educational guidance only · Not veterinary advice</p>
-  <p>Contact: <a href="mailto:support@petneeds.ai">support@petneeds.ai</a></p>
+<footer class="site-footer">
+    <div class="container footer-content">
+        <p>&copy; 2026 PetNeeds.ai. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+    </div>
 </footer>
 
+<script src="js/ask.js" defer></script>
 </body>
 </html>
-
