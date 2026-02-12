@@ -9,3 +9,9 @@
   "dependencies": {},
   "devDependencies": {}
 }
+"scripts": {
+  "build-sitemap": "node scripts/generate-sitemap.js",
+  "deploy": "npm run build-sitemap && git add sitemap.xml && git commit -m 'Update sitemap' && git push"
+}
+npm run build-sitemap
+npm run deploy
