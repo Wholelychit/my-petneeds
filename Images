@@ -1,1 +1,5 @@
-
+ ├── logo/
+│   ├── hero/
+│   ├── category/
+│   └── products/
+│
