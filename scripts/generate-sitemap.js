@@ -2,19 +2,29 @@ const fs = require('fs');
 const path = require('path');
 
 const baseUrl = 'https://petneeds.ai';
-const siteDir = path.join(__dirname, '../'); // root folder with HTML files
-const outputFile = path.join(__dirname, '../sitemap.xml');
+const rootDir = path.join(__dirname, '../');
+const outputFile = path.join(rootDir, 'sitemap.xml');
 
-const htmlFiles = fs.readdirSync(siteDir).filter(f => f.endsWith('.html'));
+const files = fs.readdirSync(rootDir)
+  .filter(file => file.endsWith('.html'));
 
-let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
+const today = new Date().toISOString().split('T')[0];
 
-htmlFiles.forEach(file => {
-  const loc = `${baseUrl}/${file}`;
-  sitemap += `  <url>\n    <loc>${loc}</loc>\n    <priority>0.8</priority>\n    <changefreq>weekly</changefreq>\n  </url>\n`;
+let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+xml += `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n\n`;
+
+files.forEach(file => {
+  const urlPath = file === 'index.html' ? '' : file;
+  xml += `  <url>\n`;
+  xml += `    <loc>${baseUrl}/${urlPath}</loc>\n`;
+  xml += `    <lastmod>${today}</lastmod>\n`;
+  xml += `    <changefreq>weekly</changefreq>\n`;
+  xml += `    <priority>${file === 'index.html' ? '1.0' : '0.8'}</priority>\n`;
+  xml += `  </url>\n\n`;
 });
 
-sitemap += '</urlset>';
+xml += `</urlset>`;
 
-fs.writeFileSync(outputFile, sitemap);
-console.log(`✅ sitemap.xml generated with ${htmlFiles.length} pages`);
+fs.writeFileSync(outputFile, xml);
+
+console.log('✅ Sitemap rebuilt successfully');
