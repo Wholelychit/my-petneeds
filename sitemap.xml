@@ -27,3 +27,34 @@
 
 </urlset>
 
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://petneeds.ai/</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Contact page -->
+  <url>
+    <loc>https://petneeds.ai/#contact</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Add more pages here as you build them -->
+  <!-- Example: Services page -->
+  <!--
+  <url>
+    <loc>https://petneeds.ai/services</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  -->
+
+</urlset>
