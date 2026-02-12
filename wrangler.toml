@@ -1,7 +1,0 @@
-name = "petneeds-ai"
-main = "workers/ask.js"  # path to your Worker code
-compatibility_date = "2026-01-20"
-
-# Optional: environment variables
-[env.production]
-  OPENAI_API_KEY = "YOUR_OPENAI_API_KEY"
