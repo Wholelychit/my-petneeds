@@ -1,40 +1,30 @@
-const fs = require('fs');
-const path = require('path');
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-const siteUrl = 'https://petneeds.ai';
-const pagesDir = './'; // folder where your HTML files are
-const sitemapPath = './sitemap.xml';
+  <url>
+    <loc>https://petneeds.ai/</loc>
+    <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
-function getAllPages(dir) {
-  const files = fs.readdirSync(dir);
-  let pages = [];
+  <url>
+    <loc>https://petneeds.ai/homepage.html</loc>
+    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
-  files.forEach(file => {
-    const fullPath = path.join(dir, file);
-    const stat = fs.statSync(fullPath);
+  <url>
+    <loc>https://petneeds.ai/contact.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
-    if (stat.isDirectory()) {
-      pages = pages.concat(getAllPages(fullPath));
-    } else if (file.endsWith('.html')) {
-      let pageUrl = file === 'index.html' ? '' : file.replace('.html', '');
-      pages.push(`${siteUrl}/${pageUrl}`);
-    }
-  });
+  <url>
+    <loc>https://petneeds.ai/products.html</loc>
+    <priority>0.8</priority>
+    <changefreq>weekly</changefreq>
+  </url>
 
-  return pages;
-}
+</urlset>
 
-const pages = getAllPages(pagesDir);
 
-let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
-
-pages.forEach(url => {
-  sitemapContent += `  <url>\n    <loc>${url}</loc>\n    <priority>0.8</priority>\n    <changefreq>weekly</changefreq>\n  </url>\n`;
-});
-
-sitemapContent += `</urlset>`;
-
-fs.writeFileSync(sitemapPath, sitemapContent, 'utf8');
-console.log('sitemap.xml generated successfully!');
-
- 
