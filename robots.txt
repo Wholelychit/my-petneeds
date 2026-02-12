@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-
-Disallow: /scripts/
-
-Sitemap: https://petneeds.ai/sitemap.xml
