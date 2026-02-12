@@ -2,19 +2,29 @@ function onFormSubmit(e) {
   const sheet = e.range.getSheet();
   const row = e.range.getRow();
 
-  // CHANGE these numbers if your columns differ
-  const photoColumn = 6; // file upload column number
-  const imageUrlColumn = 10; // "Image URL" column
+  // === CONFIGURE THESE ===
+  const photoColumn = 6;      // Column where Google Form uploads files
+  const imageUrlColumn = 10;  // Column to store the public URL
+  // ========================
 
+  // Get the uploaded file IDs (can be multiple, comma-separated)
   const fileLinks = sheet.getRange(row, photoColumn).getValue();
   if (!fileLinks) return;
 
-  const fileId = fileLinks.match(/[-\w]{25,}/);
-  if (!fileId) return;
+  // Match all Google Drive file IDs in the string
+  const fileIds = fileLinks.match(/[-\w]{25,}/g);
+  if (!fileIds || fileIds.length === 0) return;
 
-  const file = DriveApp.getFileById(fileId[0]);
-  file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+  // Convert each file to a public URL
+  const publicUrls = fileIds.map(id => {
+    try {
+      const file = DriveApp.getFileById(id);
+      file.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+      return `https://drive.google.com/uc?id=${id}`;
+    } catch (err) {
+      console.error(`Failed for file ID: ${id}`, err);
+      return null;
+    }
+  }).filter(url => url); // remove nulls if any failed
 
-  const publicUrl = `https://drive.google.com/uc?id=${fileId[0]}`;
-  sheet.getRange(row, imageUrlColumn).setValue(publicUrl);
-}
+  if (p
