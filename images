@@ -1,4 +1,5 @@
 my-petneeds/
+│
 ├─ index.html
 ├─ about.html
 ├─ dogs.html
@@ -8,17 +9,32 @@ my-petneeds/
 ├─ privacy.html
 ├─ disclaimer.html
 ├─ styles.css
-├─ ask.js          <-- AI chat script
+├─ ask.js
+│
 ├─ images/
-│   ├─ hero-dog.jpg
-│   ├─ hero-cat.jpg
-│   ├─ dog-care.jpg
-│   ├─ cat-care.jpg
-│   ├─ other-pets.jpg
-│   ├─ logo-paw.svg
-/images/
-pets/
- products/
-   banners/
-   icons/
+│   ├─ logo/
+│   │   └─ logo-paw.svg
+│   │
+│   ├─ hero/
+│   │   ├─ hero-dog.webp
+│   │   ├─ hero-cat.webp
+│   │
+│   ├─ category/
+│   │   ├─ dog-care.webp
+│   │   ├─ cat-care.webp
+│   │   ├─ other-pets.webp
+│   │
+│   ├─ pets/
+│   │   ├─ pet1.webp
+│   │   ├─ pet2.webp
+│   │
+│   ├─ products/
+│   │   ├─ product1.webp
+│   │
+│   ├─ banners/
+│   │
+│   └─ icons/
+│
+└─ README.md (optional)
 
+ 
