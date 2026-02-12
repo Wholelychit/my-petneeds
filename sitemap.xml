@@ -1,90 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+const fs = require('fs');
+const path = require('path');
 
-  <url>
-    <loc>https://petneeds.ai/</loc>
-    <priority>1.0</priority>
-    <changefreq>daily</changefreq>
-  </url>
+const siteUrl = 'https://petneeds.ai';
+const pagesDir = './'; // folder where your HTML files are
+const sitemapPath = './sitemap.xml';
 
-  <url>
-    <loc>https://petneeds.ai/#contact</loc>
-    <priority>0.8</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+function getAllPages(dir) {
+  const files = fs.readdirSync(dir);
+  let pages = [];
 
-  <url>
-    <loc>https://petneeds.ai/products</loc>
-    <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
-  </url>
+  files.forEach(file => {
+    const fullPath = path.join(dir, file);
+    const stat = fs.statSync(fullPath);
 
-  <url>
-    <loc>https://petneeds.ai/about</loc>
-    <priority>0.7</priority>
-    <changefreq>monthly</changefreq>
-  </url>
+    if (stat.isDirectory()) {
+      pages = pages.concat(getAllPages(fullPath));
+    } else if (file.endsWith('.html')) {
+      let pageUrl = file === 'index.html' ? '' : file.replace('.html', '');
+      pages.push(`${siteUrl}/${pageUrl}`);
+    }
+  });
 
-</urlset>
+  return pages;
+}
 
+const pages = getAllPages(pagesDir);
 
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+let sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-  <url>
-    <loc>https://petneeds.ai/</loc>
-  </url>
+pages.forEach(url => {
+  sitemapContent += `  <url>\n    <loc>${url}</loc>\n    <priority>0.8</priority>\n    <changefreq>weekly</changefreq>\n  </url>\n`;
+});
 
-  <url>
-    <loc>https://petneeds.ai/dogs.html</loc>
-  </url>
+sitemapContent += `</urlset>`;
 
-  <url>
-    <loc>https://petneeds.ai/cats.html</loc>
-  </url>
+fs.writeFileSync(sitemapPath, sitemapContent, 'utf8');
+console.log('sitemap.xml generated successfully!');
 
-  <url>
-    <loc>https://petneeds.ai/other-pets.html</loc>
-  </url>
-
-  <url>
-    <loc>https://petneeds.ai/products.html</loc>
-  </url>
-
-  <url>
-    <loc>https://petneeds.ai/about.html</loc>
-  </url>
-
-</urlset>
-
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Homepage -->
-  <url>
-    <loc>https://petneeds.ai/</loc>
-    <lastmod>2026-02-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <!-- Contact page -->
-  <url>
-    <loc>https://petneeds.ai/#contact</loc>
-    <lastmod>2026-02-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Add more pages here as you build them -->
-  <!-- Example: Services page -->
-  <!--
-  <url>
-    <loc>https://petneeds.ai/services</loc>
-    <lastmod>2026-02-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  -->
-
-</urlset>
+ 
