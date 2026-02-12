@@ -1,9 +1,0 @@
-{
-  "name": "petneeds-ai",
-  "version": "1.0.0",
-  "description": "Petneeds.ai website automation",
-  "scripts": {
-    "build-sitemap": "node scripts/generate-sitemap.js",
-    "deploy": "npm run build-sitemap && git add sitemap.xml && git commit -m \"Update sitemap\" && git push"
-  }
-}
