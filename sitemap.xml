@@ -1,30 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
+  <!-- Homepage -->
   <url>
     <loc>https://petneeds.ai/</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
   </url>
 
+  <!-- Dogs page -->
   <url>
-    <loc>https://petneeds.ai/homepage.html</loc>
-    <priority>0.9</priority>
+    <loc>https://petneeds.ai/dogs.html</loc>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
-  </url>
-
-  <url>
-    <loc>https://petneeds.ai/contact.html</loc>
     <priority>0.8</priority>
-    <changefreq>weekly</changefreq>
   </url>
 
+  <!-- Cats page -->
+  <url>
+    <loc>https://petneeds.ai/cats.html</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Other Pets page -->
+  <url>
+    <loc>https://petneeds.ai/other-pets.html</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Products page -->
   <url>
     <loc>https://petneeds.ai/products.html</loc>
-    <priority>0.8</priority>
+    <lastmod>2026-02-11</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- About page -->
+  <url>
+    <loc>https://petneeds.ai/about.html</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Contact page (if separate) -->
+  <url>
+    <loc>https://petneeds.ai/contact.html</loc>
+    <lastmod>2026-02-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>
-https://petneeds.ai/sitemap.xml
-
