@@ -4,14 +4,6 @@
   "description": "Petneeds.ai website automation",
   "scripts": {
     "build-sitemap": "node scripts/generate-sitemap.js",
-    "deploy": "npm run build-sitemap && git add sitemap.xml && git commit -m 'Update sitemap' && git push"
-  },
-  "dependencies": {},
-  "devDependencies": {}
+    "deploy": "npm run build-sitemap && git add sitemap.xml && git commit -m \"Update sitemap\" && git push"
+  }
 }
-"scripts": {
-  "build-sitemap": "node scripts/generate-sitemap.js",
-  "deploy": "npm run build-sitemap && git add sitemap.xml && git commit -m 'Update sitemap' && git push"
-}
-npm run build-sitemap
-npm run deploy
