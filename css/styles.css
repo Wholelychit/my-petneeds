@@ -1,8 +1,14 @@
-/* RESET */
+/* =======================
+   RESET
+======================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -10,20 +16,38 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
+    overflow-x: hidden;
 }
 
-/* CONTAINER */
+/* Prevent image breaking layout */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =======================
+   CONTAINER
+======================= */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
 }
 
-/* HEADER */
+/* =======================
+   HEADER
+======================= */
 .site-header {
     background: #ffffff;
     border-bottom: 1px solid #eee;
     padding: 15px 0;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
@@ -46,13 +70,16 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    transition: 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #ff6b00;
 }
 
-/* HERO */
+/* =======================
+   HERO
+======================= */
 .hero {
     padding: 60px 0;
     background: #f9fafc;
@@ -66,6 +93,11 @@ body {
     flex-wrap: wrap;
 }
 
+.hero-text {
+    flex: 1;
+    min-width: 280px;
+}
+
 .hero-text h1 {
     font-size: 2.2rem;
     margin-bottom: 15px;
@@ -74,17 +106,34 @@ body {
 .hero-text p {
     margin-bottom: 20px;
     font-size: 1.1rem;
+    max-width: 65ch;
 }
 
-/* BUTTONS */
-.btn-primary {
+.hero-image {
+    flex: 1;
+    min-width: 280px;
+}
+
+.hero-image img {
+    border-radius: 10px;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+.btn-primary,
+.btn-secondary {
     display: inline-block;
     padding: 10px 18px;
-    background: #ff6b00;
-    color: #fff;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: #ff6b00;
+    color: #fff;
 }
 
 .btn-primary:hover {
@@ -92,19 +141,26 @@ body {
 }
 
 .btn-secondary {
-    display: inline-block;
-    padding: 8px 16px;
     background: #333;
     color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
 }
 
 .btn-secondary:hover {
     background: #111;
 }
 
-/* CATEGORY GRID */
+/* =======================
+   SECTION TITLES
+======================= */
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+/* =======================
+   CATEGORY GRID
+======================= */
 .categories {
     padding: 60px 0;
 }
@@ -122,6 +178,11 @@ body {
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     padding: 20px;
     text-align: center;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card img {
@@ -129,7 +190,9 @@ body {
     margin-bottom: 15px;
 }
 
-/* PRODUCTS */
+/* =======================
+   PRODUCTS
+======================= */
 .featured-products {
     padding: 60px 0;
     background: #f9fafc;
@@ -148,14 +211,23 @@ body {
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: 0.3s ease;
 }
 
-/* AI CHAT */
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+/* =======================
+   AI CHAT
+======================= */
 .ask-ai {
     padding: 60px 0;
 }
 
-/* FOOTER */
+/* =======================
+   FOOTER
+======================= */
 .site-footer {
     background: #222;
     color: #fff;
@@ -167,6 +239,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .footer-links a {
@@ -179,8 +252,11 @@ body {
     text-decoration: underline;
 }
 
-/* MOBILE */
+/* =======================
+   MOBILE
+======================= */
 @media (max-width: 768px) {
+
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -191,6 +267,13 @@ body {
         gap: 10px;
         margin-top: 10px;
     }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links a {
+        margin: 0 10px;
+    }
 }
-
-
