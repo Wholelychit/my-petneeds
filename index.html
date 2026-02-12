@@ -1,113 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Petneeds.ai – Smart Pet Advice</title>
-  <style>
-    /* Reset & basics */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: #333; background-color: #fefefe; }
-    a { text-decoration: none; color: inherit; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PetNeeds.ai | Smart Pet Care & Trusted Products</title>
+<meta name="description" content="Simple pet care advice, trusted product guides, and helpful tips for dogs, cats, and other pets.">
 
-    /* Header / Navbar */
-    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: #4CAF50; color: white; position: sticky; top: 0; z-index: 1000; }
-    header img { height: 50px; }
-    nav ul { display: flex; list-style: none; }
-    nav ul li { margin-left: 20px; }
-    nav ul li a { color: white; font-weight: bold; transition: color 0.3s; }
-    nav ul li a:hover { color: #e0f7e0; }
+<link rel="stylesheet" href="styles.css">
 
-    /* Hero Section */
-    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 20px; background: linear-gradient(to right, #a8e063, #56ab2f); color: white; }
-    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-    .hero p { font-size: 1.2rem; margin-bottom: 30px; max-width: 600px; }
-    .cta-btn { padding: 15px 30px; font-size: 1.1rem; color: white; background-color: #ff9800; border: none; border-radius: 5px; cursor: pointer; transition: background 0.3s; }
-    .cta-btn:hover { background-color: #e68a00; }
-      <!-- Contact Section -->
-  <section id="contact" style="padding: 80px 20px; background-color: #f4f4f4; text-align: center;">
-    <h2 style="font-size: 2.5rem; margin-bottom: 20px; color: #333;">Contact Petneeds.ai</h2>
-    <p style="max-width: 600px; margin: 0 auto 40px; font-size: 1.1rem; color: #555;">
-      Have a question about your pet? Fill out the form below or reach out via email. We’ll get back to you quickly!
-    </p>
+<!-- Preload Hero Image -->
+<link rel="preload" as="image" href="images/hero/hero-dog.webp">
 
-    <!-- Contact Form (Google Form Embed) -->
-    <iframe 
-      src="YOUR_GOOGLE_FORM_URL_HERE" 
-      width="100%" 
-      height="600" 
-      frameborder="0" 
-      marginheight="0" 
-      marginwidth="0">
-      Loading…
-    </iframe>
-
-    <!-- Or fallback Email link -->
-    <p style="margin-top: 20px; font-size: 1rem;">
-      Or email us directly: <a href="mailto:petneedsai@gmail.com" style="color: #4CAF50;">petneedsai@gmail.com</a>
-    </p>
-  </section>
-
-  <!-- Footer Section -->
-  <footer style="background-color: #333; color: white; padding: 40px 20px; text-align: center;">
-    <p style="margin-bottom: 15px;">Follow us on social media:</p>
-    <div style="margin-bottom: 20px;">
-      <a href="https://www.facebook.com" target="_blank" style="margin: 0 10px; color: white;">Facebook</a> |
-      <a href="https://www.instagram.com" target="_blank" style="margin: 0 10px; color: white;">Instagram</a> |
-      <a href="https://www.tiktok.com" target="_blank" style="margin: 0 10px; color: white;">TikTok</a> |
-      <a href="https://www.linkedin.com" target="_blank" style="margin: 0 10px; color: white;">LinkedIn</a>
-    </div>
-    <p style="font-size: 0.9rem;">&copy; 2026 Petneeds.ai – All Rights Reserved</p>
-  </footer>
-
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      header { flex-direction: column; padding: 15px; }
-      nav ul { flex-direction: column; margin-top: 10px; }
-      nav ul li { margin: 10px 0; }
-      .hero h1 { font-size: 2.2rem; }
-      .hero p { font-size: 1rem; }
-    }
-  </style>
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PetNeeds.ai",
+  "url": "https://petneeds.ai",
+  "logo": "https://petneeds.ai/images/logo/logo-paw.svg"
+}
+</script>
 </head>
+
 <body>
 
-  <!-- Header / Navigation -->
-  <header>
-    <img src="logo.png" alt="Petneeds.ai Logo"> <!-- Replace with your logo file -->
-    <nav>
-      <ul>
-        <li><a href="#dogs">Dogs</a></li>
-        <li><a href="#cats">Cats</a></li>
-        <li><a href="#other">Other Pets</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="logo">
+            <img src="images/logo/logo-paw.svg" alt="PetNeeds.ai Logo" width="40" height="40">
+            <span>PetNeeds.ai</span>
+        </a>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1 id="hero-title"></h1>
-    <p>Get instant AI-driven pet advice, tips, and guides for dogs, cats, and all kinds of pets. Keep your furry friends happy and healthy!</p>
-    <button class="cta-btn" onclick="window.location.href='#contact'">Ask About Your Pet</button>
-  </section>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="dogs.html">Dogs</a></li>
+                <li><a href="cats.html">Cats</a></li>
+                <li><a href="other-pets.html">Other Pets</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-  <script>
-    // Scripted Title Animation
-    const title = "Petneeds.ai – Smart Pet Advice";
-    let i = 0;
-    const heroTitle = document.getElementById("hero-title");
-    
-    function typeWriter() {
-      if (i < title.length) {
-        heroTitle.innerHTML += title.charAt(i);
-        i++;
-        setTimeout(typeWriter, 100); // Adjust speed here
-      }
-    }
-    typeWriter();
-  </script>
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h1>Simple, Smart Care for Your Pets</h1>
+            <p>Trusted advice. Helpful guides. Products that actually work.</p>
+            <a href="dogs.html" class="btn-primary">Start Here</a>
+        </div>
+
+        <div class="hero-image">
+            <img 
+                src="images/hero/hero-dog.webp" 
+                alt="Happy dog looking at owner"
+                width="500"
+                height="400"
+                loading="eager">
+        </div>
+    </div>
+</section>
+
+<!-- CATEGORY SECTION -->
+<section class="categories">
+    <div class="container">
+
+        <h2>Explore Pet Care Topics</h2>
+
+        <div class="category-grid">
+
+            <div class="card">
+                <img src="images/category/dog-care.webp"
+                     alt="Dog care tips"
+                     width="300"
+                     height="200"
+                     loading="lazy">
+                <h3>Dog Care</h3>
+                <p>Training, food, grooming, and health tips for your dog.</p>
+                <a href="dogs.html" class="btn-secondary">Learn More</a>
+            </div>
+
+            <div class="card">
+                <img src="images/category/cat-care.webp"
+                     alt="Cat care tips"
+                     width="300"
+                     height="200"
+                     loading="lazy">
+                <h3>Cat Care</h3>
+                <p>Simple advice to keep your cat happy and healthy.</p>
+                <a href="cats.html" class="btn-secondary">Learn More</a>
+            </div>
+
+            <div class="card">
+                <img src="images/category/other-pets.webp"
+                     alt="Other pet care"
+                     width="300"
+                     height="200"
+                     loading="lazy">
+                <h3>Other Pets</h3>
+                <p>Birds, fish, reptiles, and small animals.</p>
+                <a href="other-pets.html" class="btn-secondary">Learn More</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- FEATURED PRODUCTS SECTION -->
+<section class="featured-products">
+    <div class="container">
+        <h2>Featured Pet Products</h2>
+        <p>Carefully selected products we recommend.</p>
+
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="images/products/product1.webp"
+                     alt="Durable dog toy"
+                     width="250"
+                     height="250"
+                     loading="lazy">
+                <h3>Durable Dog Toy</h3>
+                <p>Strong and safe for heavy chewers.</p>
+                <a href="#" class="btn-primary">View Product</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- AI CHAT SECTION -->
+<section class="ask-ai">
+    <div class="container">
+        <h2>Ask PetNeeds AI</h2>
+        <p>Have a question about your pet? Ask here.</p>
+        <div id="chat-box"></div>
+    </div>
+</section>
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <p>&copy; 2026 PetNeeds.ai. All rights reserved.</p>
+
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="disclaimer.html">Disclaimer</a>
+        </div>
+    </div>
+</footer>
+
+<script src="ask.js"></script>
 
 </body>
 </html>
