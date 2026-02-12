@@ -27,4 +27,9 @@ function onFormSubmit(e) {
     }
   }).filter(url => url); // remove nulls if any failed
 
-  if (p
+  // Save the public URL(s) to the designated column
+  if (publicUrls.length > 0) {
+    // Join multiple URLs with commas
+    sheet.getRange(row, imageUrlColumn).setValue(publicUrls.join(", "));
+  }
+}
