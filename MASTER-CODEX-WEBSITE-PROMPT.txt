@@ -1,0 +1,4 @@
+Use MASTER-CODEX-WEBSITE-PROMPT.
+
+Website-specific add-on:
+This repo is for My Pet Needs. Keep the website independent, fast, simple, mobile-first, crawlable, and reviewer-ready. Preserve the current stack, avoid unsupported pet health or medical claims, and do not add live monetization, tracking, private keys, or external-service dependencies without approval.
