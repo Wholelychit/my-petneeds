@@ -12,9 +12,38 @@ PetNeeds.ai is a simple, static pet information and community website built with
 
 ## Site purpose
 
-PetNeeds.ai provides family-friendly educational pet guidance for dogs, cats, fish, birds, reptiles, small pets, senior pets, rescue pets, and emergency awareness.
+PetNeeds.ai provides family-friendly educational pet guidance for dogs, cats, fish, birds, reptiles, small pets, senior pets, rescue pets, and safety awareness.
 
 The site is educational only and is not a substitute for licensed veterinary care.
+
+## Current public pages
+
+- `index.html`
+- `dogs.html`
+- `dog-comfort-checklist.html`
+- `cats.html`
+- `fish.html`
+- `birds.html`
+- `reptiles.html`
+- `small-pets.html`
+- `senior-pets.html`
+- `rescue.html`
+- `ask-ai.html`
+- `emergency.html`
+- `upload-photo.html`
+- `about.html`
+- `contact.html`
+- `privacy.html`
+- `terms.html`
+- `affiliate-disclosure.html`
+
+## Planning documents
+
+- `SITE-CHECKLIST.md`
+- `GROWTH-PLAN.md`
+- `PROJECT-STATUS.md`
+- `AGENTS.md`
+- `CODEX-WORKFLOW.md`
 
 ## Safe build priorities
 
@@ -23,7 +52,8 @@ The site is educational only and is not a substitute for licensed veterinary car
 3. Add useful pet content pages gradually.
 4. Improve mobile layout and accessibility basics.
 5. Keep all content beginner-friendly and family-safe.
-6. Avoid live ads, payment handling, private keys, and medical diagnosis claims until intentionally configured.
+6. Avoid live ads, payment handling, private keys, and diagnosis claims until intentionally configured.
+7. Keep future revenue ideas clearly disclosed and separate from safety content.
 
 ## File work rules
 
