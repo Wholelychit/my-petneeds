@@ -8,6 +8,7 @@
 - `kitten-starter-checklist.html` — Kitten starter checklist
 - `fish-tank-starter-checklist.html` — Fish tank starter checklist
 - `senior-pet-comfort-checklist.html` — Senior pet comfort checklist
+- `rescue-first-week-checklist.html` — Rescue first week checklist
 - `dogs.html` — Dogs
 - `dog-comfort-checklist.html` — Dog comfort checklist
 - `cats.html` — Cats
@@ -44,6 +45,7 @@
 - Kitten checklist button works.
 - Fish tank checklist button works.
 - Senior pet comfort checklist link works where present.
+- Rescue first week checklist button works.
 - Starter checklist pages link back to Starter Guides.
 
 ## Navigation review
@@ -88,7 +90,6 @@
 
 ## Next build ideas
 
-- Add rescue first week checklist.
 - Add local resource planning through Codex.
 - Add email signup planning through Codex.
 - Add photo review planning through Codex.
