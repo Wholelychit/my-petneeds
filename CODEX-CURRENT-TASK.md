@@ -4,54 +4,39 @@ Last updated: 2026-05-29
 
 ## Repository
 
-`Wholelychit/my-petneeds`
+Wholelychit/my-petneeds
 
-## Current operating mode
+## Current workflow
 
-Use ChatGPT 5.5 and Codex as the production workflow.
+Use ChatGPT 5.5, Codex, GitHub, and Cloudflare Pages.
 
-No local Git. No terminal Git. No VS Code requirement. No manual repo file creation or paste updates.
+ChatGPT plans the work. Codex handles repository edits. GitHub stores the commits. Cloudflare Pages publishes from GitHub when connected.
 
-Workflow:
+## Batch note
 
-1. ChatGPT 5.5 manages the plan.
-2. Codex performs repository work.
-3. GitHub stores files and commits.
-4. Cloudflare Pages publishes from GitHub when connected.
+For build sessions, group related website updates into useful commits.
 
-## Current project focus
+Focus on the static website, page cleanup, simple content improvements, navigation, footer consistency, SEO basics, and documentation.
+
+Give a summary after the grouped work is complete or when repository access blocks progress.
+
+## Current focus
 
 My Petneeds is a pet information and future monetization website.
 
 Keep the site simple, fast, mobile-friendly, family-readable, and trustworthy. Use plain language for pet owners.
 
-## Current safe queue
+## Current queue
 
-1. Review current pages and docs before changing production files.
-2. Improve homepage clarity and navigation.
-3. Add or improve safe pet category pages.
-4. Add clear advertising/affiliate planning docs before any live monetization.
-5. Improve footer, titles, meta description, canonical URL, robots.txt, and sitemap.xml.
-6. Keep medical/veterinary guidance careful: general education only, encourage qualified veterinary help for serious symptoms.
-7. Prepare local advertising ideas in planning docs only until approved.
-
-## Stop points
-
-Stop before:
-
-- veterinary diagnosis claims
-- emergency medical advice as a substitute for a vet
-- live ads or tracking
-- affiliate links
-- payment setup
-- ordering integrations
-- user accounts
-- upload systems
-- public AI tools
-- private keys or API keys
-- framework rebuilds
-- major code deletion
+1. Review current pages and docs.
+2. Finish canonical URLs on public HTML pages.
+3. Add the standard pet safety footer note to public pages.
+4. Improve homepage clarity and navigation.
+5. Improve pet category pages.
+6. Improve sitemap, robots, titles, descriptions, and support docs.
+7. Keep pet guidance educational and beginner-friendly.
+8. Prepare local advertising ideas in planning docs only.
 
 ## Reporting
 
-Report only after useful commits or a real blocker.
+Report after useful grouped commits or a repository blocker.
