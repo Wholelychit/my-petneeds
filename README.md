@@ -1,14 +1,14 @@
 # PetNeeds.ai
 
-PetNeeds.ai is a simple, static pet information and community website built with plain HTML, CSS, and JavaScript.
+PetNeeds.ai is a simple, static pet information and community website built with plain HTML and CSS.
 
 ## Current stack
 
 - Plain HTML files
 - Plain CSS in `styles.css`
-- Optional plain JavaScript in `ask.js`
 - GitHub repository hosting workflow
 - No React, Vite, Next.js, TypeScript, npm, or build tooling
+- No active JavaScript file is required by the current public pages
 
 ## Site purpose
 
@@ -23,6 +23,7 @@ The site is educational only and is not a substitute for licensed veterinary car
 - `puppy-starter-checklist.html`
 - `kitten-starter-checklist.html`
 - `fish-tank-starter-checklist.html`
+- `senior-pet-comfort-checklist.html`
 - `dogs.html`
 - `dog-comfort-checklist.html`
 - `cats.html`
@@ -55,8 +56,8 @@ The site is educational only and is not a substitute for licensed veterinary car
 2. Keep support pages available: About, Contact, Privacy, Terms, and Affiliate Disclosure.
 3. Add useful pet content pages gradually.
 4. Improve mobile layout and accessibility basics.
-5. Keep all content beginner-friendly and family-safe.
-6. Avoid live ads, payment handling, private keys, and diagnosis claims until intentionally configured.
+5. Keep all content beginner-friendly, family-safe, and clear that it does not replace a veterinarian.
+6. Avoid live ads, payment handling, private keys, public AI, uploads, accounts, and diagnosis claims until intentionally configured and approved.
 7. Keep future revenue ideas clearly disclosed and separate from safety content.
 
 ## File work rules
