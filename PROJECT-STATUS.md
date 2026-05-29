@@ -55,22 +55,20 @@ PetNeeds.ai is a simple static pet information website for families and everyday
 
 ## Canonical cleanup status
 
-Canonical URLs are now complete for the current public page set.
+Canonical URLs are complete for the current public page set.
 
-Completed pages:
+## Footer note cleanup status
 
-- `puppy-starter-checklist.html`
-- `kitten-starter-checklist.html`
-- `fish-tank-starter-checklist.html`
-- `senior-pet-comfort-checklist.html`
-- `rescue-first-week-checklist.html`
-- `dog-comfort-checklist.html`
+The shared footer note has been added to the main support, category, and checklist pages completed in the current cleanup pass.
+
+Footer-note pages completed in recent passes include:
+
 - `contact.html`
 - `privacy.html`
 - `terms.html`
 - `affiliate-disclosure.html`
 - `upload-photo.html`
-- `about.html`
+- `ask-ai.html`
 - `emergency.html`
 - `fish.html`
 - `birds.html`
@@ -78,18 +76,22 @@ Completed pages:
 - `small-pets.html`
 - `senior-pets.html`
 - `rescue.html`
-- `ask-ai.html`
+- `puppy-starter-checklist.html`
+- `kitten-starter-checklist.html`
+- `fish-tank-starter-checklist.html`
+- `senior-pet-comfort-checklist.html`
+- `rescue-first-week-checklist.html`
 
 ## Current batch status
 
-The canonical URL sweep is complete for the current public HTML pages.
+The current cleanup pass made page-level updates through the GitHub connector.
 
 Several pages also received light wording cleanup to keep the site simple and consistent.
 
 ## Next queue
 
 1. Re-check every public page for title, meta description, canonical URL, stylesheet link, and footer.
-2. Add the short shared footer note to public pages.
+2. Finish any remaining footer-note pages found during verification.
 3. Re-check sitemap entries against real files.
 4. Add local resource planning as documentation only.
 5. Add email signup planning as documentation only.
