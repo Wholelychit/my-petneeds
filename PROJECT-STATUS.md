@@ -24,6 +24,7 @@ PetNeeds.ai is a simple static pet information website for families and everyday
 - `rescue-first-week-checklist.html`
 - `dogs.html`
 - `dog-comfort-checklist.html`
+- `dog-daily-routine.html`
 - `cats.html`
 - `fish.html`
 - `birds.html`
@@ -53,6 +54,8 @@ PetNeeds.ai is a simple static pet information website for families and everyday
 - `SITE-BATCH-WORKFLOW.md` records the full page cleanup workflow.
 - The open Cloudflare setup PR includes current content batch notes.
 - `SITE-VERIFY-2026-05-29.md` records the latest verification pass.
+- `LOCAL-RESOURCE-PLAN.md` records future local resource planning.
+- `EMAIL-SIGNUP-PLAN.md` records future email signup planning.
 
 ## Canonical cleanup status
 
@@ -99,14 +102,20 @@ Verified basics include:
 
 ## Current batch status
 
-The current cleanup pass made page-level updates through the GitHub connector.
+This batch added planning documentation and a new public dog routine guide.
 
-Several pages also received light wording cleanup to keep the site simple and consistent.
+Completed in this batch:
+
+- `LOCAL-RESOURCE-PLAN.md`
+- `EMAIL-SIGNUP-PLAN.md`
+- `dog-daily-routine.html`
+- `dogs.html` internal link update
+- `sitemap.xml` update for the new dog routine guide
 
 ## Next queue
 
-1. Add local pet resource planning documentation.
-2. Add email signup planning documentation.
-3. Add more high-value guide content for dogs, cats, fish, and rescue pets.
-4. Improve internal links between guide pages.
+1. Add more high-value guide content for cats, fish, and rescue pets.
+2. Improve internal links between guide pages.
+3. Create a simple public local resources planning page when ready.
+4. Create the free pet safety guide content for future email signup.
 5. Continue simple category and guide content upgrades.
