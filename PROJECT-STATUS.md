@@ -20,6 +20,7 @@ The repo uses plain HTML, plain CSS, and optional plain JavaScript.
 
 - Homepage is live as `index.html`.
 - Starter Guides page exists and is linked from the homepage.
+- Starter checklists exist for puppies, kittens, and fish tanks.
 - Main category pages exist for dogs, cats, fish, birds, reptiles, small pets, senior pets, and rescue pets.
 - Support pages exist for About, Contact, Privacy, Terms, Affiliate Disclosure, Ask AI, Safety Guide, and Photo Ideas.
 - Dog comfort checklist page exists.
@@ -44,6 +45,9 @@ The repo uses plain HTML, plain CSS, and optional plain JavaScript.
 
 - `index.html`
 - `starter-guides.html`
+- `puppy-starter-checklist.html`
+- `kitten-starter-checklist.html`
+- `fish-tank-starter-checklist.html`
 - `dogs.html`
 - `dog-comfort-checklist.html`
 - `cats.html`
@@ -68,9 +72,10 @@ Some larger new-page writes were blocked by the ChatGPT GitHub connector. Use Co
 
 ## Next safe queue
 
-1. Try one simple checklist page at a time with very plain wording.
-2. Use Codex for larger starter guide batches.
-3. Use Codex for local resource planning pages.
-4. Use Codex for email signup planning pages.
-5. Use Codex for photo review planning pages.
-6. Run manual test steps from SITE-CHECKLIST.md.
+1. Add one simple guide page at a time with very plain wording.
+2. Add a senior pet comfort checklist.
+3. Add a rescue first week checklist.
+4. Use Codex for local resource planning pages.
+5. Use Codex for email signup planning pages.
+6. Use Codex for photo review planning pages.
+7. Run manual test steps from SITE-CHECKLIST.md.
