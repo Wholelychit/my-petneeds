@@ -26,12 +26,15 @@ PetNeeds.ai is a simple static pet information website for families and everyday
 - `dog-comfort-checklist.html`
 - `dog-daily-routine.html`
 - `cats.html`
+- `cat-litter-box-basics.html`
 - `fish.html`
+- `fish-tank-routine-basics.html`
 - `birds.html`
 - `reptiles.html`
 - `small-pets.html`
 - `senior-pets.html`
 - `rescue.html`
+- `rescue-pet-settling-in.html`
 - `ask-ai.html`
 - `emergency.html`
 - `upload-photo.html`
@@ -102,20 +105,25 @@ Verified basics include:
 
 ## Current batch status
 
-This batch added planning documentation and a new public dog routine guide.
+This batch added new public guide pages for cats, fish, and rescue pets.
 
 Completed in this batch:
 
-- `LOCAL-RESOURCE-PLAN.md`
-- `EMAIL-SIGNUP-PLAN.md`
-- `dog-daily-routine.html`
-- `dogs.html` internal link update
-- `sitemap.xml` update for the new dog routine guide
+- `cat-litter-box-basics.html`
+- `fish-tank-routine-basics.html`
+- `rescue-pet-settling-in.html`
+- `cats.html` internal link update
+- `fish.html` internal link update
+- `sitemap.xml` update for the new guide pages
+
+Follow-up item:
+
+- Add the `rescue-pet-settling-in.html` link to `rescue.html` with a smaller safe update.
 
 ## Next queue
 
-1. Add more high-value guide content for cats, fish, and rescue pets.
-2. Improve internal links between guide pages.
-3. Create a simple public local resources planning page when ready.
-4. Create the free pet safety guide content for future email signup.
+1. Add the rescue settling-in link to the rescue category page.
+2. Create a simple public local resources planning page when ready.
+3. Create the free pet safety guide content for future email signup.
+4. Add more high-value guide content for birds, reptiles, small pets, and senior pets.
 5. Continue simple category and guide content upgrades.
