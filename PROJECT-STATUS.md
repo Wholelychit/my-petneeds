@@ -25,6 +25,7 @@ The repo uses plain HTML and plain CSS. No active JavaScript file is required by
 ## Files / Pages Complete
 
 - Homepage is live as `index.html`.
+- Homepage now has a canonical URL and visible footer veterinary safety disclaimer.
 - Starter Guides page exists and is linked from the homepage.
 - Starter checklists exist for puppies, kittens, fish tanks, senior pet comfort, and rescue first week care.
 - Main category pages exist for dogs, cats, fish, birds, reptiles, small pets, senior pets, and rescue pets.
@@ -36,12 +37,12 @@ The repo uses plain HTML and plain CSS. No active JavaScript file is required by
 - Mobile CSS and focus styles have been improved.
 - Public page navigation has been standardized across the main pages.
 - Footer disclaimer styling exists in `styles.css` as `.footer-note`.
-- README, GROWTH-PLAN.md, PROJECT-STATUS.md, and SITE-CHECKLIST.md are updated.
+- README, CHANGELOG.md, GROWTH-PLAN.md, PROJECT-STATUS.md, and SITE-CHECKLIST.md are updated.
 
 ## Files / Pages Needing Work
 
-- Public HTML pages still need canonical URLs added before this audit can be marked PASS.
-- Most public pages should repeat a clear veterinarian disclaimer, not only link to the safety guide.
+- Remaining public HTML pages still need canonical URLs added before this audit can be marked PASS.
+- Remaining public pages should repeat a clear veterinarian disclaimer, not only link to the safety guide.
 - `ask.js` is not present and is not required by the current public pages; docs should not imply it is active.
 - Visual QA remains pending.
 - Future content should continue one safe page at a time.
@@ -49,8 +50,9 @@ The repo uses plain HTML and plain CSS. No active JavaScript file is required by
 ## SEO Status
 
 - Public pages checked have titles, meta descriptions, exactly one H1, main navigation, and footer navigation.
+- `index.html` has a canonical URL.
 - `sitemap.xml` includes the public pages found in the repository, including `senior-pet-comfort-checklist.html` and `rescue-first-week-checklist.html`.
-- Canonical URLs are currently missing from public HTML pages and remain the top SEO fix.
+- Canonical URLs are still missing from remaining public HTML pages and remain the top SEO fix.
 - No live tracking, live ads, payments, uploads, user accounts, public AI, or affiliate links were found during the non-visual audit.
 
 ## Sitemap / Robots Status
@@ -64,7 +66,9 @@ The repo uses plain HTML and plain CSS. No active JavaScript file is required by
 - Public pages checked have header navigation and footer navigation.
 - Internal local `.html` and `styles.css` references resolved during the audit.
 - Footer/navigation should be kept consistent as new guide pages are added.
-- Footer disclaimer styling has been added, but the disclaimer still needs to be inserted into public page footers.
+- Footer disclaimer styling has been added.
+- `index.html` now includes the footer disclaimer.
+- Remaining public page footers still need the disclaimer inserted.
 
 ## Trust / Legal Status
 
@@ -83,6 +87,7 @@ The repo uses plain HTML and plain CSS. No active JavaScript file is required by
 
 - Universal Codex Repo Audit started on 2026-05-28.
 - Non-visual checks found safe issues that still need page-level cleanup: missing canonical URLs and broader veterinarian disclaimer placement.
+- Homepage canonical and homepage footer disclaimer are now complete.
 - Rescue first week checklist and sitemap coverage are now present.
 - Current audit status: NEEDS FIX.
 - Visual/browser QA remains pending.
@@ -138,8 +143,8 @@ The repo uses plain HTML and plain CSS. No active JavaScript file is required by
 
 ## Next Safe Queue
 
-1. Add canonical URLs to every public HTML page.
-2. Add the `.footer-note` veterinarian disclaimer into public guide/support page footers.
+1. Add canonical URLs to remaining public HTML pages.
+2. Add the `.footer-note` veterinarian disclaimer into remaining public guide/support page footers.
 3. Re-run the non-visual audit after canonical and disclaimer cleanup.
 4. Run browser/mobile visual QA.
 5. Add local resource planning through Codex.
