@@ -14,6 +14,8 @@
 
 * { box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -24,7 +26,13 @@ body {
 }
 
 a { color: var(--brand-dark); }
-img { max-width: 100%; }
+a:hover { text-decoration-thickness: 2px; }
+img { max-width: 100%; height: auto; }
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
 
 .wrap {
   width: min(1120px, calc(100% - 32px));
@@ -32,11 +40,12 @@ img { max-width: 100%; }
 }
 
 .site-header {
-  background: var(--panel);
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--line);
   position: sticky;
   top: 0;
   z-index: 10;
+  backdrop-filter: blur(10px);
 }
 
 .header-wrap {
@@ -52,21 +61,27 @@ img { max-width: 100%; }
   font-size: 1.35rem;
   color: var(--brand-dark);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 10px;
 }
 
 nav a {
   color: var(--text);
   text-decoration: none;
   font-weight: 700;
+  border-radius: 999px;
+  padding: 6px 8px;
 }
 
-nav a:hover { color: var(--brand-dark); }
+nav a:hover {
+  color: var(--brand-dark);
+  background: #eaf8f3;
+}
 
 .hero {
   padding: 64px 0;
@@ -103,6 +118,8 @@ h1 {
 h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
 h3 { font-size: 1.25rem; }
 
+p { margin-top: 0; }
+
 .hero-text {
   font-size: 1.2rem;
   max-width: 680px;
@@ -127,6 +144,7 @@ button {
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
+  line-height: 1.2;
 }
 
 .primary,
@@ -134,6 +152,9 @@ button {
   background: var(--brand);
   color: white;
 }
+
+.primary:hover,
+button:hover { background: var(--brand-dark); }
 
 .secondary {
   background: white;
@@ -163,6 +184,8 @@ textarea {
   padding: 14px 15px;
   font-size: 1rem;
   font-family: inherit;
+  background: white;
+  color: var(--text);
 }
 
 .search-box input,
@@ -206,6 +229,8 @@ section.wrap,
 .page-card p,
 .form-card p { color: var(--muted); }
 
+.card a { font-weight: 800; }
+
 .feature-band {
   padding: 52px 0;
   background: #eaf8f3;
@@ -224,6 +249,7 @@ section.wrap,
 }
 
 .site-footer a { color: white; }
+.site-footer nav a:hover { background: rgba(255,255,255,0.12); color: white; }
 .footer-grid { display: grid; gap: 16px; }
 
 .page-hero { padding: 46px 0 18px; }
@@ -244,6 +270,9 @@ section.wrap,
   border-radius: 14px;
 }
 
+.check-list,
+.danger-list { padding-left: 1.25rem; }
+.check-list li,
 .danger-list li { margin-bottom: 10px; }
 
 .sr-only {
@@ -264,12 +293,27 @@ section.wrap,
   .page-grid { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: repeat(2, 1fr); }
   .header-wrap { align-items: flex-start; flex-direction: column; }
+  nav { width: 100%; }
 }
 
 @media (max-width: 560px) {
   body { font-size: 16px; }
+  .wrap { width: min(100% - 24px, 1120px); }
+  .site-header { position: static; }
+  .header-wrap { padding: 14px 0; }
+  nav { gap: 6px; }
+  nav a { font-size: 0.95rem; padding: 6px 7px; }
   .hero { padding: 42px 0; }
+  .hero-card,
+  .card,
+  .alert-card,
+  .email-card,
+  .page-card,
+  .form-card { border-radius: 18px; padding: 18px; }
   .card-grid { grid-template-columns: 1fr; }
+  .hero-actions,
+  .signup-form,
+  .search-box { flex-direction: column; }
   .button,
   button { width: 100%; text-align: center; }
 }
