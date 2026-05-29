@@ -20,6 +20,9 @@ The site is educational only and is not a substitute for licensed veterinary car
 
 - `index.html`
 - `starter-guides.html`
+- `puppy-starter-checklist.html`
+- `kitten-starter-checklist.html`
+- `fish-tank-starter-checklist.html`
 - `dogs.html`
 - `dog-comfort-checklist.html`
 - `cats.html`
