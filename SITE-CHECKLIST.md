@@ -7,6 +7,7 @@
 - `puppy-starter-checklist.html` — Puppy starter checklist
 - `kitten-starter-checklist.html` — Kitten starter checklist
 - `fish-tank-starter-checklist.html` — Fish tank starter checklist
+- `senior-pet-comfort-checklist.html` — Senior pet comfort checklist
 - `dogs.html` — Dogs
 - `dog-comfort-checklist.html` — Dog comfort checklist
 - `cats.html` — Cats
@@ -34,6 +35,7 @@
 - Pet category cards open real pages.
 - Featured guide cards open real pages.
 - Email box is clearly a future/simple offer, not a live system unless connected later.
+- Page reminds visitors that serious pet concerns need professional veterinary care.
 
 ## Starter Guides review
 
@@ -41,6 +43,7 @@
 - Puppy checklist button works.
 - Kitten checklist button works.
 - Fish tank checklist button works.
+- Senior pet comfort checklist link works where present.
 - Starter checklist pages link back to Starter Guides.
 
 ## Navigation review
@@ -50,6 +53,15 @@
 - Logo returns to homepage.
 - Main pages have a path back home.
 - No public link points to `blog.html` unless that page exists.
+
+## SEO review
+
+- Every public page has a title.
+- Every public page has a meta description.
+- Every public page has exactly one H1.
+- Every public page should have a canonical URL before launch promotion.
+- `sitemap.xml` includes every public page.
+- `robots.txt` points to the sitemap.
 
 ## Mobile review
 
@@ -67,13 +79,15 @@
 - Affiliate disclosure page exists.
 - Contact page includes a working email address.
 - Safety guide is easy to find.
+- Public content is beginner-friendly and does not replace a veterinarian.
 - No page asks for payment.
 - No page includes tracking scripts.
-- No page includes private keys.
+- No page includes live ads.
+- No page includes live affiliate links.
+- No page includes private keys, API tokens, uploads, user accounts, public AI, or diagnosis features.
 
 ## Next build ideas
 
-- Add senior pet comfort checklist.
 - Add rescue first week checklist.
 - Add local resource planning through Codex.
 - Add email signup planning through Codex.
