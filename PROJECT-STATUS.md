@@ -52,6 +52,7 @@ PetNeeds.ai is a simple static pet information website for families and everyday
 - `CODEX-CURRENT-TASK.md` records the batch workflow.
 - `SITE-BATCH-WORKFLOW.md` records the full page cleanup workflow.
 - The open Cloudflare setup PR includes current content batch notes.
+- `SITE-VERIFY-2026-05-29.md` records the latest verification pass.
 
 ## Canonical cleanup status
 
@@ -81,6 +82,20 @@ Footer-note pages completed in recent passes include:
 - `fish-tank-starter-checklist.html`
 - `senior-pet-comfort-checklist.html`
 - `rescue-first-week-checklist.html`
+- `dog-comfort-checklist.html`
+
+## Verification status
+
+A verification pass checked sitemap coverage and key page basics.
+
+Verified basics include:
+
+- title tags
+- meta descriptions
+- canonical URLs
+- shared stylesheet links
+- footer navigation
+- footer note coverage on recently cleaned pages
 
 ## Current batch status
 
@@ -90,9 +105,8 @@ Several pages also received light wording cleanup to keep the site simple and co
 
 ## Next queue
 
-1. Re-check every public page for title, meta description, canonical URL, stylesheet link, and footer.
-2. Finish any remaining footer-note pages found during verification.
-3. Re-check sitemap entries against real files.
-4. Add local resource planning as documentation only.
-5. Add email signup planning as documentation only.
-6. Continue simple category and guide content upgrades.
+1. Add local pet resource planning documentation.
+2. Add email signup planning documentation.
+3. Add more high-value guide content for dogs, cats, fish, and rescue pets.
+4. Improve internal links between guide pages.
+5. Continue simple category and guide content upgrades.
