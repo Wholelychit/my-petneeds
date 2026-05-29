@@ -12,13 +12,14 @@ PetNeeds.ai is a simple, static pet information and community website built with
 
 ## Site purpose
 
-PetNeeds.ai provides family-friendly educational pet guidance for dogs, cats, fish, birds, reptiles, small pets, senior pets, rescue pets, and safety awareness.
+PetNeeds.ai provides family-friendly educational pet guidance for starter guides, dogs, cats, fish, birds, reptiles, small pets, senior pets, rescue pets, and safety awareness.
 
 The site is educational only and is not a substitute for licensed veterinary care.
 
 ## Current public pages
 
 - `index.html`
+- `starter-guides.html`
 - `dogs.html`
 - `dog-comfort-checklist.html`
 - `cats.html`
