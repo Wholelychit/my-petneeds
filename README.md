@@ -24,6 +24,7 @@ The site is educational only and is not a substitute for licensed veterinary car
 - `kitten-starter-checklist.html`
 - `fish-tank-starter-checklist.html`
 - `senior-pet-comfort-checklist.html`
+- `rescue-first-week-checklist.html`
 - `dogs.html`
 - `dog-comfort-checklist.html`
 - `cats.html`
@@ -59,6 +60,14 @@ The site is educational only and is not a substitute for licensed veterinary car
 5. Keep all content beginner-friendly, family-safe, and clear that it does not replace a veterinarian.
 6. Avoid live ads, payment handling, private keys, public AI, uploads, accounts, and diagnosis claims until intentionally configured and approved.
 7. Keep future revenue ideas clearly disclosed and separate from safety content.
+
+## Current safe queue
+
+1. Add canonical URLs to public HTML pages.
+2. Add repeated educational/veterinary safety language to guide and support pages.
+3. Re-run the non-visual audit after page-level cleanup.
+4. Run browser/mobile visual QA.
+5. Continue local resource and email signup planning as documentation only.
 
 ## File work rules
 
